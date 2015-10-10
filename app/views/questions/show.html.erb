@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @question.number %>
+</p>
+
+<p>
+  <strong>Qtext:</strong>
+  <%= @question.Qtext %>
+</p>
+
+<p>
+  <strong>Optiona:</strong>
+  <%= @question.optionA %>
+</p>
+
+<p>
+  <strong>Optionb:</strong>
+  <%= @question.optionB %>
+</p>
+
+<p>
+  <strong>Optionc:</strong>
+  <%= @question.optionC %>
+</p>
+
+<p>
+  <strong>Optiond:</strong>
+  <%= @question.optionD %>
+</p>
+
+<p>
+  <strong>Optione:</strong>
+  <%= @question.optionE %>
+</p>
+
+<p>
+  <strong>Correct:</strong>
+  <%= @question.correct %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

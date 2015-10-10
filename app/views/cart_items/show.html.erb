@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>CartItem:</strong>
+  <%= @cart_item.id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cart_item.user_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @cart_item.product_id %>
+</p>
+
+<p>
+  <strong>Product Title:</strong>
+  <%= @product_title %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product_price %>
+</p>
+
+
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @cart_item.quantity %>
+</p>
+
+<p>
+  <strong>Purchased at:</strong>
+  
+  <%= @cart_item.purchased_at %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @cart_item.status %>
+</p>
+<p>
+  <strong>TransactionID:</strong>
+  <%= @cart_item.transaction_id %>
+</p>
+
+<%= link_to 'Edit', edit_cart_item_path(@cart_item) %> |
+<%= link_to 'Back', cart_items_path %>

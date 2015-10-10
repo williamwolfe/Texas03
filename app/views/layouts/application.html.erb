@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Texas03</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to "Home", pages_home_path %>
+<%= link_to "Products", products_path %>
+<% if (user_signed_in?) %>
+	<%= link_to "Cart Items", cart_items_path %>
+	<%= link_to "Questions", questions_path%>	
+	<%= link_to "Attempts", attempts_path%>	
+	<%= link_to "Quiz", quiz_display_path%>	
+	<%= link_to "Sign Out", destroy_user_session_path, method:'delete' %>	
+	<br>
+		welcome user id: <%=current_user.id%> --> <%=current_user.email%>
+	</br>
+<% else %>
+	<%= link_to "Sign In", new_user_session_path %>
+	<%= link_to "Sign Up", new_user_registration_path %>
+<% end %>
+
+<%= link_to "General Information", pages_home_path %><br>
+<%= link_to "Consortium Members", pages_home_path %><br>
+<%= link_to "Clinician Members", pages_home_path %><br>
+<%= link_to "Related Links", pages_home_path %><br>
+<%= link_to "PT MACS", pages_home_path %><br>
+<%= link_to "Available Resources", pages_home_path %><br>
+<%= link_to "Clinical Instructor Certification Course", pages_home_path %><br>
+<%= link_to "Exemplary Clinical Education Site Award", pages_home_path %><br>
+<%= link_to "CCUs for Clinical Instructors ", pages_home_path %>
+
+
+
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<%= yield %>
+
+</body>
+</html>

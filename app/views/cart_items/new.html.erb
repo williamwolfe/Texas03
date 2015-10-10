@@ -1,0 +1,26 @@
+<h1>Buy:</h1>
+(New Cart Item)
+<p>
+  <strong>Product ID:</strong>
+  <%= @product_id %>
+</p>
+
+<p>
+  <strong>Product Title:</strong>
+  <%= @product_title %>
+</p>
+
+<p>
+  <strong>Product Description:</strong>
+  <%= @product_description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  $<%= @product_price %>.00
+</p>
+
+
+<%= render 'form' %>
+
+<%= link_to 'Back', cart_items_path %>

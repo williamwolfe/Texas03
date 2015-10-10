@@ -1,0 +1,101 @@
+<h1>Clinical Instructor Certification Exam</h1>
+<p>(Quiz#display) Find me in app/views/quiz/display.html.erb</p>
+
+
+<%= form_for(@attempt) do |f| %>
+  <% if @attempt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attempt.errors.count, "error") %> prohibited this attempt from being saved:</h2>
+
+      <ul>
+      <% @attempt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  
+
+  <div class="field">    
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%='hidden field --> user_id: '%>
+    <%=current_user.id%>
+  </div>
+  
+
+<table border=1>
+<% @questions.each do |question| %>
+	<% answer = "answer" + question.number.to_s %>
+	<% if(@last_attempt) %>
+		<% this_choice = @last_attempt[answer] %>
+	<% end %>
+	
+ <tr>
+ 	<td>  <%= f.label question.number %> </td>
+    <td>  <%= f.label question.Qtext %> <%=this_choice%> </td>
+    
+ </tr>
+    
+   
+  <tr>
+  	<td> 
+  		<% if (this_choice == 1) %>
+  	 		<%= f.radio_button answer, 1, checked:'checked'%> 
+  		<% else %>
+  			<%= f.radio_button answer, 1 %>
+  		<% end %>
+  	</td>
+  <td>
+    <%= f.label :optionA, question.optionA %>
+  </td></tr>
+  
+  <tr>
+   <td> 
+  		<% if (this_choice == 2) %>
+  	 		<%= f.radio_button answer, 2, checked:'checked'%> 
+  		<% else %>
+  			<%= f.radio_button answer, 2 %>
+  		<% end %>
+  	</td>
+    <td>  <%= f.label :optionB, question.optionB %> </td>
+  </tr>
+  
+  <tr>
+    <td> 
+  		<% if (this_choice == 3) %>
+  	 		<%= f.radio_button answer, 3, checked:'checked'%> 
+  		<% else %>
+  			<%= f.radio_button answer, 3 %>
+  		<% end %>
+  	</td>
+    <td>  <%= f.label :optionC, question.optionC %> </td>
+  </tr>
+  
+  <tr>
+   <td> 
+  		<% if (this_choice == 4) %>
+  	 		<%= f.radio_button answer, 4, checked:'checked'%> 
+  		<% else %>
+  			<%= f.radio_button answer, 4 %>
+  		<% end %>
+  	</td>
+    <td>  <%= f.label :optionD, question.optionD %> </td>
+  </tr>
+  
+  <tr>
+  	<td colspan='2'><hr></td>
+  </tr>
+<% end %>
+  
+ <tr>
+ 	<td colspan='2' class="actions">
+ 	<div class = "actions">
+    	<%= f.submit 'submit' %>
+    </div>
+    </td>
+ </tr>
+ </table>
+ <% end %>
+
