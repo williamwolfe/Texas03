@@ -1,0 +1,42 @@
+<%= form_for(@planning_case1) do |f| %>
+  <% if @planning_case1.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@planning_case1.errors.count, "error") %> prohibited this planning_case1 from being saved:</h2>
+
+      <ul>
+      <% @planning_case1.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">    
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%='hidden field --> user_id: '%>
+    <%=current_user.id%>
+</div>
+
+  <div class="field">
+  <p><h4>How should Sally plan this student’s learning experiences?</h4></p>
+    <%= f.label :experiences %><br>
+    <%= f.text_area :experiences %>
+  </div>
+  
+
+  <div class="field">
+  <p><h4>What should Sally’s on-site orientation include on day one?</h4></p>
+    <%= f.label :orientation %><br>
+    <%= f.text_area :orientation %>
+  </div>
+  
+  
+  <div class="field">  
+  <p><h4> How will Sally decide if the learning experiences are appropriate?</h4></p>
+    <%= f.label :appropriate %><br>
+    <%= f.text_area :appropriate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

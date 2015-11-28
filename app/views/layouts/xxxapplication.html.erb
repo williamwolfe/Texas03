@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Texas03</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'shared/navbar' %>
+	<div id="main-container" class="container-fluid">
+	
+	<div class="row">
+        <div class="col-xs-12">
+          <% flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+          <% end -%>
+        </div>
+    </div>
+      <div class="row">
+        <div id="sidebar" class="col-xs-3">
+         	<%= link_to "Home", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "Members", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "Links", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "PT MACS", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "Resources", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "Courses", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "Site Award", pages_home_path, class: 'btn btn-success' %><br>
+			<%= link_to "CCUs", pages_home_path, class: 'btn btn-success' %>
+        </div>
+        <div id="main-content" class="col-xs-9">
+         	<%= yield %>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

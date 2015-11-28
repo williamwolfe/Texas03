@@ -1,4 +1,81 @@
 Rails.application.routes.draw do
+
+
+  get 'course/home'
+
+  resources :teaching_activities
+  get 'teaching_pages/home'
+
+  get 'teaching_pages/learning'
+
+  get 'teaching_pages/adult'
+
+  get 'teaching_pages/domains'
+
+  get 'teaching_pages/barriers'
+
+  get 'teaching_pages/guiding'
+
+  get 'teaching_pages/theory'
+
+  get 'teaching_pages/self'
+
+  resources :communication_activities
+  get 'communication_pages/home'
+
+  get 'communication_pages/communication'
+
+  get 'communication_pages/three'
+
+  get 'communication_pages/verbal'
+
+  get 'communication_pages/nonverbal'
+
+  get 'communication_pages/feedback'
+
+  resources :evaluation_credits
+  resources :student_evaluation_case2s
+  get 'student_evaluation/home'
+
+  get 'student_evaluation/performance'
+
+  get 'student_evaluation/tool'
+
+  get 'student_evaluation/structure'
+
+  get 'student_evaluation/ptmacs'
+
+  get 'student_evaluation/learning'
+
+  get 'student_evaluation/use'
+
+get 'planning_pages/planning_home'
+
+  get 'planning_pages/tx_consortium'
+
+  get 'planning_pages/philosophy'
+
+  get 'planning_pages/players'
+
+  get 'planning_pages/apta_link'
+
+  get 'planning_pages/site_development'
+
+  get 'planning_pages/scheduling'
+
+  get 'planning_pages/clinical_education'
+
+  get 'planning_pages/learning_experiences'
+
+  get 'planning_pages/legal_issues'
+
+  get 'planning_pages/case_study'
+
+  get 'planning_pages/to_receive_credit'
+
+  resources :planning_credits
+  resources :planning_case1s
+  resources :evaluations
   get 'quiz/display'
 
   get 'quiz/results'
@@ -6,7 +83,16 @@ Rails.application.routes.draw do
   resources :attempts
   resources :questions
   devise_for :users
+  
   get 'pages/home'
+  get 'pages/members'
+  get 'pages/clinician'
+  get 'pages/related'
+  get 'pages/ptmacs'
+  get 'pages/resources'
+  get 'pages/ciccourse'
+  get 'pages/award'
+  get 'pages/ccus'
 
   get 'pages/products'
 

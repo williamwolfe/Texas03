@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @evaluation_credit.user_id %>
+</p>
+
+<p>
+  <strong>List skills 1:</strong>
+  <%= @evaluation_credit.list_skills_1 %>
+</p>
+
+<p>
+  <strong>Rating 1:</strong>
+  <%= @evaluation_credit.rating_1 %>
+</p>
+
+<p>
+  <strong>List skills 2:</strong>
+  <%= @evaluation_credit.list_skills_2 %>
+</p>
+
+<p>
+  <strong>Selected skill:</strong>
+  <%= @evaluation_credit.selected_skill %>
+</p>
+
+<p>
+  <strong>Rating 2:</strong>
+  <%= @evaluation_credit.rating_2 %>
+</p>
+
+<p>
+  <strong>Support:</strong>
+  <%= @evaluation_credit.support %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_credit_path(@evaluation_credit) %> |
+<%= link_to 'Back', evaluation_credits_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Student Evaluation Case2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Rate</th>
+      <th>Plan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_evaluation_case2s.each do |student_evaluation_case2| %>
+      <tr>
+        <td><%= student_evaluation_case2.user_id %></td>
+        <td><%= student_evaluation_case2.rate %></td>
+        <td><%= student_evaluation_case2.plan %></td>
+        <td><%= link_to 'Show', student_evaluation_case2 %></td>
+        <td><%= link_to 'Edit', edit_student_evaluation_case2_path(student_evaluation_case2) %></td>
+        <td><%= link_to 'Destroy', student_evaluation_case2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student evaluation case2', new_student_evaluation_case2_path %>

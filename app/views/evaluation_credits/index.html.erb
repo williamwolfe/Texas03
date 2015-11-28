@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Evaluation Credits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>List skills 1</th>
+      <th>Rating 1</th>
+      <th>List skills 2</th>
+      <th>Selected skill</th>
+      <th>Rating 2</th>
+      <th>Support</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evaluation_credits.each do |evaluation_credit| %>
+      <tr>
+        <td><%= evaluation_credit.user_id %></td>
+        <td><%= evaluation_credit.list_skills_1 %></td>
+        <td><%= evaluation_credit.rating_1 %></td>
+        <td><%= evaluation_credit.list_skills_2 %></td>
+        <td><%= evaluation_credit.selected_skill %></td>
+        <td><%= evaluation_credit.rating_2 %></td>
+        <td><%= evaluation_credit.support %></td>
+        <td><%= link_to 'Show', evaluation_credit %></td>
+        <td><%= link_to 'Edit', edit_evaluation_credit_path(evaluation_credit) %></td>
+        <td><%= link_to 'Destroy', evaluation_credit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evaluation credit', new_evaluation_credit_path %>

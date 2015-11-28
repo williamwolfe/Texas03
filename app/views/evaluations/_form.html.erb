@@ -1,0 +1,141 @@
+<%= form_for(@evaluation) do |f| %>
+  <% if @evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+      <% @evaluation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<div class="field">    
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%='hidden field --> user_id: '%>
+    <%=current_user.id%>
+</div>
+
+  <div class="field">
+    <%= f.label :completion_date %><br>
+    <%= f.date_select :completion_date %>
+  </div>
+  <div class="field">
+    <%= f.label :license %><br>
+    <%= f.text_field :license %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :overall %><br>
+    <!--<%= f.text_field :overall %>-->
+	<!--<%= f.radio_button :overall, 1, checked:'checked'%>-->
+	<%= f.radio_button :overall, 1 %>  
+	<%= f.radio_button :overall, 2 %> 
+	<%= f.radio_button :overall, 3 %> 
+	<%= f.radio_button :overall, 4 %> 
+	<%= f.radio_button :overall, 5 %>  
+  </div>
+
+
+  
+<div class="field">
+    <%= f.label :overall_comments %><br>
+    <%= f.text_area :overall_comments, size: "60x3"%>
+</div>
+
+ 
+  
+  
+  <div class="field">
+    <%= f.label :develop %><br>
+    <!--<%= f.text_field :develop %>-->
+    
+    <%= f.radio_button :develop, 1 %>  
+	<%= f.radio_button :develop, 2 %> 
+	<%= f.radio_button :develop, 3 %> 
+	<%= f.radio_button :develop, 4 %> 
+	<%= f.radio_button :develop, 5 %>  
+  </div>
+  <div class="field">
+    <%= f.label :develop_comments %><br>
+    <%= f.text_area :develop_comments %>
+  </div>
+  <div class="field">
+    <%= f.label :use %><br>
+    <!--<%= f.text_field :use %>-->
+    
+    <%= f.radio_button :use, 1 %>  
+	<%= f.radio_button :use, 2 %> 
+	<%= f.radio_button :use, 3 %> 
+	<%= f.radio_button :use, 4 %> 
+	<%= f.radio_button :use, 5 %>  
+  </div>
+  <div class="field">
+    <%= f.label :use_comments %><br>
+    <%= f.text_area :use_comments %>
+  </div>
+  <div class="field">
+    <%= f.label :feedback %><br>
+    <!--<%= f.text_field :feedback %>-->
+    <%= f.radio_button :feedback, 1 %>  
+	<%= f.radio_button :feedback, 2 %> 
+	<%= f.radio_button :feedback, 3 %> 
+	<%= f.radio_button :feedback, 4 %> 
+	<%= f.radio_button :feedback, 5 %>  
+  </div>
+  <div class="field">
+    <%= f.label :feedback_comments %><br>
+    <%= f.text_area :feedback_comments %>
+  </div>
+  <div class="field">
+    <%= f.label :teaching %><br>
+    <!--<%= f.text_field :teaching %>-->
+    <%= f.radio_button :teaching, 1 %>  
+	<%= f.radio_button :teaching, 2 %> 
+	<%= f.radio_button :teaching, 3 %> 
+	<%= f.radio_button :teaching, 4 %> 
+	<%= f.radio_button :teaching, 5 %>     
+  </div>
+  <div class="field">
+    <%= f.label :teaching_comments %><br>
+    <%= f.text_area :teaching_comments %>
+  </div>
+  <div class="field">
+    <%= f.label :topics %><br>
+    <%= f.text_area :topics %>
+  </div>
+  <div class="field">
+    <%= f.label :advanced %><br>
+   <!-- <%= f.text_field :advanced %>-->
+    <%= f.radio_button :advanced, 1 %>  
+	<%= f.radio_button :advanced, 2 %> 
+  </div>
+  <div class="field">
+    <%= f.label :advance_topics %><br>
+    <%= f.text_area :advance_topics %>
+  </div>
+  <div class="field">
+    <%= f.label :add_comments %><br>
+    <%= f.text_area :add_comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

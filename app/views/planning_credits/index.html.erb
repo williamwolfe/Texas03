@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Planning Credits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Acute</th>
+      <th>Ip</th>
+      <th>Private</th>
+      <th>Corporate</th>
+      <th>Nonprofit</th>
+      <th>Pediatric</th>
+      <th>School</th>
+      <th>Snu</th>
+      <th>Snf</th>
+      <th>Ltc</th>
+      <th>Other</th>
+      <th>List</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planning_credits.each do |planning_credit| %>
+      <tr>
+        <td><%= planning_credit.user_id %></td>
+        <td><%= planning_credit.acute %></td>
+        <td><%= planning_credit.IP %></td>
+        <td><%= planning_credit.private %></td>
+        <td><%= planning_credit.corporate %></td>
+        <td><%= planning_credit.nonprofit %></td>
+        <td><%= planning_credit.pediatric %></td>
+        <td><%= planning_credit.school %></td>
+        <td><%= planning_credit.SNU %></td>
+        <td><%= planning_credit.SNF %></td>
+        <td><%= planning_credit.LTC %></td>
+        <td><%= planning_credit.other %></td>
+        <td><%= planning_credit.list %></td>
+        <td><%= link_to 'Show', planning_credit %></td>
+        <td><%= link_to 'Edit', edit_planning_credit_path(planning_credit) %></td>
+        <td><%= link_to 'Destroy', planning_credit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Planning credit', new_planning_credit_path %>

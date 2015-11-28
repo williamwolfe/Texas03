@@ -1,0 +1,74 @@
+
+
+<%= form_for(@planning_credit) do |f| %>
+  <% if @planning_credit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@planning_credit.errors.count, "error") %> prohibited this planning_credit from being saved:</h2>
+
+      <ul>
+      <% @planning_credit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<p>Site type:</p>
+<div class="field">    
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%='hidden field --> user_id: '%>
+    <%=current_user.id%>
+</div>
+  <div class="field">
+    <%= f.label :acute %><br>
+    <%= f.check_box :acute %>
+  </div>
+  <div class="field">
+    <%= f.label :IP %><br>
+    <%= f.check_box :IP %>
+  </div>
+  <div class="field">
+    <%= f.label :private %><br>
+    <%= f.check_box :private %>
+  </div>
+  <div class="field">
+    <%= f.label :corporate %><br>
+    <%= f.check_box :corporate %>
+  </div>
+  <div class="field">
+    <%= f.label :nonprofit %><br>
+    <%= f.check_box :nonprofit %>
+  </div>
+  <div class="field">
+    <%= f.label :pediatric %><br>
+    <%= f.check_box :pediatric %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.check_box :school %>
+  </div>
+  <div class="field">
+    <%= f.label :SNU %><br>
+    <%= f.check_box :SNU %>
+  </div>
+  <div class="field">
+    <%= f.label :SNF %><br>
+    <%= f.check_box :SNF %>
+  </div>
+  <div class="field">
+    <%= f.label :LTC %><br>
+    <%= f.check_box :LTC %>
+  </div>
+  <div class="field">
+    <%= f.label :other %><br>
+    <%= f.text_area :other %>
+  </div>
+  <p>Compile a list of activities that you would include in a CI/Student orientation checklist. You may not need to complete each row depending on the needs of your setting.</p>
+  <div class="field">
+    <%= f.label :list %><br>
+    <%= f.text_area :list %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Texas03</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ 
+
+<div class="inner">
+ 	<%=yield%>
+ 	<div class="container-narrow">
+    	<div class="col-lg-4">
+      	  <div class="box">     	
+          	<h4><%= link_to "Planning Home", planning_pages_planning_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#ff1e1e;'} %></h4>         
+          </div>
+		  <br>
+          <div class="box">
+          	<h4><%= link_to "Tx Consortium", planning_pages_tx_consortium_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+          <br>
+          <div class="box">
+          	<h4><%= link_to "Philosphy", planning_pages_philosophy_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+		  <div class="box">
+          	<h4><%= link_to "APTA", planning_pages_apta_link_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+		</div>
+    	<div class="col-lg-4">
+          <div class="box">
+          <h4><%= link_to "Site Development", planning_pages_site_development_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+          <div class="box">
+          <h4><%= link_to "Scheduling", planning_pages_scheduling_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+          <br>
+          <div class="box">
+          <h4><%= link_to "Clinical Education", planning_pages_clinical_education_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+		  <div class="box">
+          <h4><%= link_to "Learning", planning_pages_learning_experiences_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>		  
+    	</div>
+    
+    	<div class="col-lg-4">
+    	  <div class="box">
+          <h4><%= link_to "Legal Issues", planning_pages_legal_issues_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+		  
+		  <div class="box">
+          <h4><%= link_to "Case Study", new_planning_case1_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+		  
+		  <div class="box">
+          <h4><%= link_to "To Receive Credit", new_planning_credit_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+    	
+    	<div class="box">
+          <h4><%= link_to "To Receive Credit", new_planning_credit_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
+          </div>
+		  <br>
+    	</div>
+   
+   		<div class="footer">
+        	<p>&copy; Company 2013</p>
+      	</div>
+
+    </div> <!-- /container -->
+
+   
+  </body>
+
+
+
+</html>
+

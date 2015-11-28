@@ -1,0 +1,46 @@
+<%= form_for(@evaluation_credit) do |f| %>
+  <% if @evaluation_credit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation_credit.errors.count, "error") %> prohibited this evaluation_credit from being saved:</h2>
+
+      <ul>
+      <% @evaluation_credit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">    
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%='hidden field --> user_id: '%>
+    <%=current_user.id%>
+</div>
+  <div class="field">
+    <%= f.label :list_skills_1 %><br>
+    <%= f.text_area :list_skills_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :rating_1 %><br>
+    <%= f.text_field :rating_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :list_skills_2 %><br>
+    <%= f.text_area :list_skills_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :selected_skill %><br>
+    <%= f.text_field :selected_skill %>
+  </div>
+  <div class="field">
+    <%= f.label :rating_2 %><br>
+    <%= f.text_field :rating_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :support %><br>
+    <%= f.text_area :support %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

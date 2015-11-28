@@ -1,0 +1,134 @@
+<%= form_for(@communication_activity) do |f| %>
+  <% if @communication_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@communication_activity.errors.count, "error") %> prohibited this communication_activity from being saved:</h2>
+
+      <ul>
+      <% @communication_activity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">    
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%='hidden field --> user_id: '%>
+    <%=current_user.id%>
+</div>
+  <div class="field">
+    <%= f.label :mono %><br>
+    <%= f.text_area :mono %>
+  </div>
+  <div class="field">
+    <%= f.label :slow %><br>
+    <%= f.text_area :slow %>
+  </div>
+  <div class="field">
+    <%= f.label :high_voice %><br>
+    <%= f.text_area :high_voice %>
+  </div>
+  <div class="field">
+    <%= f.label :ascending %><br>
+    <%= f.text_area :ascending %>
+  </div>
+  <div class="field">
+    <%= f.label :terse %><br>
+    <%= f.text_area :terse %>
+  </div>
+  <div class="field">
+    <%= f.label :abrupt_speed %><br>
+    <%= f.text_area :abrupt_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :high_pitch %><br>
+    <%= f.text_area :high_pitch %>
+  </div>
+  <div class="field">
+    <%= f.label :aloof %><br>
+    <%= f.text_area :aloof %>
+  </div>
+  <div class="field">
+    <%= f.label :abrupt %><br>
+    <%= f.text_area :abrupt %>
+  </div>
+  <div class="field">
+    <%= f.label :shy %><br>
+    <%= f.text_area :shy %>
+  </div>
+  <div class="field">
+    <%= f.label :aggressive %><br>
+    <%= f.text_area :aggressive %>
+  </div>
+  <div class="field">
+    <%= f.label :helpful %><br>
+    <%= f.text_area :helpful %>
+  </div>
+  <div class="field">
+    <%= f.label :unprepared %><br>
+    <%= f.text_area :unprepared %>
+  </div>
+  <div class="field">
+    <%= f.label :bored %><br>
+    <%= f.text_area :bored %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :unhappy %><br>
+    <%= f.text_area :unhappy %>
+  </div>
+  <div class="field">
+    <%= f.label :careless %><br>
+    <%= f.text_area :careless %>
+  </div>
+  <div class="field">
+    <%= f.label :passive %><br>
+    <%= f.text_area :passive %>
+  </div>
+  <div class="field">
+    <%= f.label :caring %><br>
+    <%= f.text_area :caring %>
+  </div>
+  <div class="field">
+    <%= f.label :imaginative %><br>
+    <%= f.text_area :imaginative %>
+  </div>
+  <div class="field">
+    <%= f.label :eager %><br>
+    <%= f.text_area :eager %>
+  </div>
+  <div class="field">
+    <%= f.label :activity3_1 %><br>
+    <%= f.text_area :activity3_1 %>
+  </div>
+  <div class="field">
+    <%= f.label :activity3_2 %><br>
+    <%= f.text_area :activity3_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :activity3_3 %><br>
+    <%= f.text_area :activity3_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :activity3_4 %><br>
+    <%= f.text_area :activity3_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :activity3_5 %><br>
+    <%= f.text_area :activity3_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :activity3_6 %><br>
+    <%= f.text_area :activity3_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :activity4 %><br>
+    <%= f.text_area :activity4 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

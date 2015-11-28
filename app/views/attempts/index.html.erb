@@ -1,35 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-
-
 <h1>Quiz Attempts</h1>
 (Listing Attempts)
 
-<table>
+<table class="table-striped">
   <thead>
   
     <tr>
       <th>User</th>
-      <th>Answer1</th>
-      <th>Answer2</th>
-      <th>Answer3</th>
-      <th>Answer4</th>
-      <th>Answer5</th>
-      <th>Answer6</th>
-      <th>Answer7</th>
-      <th>Answer8</th>
-      <th>Answer9</th>
-      <th>Answer10</th>
-      <th>Answer11</th>
-      <th>Answer12</th>
-      <th>Answer13</th>
-      <th>Answer14</th>
-      <th>Answer15</th>
-      <th>Answer16</th>
-      <th>Answer17</th>
-      <th>Answer18</th>
-      <th>Answer19</th>
-      <th>Answer20</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+      <th>17</th>
+      <th>18</th>
+      <th>19</th>
+      <th>20</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -61,9 +59,9 @@
         <td><%= attempt.answer18 %></td>
         <td><%= attempt.answer19 %></td>
         <td><%= attempt.answer20 %></td>
-        <td><%= link_to 'Show', attempt %></td>
-        <td><%= link_to 'Edit', edit_attempt_path(attempt) %></td>
-        <td><%= link_to 'Destroy', attempt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', attempt, class: 'btn btn-primary btn-xs'  %></td>
+        <td><%= link_to 'Edit', edit_attempt_path(attempt), class: 'btn btn-info btn-xs'  %></td>
+        <td><%= link_to 'Destroy', attempt, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -71,4 +69,7 @@
 
 <br>
 
-<%= link_to 'New Attempt', new_attempt_path %>
+
+<%= link_to new_attempt_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New Attempt
+<% end %>

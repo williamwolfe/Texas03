@@ -6,6 +6,7 @@ class CartItemsController < ApplicationController
   # GET /cart_items.json
   def index
     @cart_items = CartItem.all
+   
   end
 
   # GET /cart_items/1
@@ -14,6 +15,7 @@ class CartItemsController < ApplicationController
   	@product_id = params[:product_id]
   	@product_title = Product.find_by(id:@cart_item.product_id).title
   	@product_price = Product.find_by(id:@cart_item.product_id).price
+  
   end
 
   # GET /cart_items/new

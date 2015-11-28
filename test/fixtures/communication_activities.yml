@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  mono: MyText
+  slow: MyText
+  high_voice: MyText
+  ascending: MyText
+  terse: MyText
+  abrupt_speed: MyText
+  high_pitch: MyText
+  aloof: MyText
+  abrupt: MyText
+  shy: MyText
+  aggressive: MyText
+  helpful: MyText
+  unprepared: MyText
+  bored: MyText
+  content: MyText
+  unhappy: MyText
+  careless: MyText
+  passive: MyText
+  caring: MyText
+  imaginative: MyText
+  eager: MyText
+  activity3_1: MyText
+  activity3_2: MyText
+  activity3_3: MyText
+  activity3_4: MyText
+  activity3_5: MyText
+  activity3_6: MyText
+  activity4: MyText
+
+two:
+  user_id: 1
+  mono: MyText
+  slow: MyText
+  high_voice: MyText
+  ascending: MyText
+  terse: MyText
+  abrupt_speed: MyText
+  high_pitch: MyText
+  aloof: MyText
+  abrupt: MyText
+  shy: MyText
+  aggressive: MyText
+  helpful: MyText
+  unprepared: MyText
+  bored: MyText
+  content: MyText
+  unhappy: MyText
+  careless: MyText
+  passive: MyText
+  caring: MyText
+  imaginative: MyText
+  eager: MyText
+  activity3_1: MyText
+  activity3_2: MyText
+  activity3_3: MyText
+  activity3_4: MyText
+  activity3_5: MyText
+  activity3_6: MyText
+  activity4: MyText

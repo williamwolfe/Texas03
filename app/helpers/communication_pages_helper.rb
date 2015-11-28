@@ -1,0 +1,2 @@
+module CommunicationPagesHelper
+end

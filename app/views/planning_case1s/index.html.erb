@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Planning Case1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Experiences</th>
+      <th>Orientation</th>
+      <th>Appropriate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @planning_case1s.each do |planning_case1| %>
+      <tr>
+        <td><%= planning_case1.user_id %></td>
+        <td><%= planning_case1.experiences %></td>
+        <td><%= planning_case1.orientation %></td>
+        <td><%= planning_case1.appropriate %></td>
+        <td><%= link_to 'Show', planning_case1 %></td>
+        <td><%= link_to 'Edit', edit_planning_case1_path(planning_case1) %></td>
+        <td><%= link_to 'Destroy', planning_case1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Planning case1', new_planning_case1_path %>

@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse" role="navigation">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>   
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			 
+			  <ul class="nav navbar-nav">
+				<li><%= link_to "PlanHome", planning_pages_planning_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#d3d3d3;'} %></li> 
+				<li><%= link_to "TxConsort", planning_pages_tx_consortium_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Philos", planning_pages_philosophy_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "APTA", planning_pages_apta_link_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "SiteDev", planning_pages_site_development_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "Sched", planning_pages_scheduling_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "ClinEd", planning_pages_clinical_education_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "Learning", planning_pages_learning_experiences_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "Legal", planning_pages_legal_issues_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+			
+	
+			<% if (user_signed_in?) %>
+				<li><%= link_to "Evaluations", evaluations_path, {class:'glyphicon glyphicon-list-alt', :style=>'color:#d3d3d3;'} %></li>
+     			<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', method:'delete'} %></li>
+        	<% else %>
+        		<li><%= link_to " Login", new_user_session_path, {class:'glyphicon glyphicon-log-in', :style=>'color:#d3d3d3;'}%></li>	
+     			<li><%= link_to " SignUp", new_user_registration_path, {class:'glyphicon glyphicon-user',:style=>'color:#d3d3d3;'}  %></li>   			
+        	<% end %>
+        	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>   
+			  </ul>
+			</div>
+		  </div>
+</nav>   

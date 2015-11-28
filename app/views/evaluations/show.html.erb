@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @evaluation.user_id %>
+</p>
+
+<p>
+  <strong>Completion date:</strong>
+  <%= @evaluation.completion_date %>
+</p>
+
+<p>
+  <strong>License:</strong>
+  <%= @evaluation.license %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @evaluation.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @evaluation.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @evaluation.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @evaluation.zip %>
+</p>
+
+<p>
+  <strong>Overall:</strong>
+  <%= @evaluation.overall %>
+</p>
+
+<p>
+  <strong>Overall comments:</strong>
+  <%= @evaluation.overall_comments %>
+</p>
+
+<p>
+  <strong>Develop:</strong>
+  <%= @evaluation.develop %>
+</p>
+
+<p>
+  <strong>Develop comments:</strong>
+  <%= @evaluation.develop_comments %>
+</p>
+
+<p>
+  <strong>Use:</strong>
+  <%= @evaluation.use %>
+</p>
+
+<p>
+  <strong>Use comments:</strong>
+  <%= @evaluation.use_comments %>
+</p>
+
+<p>
+  <strong>Feedback:</strong>
+  <%= @evaluation.feedback %>
+</p>
+
+<p>
+  <strong>Feedback comments:</strong>
+  <%= @evaluation.feedback_comments %>
+</p>
+
+<p>
+  <strong>Teaching:</strong>
+  <%= @evaluation.teaching %>
+</p>
+
+<p>
+  <strong>Teaching comments:</strong>
+  <%= @evaluation.teaching_comments %>
+</p>
+
+<p>
+  <strong>Topics:</strong>
+  <%= @evaluation.topics %>
+</p>
+
+<p>
+  <strong>Advanced:</strong>
+  <%= @evaluation.advanced %>
+</p>
+
+<p>
+  <strong>Advance topics:</strong>
+  <%= @evaluation.advance_topics %>
+</p>
+
+<p>
+  <strong>Add comments:</strong>
+  <%= @evaluation.add_comments %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>

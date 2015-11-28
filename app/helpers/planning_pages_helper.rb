@@ -1,0 +1,2 @@
+module PlanningPagesHelper
+end

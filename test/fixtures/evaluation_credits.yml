@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  list_skills_1: MyText
+  rating_1: MyString
+  list_skills_2: MyText
+  selected_skill: MyString
+  rating_2: MyString
+  support: MyText
+
+two:
+  user_id: 1
+  list_skills_1: MyText
+  rating_1: MyString
+  list_skills_2: MyText
+  selected_skill: MyString
+  rating_2: MyString
+  support: MyText

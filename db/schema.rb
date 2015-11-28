@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003175053) do
+ActiveRecord::Schema.define(version: 20151124183409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,105 @@ ActiveRecord::Schema.define(version: 20151003175053) do
     t.string   "transaction_id"
   end
 
+  create_table "communication_activities", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "mono"
+    t.text     "slow"
+    t.text     "high_voice"
+    t.text     "ascending"
+    t.text     "terse"
+    t.text     "abrupt_speed"
+    t.text     "high_pitch"
+    t.text     "aloof"
+    t.text     "abrupt"
+    t.text     "shy"
+    t.text     "aggressive"
+    t.text     "helpful"
+    t.text     "unprepared"
+    t.text     "bored"
+    t.text     "content"
+    t.text     "unhappy"
+    t.text     "careless"
+    t.text     "passive"
+    t.text     "caring"
+    t.text     "imaginative"
+    t.text     "eager"
+    t.text     "activity3_1"
+    t.text     "activity3_2"
+    t.text     "activity3_3"
+    t.text     "activity3_4"
+    t.text     "activity3_5"
+    t.text     "activity3_6"
+    t.text     "activity4"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "evaluation_credits", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "list_skills_1"
+    t.string   "rating_1"
+    t.text     "list_skills_2"
+    t.string   "selected_skill"
+    t.string   "rating_2"
+    t.text     "support"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "evaluations", force: :cascade do |t|
+    t.date     "completion_date"
+    t.string   "license"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "overall"
+    t.string   "develop"
+    t.text     "develop_comments"
+    t.string   "use"
+    t.text     "use_comments"
+    t.string   "feedback"
+    t.text     "feedback_comments"
+    t.string   "teaching"
+    t.text     "teaching_comments"
+    t.text     "topics"
+    t.string   "advanced"
+    t.text     "advance_topics"
+    t.text     "add_comments"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.text     "overall_comments"
+    t.integer  "user_id"
+  end
+
+  create_table "planning_case1s", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "experiences"
+    t.text     "orientation"
+    t.text     "appropriate"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "planning_credits", force: :cascade do |t|
+    t.integer  "user_id"
+    t.boolean  "acute"
+    t.boolean  "IP"
+    t.boolean  "private"
+    t.boolean  "corporate"
+    t.boolean  "nonprofit"
+    t.boolean  "pediatric"
+    t.boolean  "school"
+    t.boolean  "SNU"
+    t.boolean  "SNF"
+    t.boolean  "LTC"
+    t.text     "other"
+    t.text     "list"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -71,6 +170,22 @@ ActiveRecord::Schema.define(version: 20151003175053) do
     t.string   "optionD"
     t.string   "optionE"
     t.string   "correct"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "student_evaluation_case2s", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "rate"
+    t.text     "plan"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teaching_activities", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "activity1"
+    t.text     "activity2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

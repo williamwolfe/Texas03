@@ -2,7 +2,7 @@
 
 <h1>Listing Questions</h1>
 
-<table>
+<table class="table-striped">
   <thead>
     <tr>
       <th>Number</th>
@@ -28,9 +28,9 @@
         <td><%= question.optionD %></td>
         <td><%= question.optionE %></td>
         <td><%= question.correct %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', question, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_question_path(question), class: 'btn btn-info btn-xs' %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,7 @@
 
 <br>
 
-<%= link_to 'New Question', new_question_path %>
+
+<%= link_to new_question_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> New Question
+<% end %>

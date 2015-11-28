@@ -1,8 +1,10 @@
 
 <p id="notice"><%= notice %></p>
 
+
+
 <h1>
-  <strong>Title:</strong>
+  <strong>Course Title:</strong>
   <%= @product.title %>
 </h1>
 
@@ -18,5 +20,33 @@
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
-
+<br>
 <%= link_to 'Add to Cart', new_cart_item_path(product_id:@product.id) %>
+ 
+
+<% if !@prior_purchase.empty? %>
+<h2>You have already purchased this item:</h2>
+<table class="table-striped">
+  <thead>
+    <tr>
+    	<th>cart_id</th>
+    	<th>product_id</th>
+    	<th>user_id</th>
+    	<th>purchased_at</th>
+    	<th>status</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prior_purchase.each do |x| %>
+      <tr>
+        <td><%= x.id %></td>
+        <td><%= x.product_id %></td>
+        <td><%= x.user_id%></td>
+        <td><%= x.purchased_at%></td>
+        <td><%= x.status%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%end%>

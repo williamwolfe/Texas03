@@ -1,0 +1,37 @@
+ <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <!--<a class="navbar-brand" href="#">Texas03</a>-->
+    </div>
+    
+       <div class="collapse navbar-collapse" id="myNavbar">
+    	<div class="nav nav-pills pull-right">
+    	 	<li><%= link_to "Home", pages_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#d3d3d3;'} %></li> 
+    	 	<li><%= link_to "Products", products_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>   	 	
+        	<% if (user_signed_in?) %>
+        		<li><%= link_to "CartItems", cart_items_path, {class:'glyphicon glyphicon-shopping-cart', :style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Questions", questions_path%></li>	
+				<li><%= link_to "Attempts", attempts_path%></li>	
+				<li><%= link_to "Quiz", quiz_display_path, {class:'glyphicon glyphicon-list-alt', :style=>'color:#d3d3d3;'} %></li>
+     			<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', method:'delete'} %></li>
+        	<% else %>
+        		<li><%= link_to " Login", new_user_session_path, {class:'glyphicon glyphicon-log-in', :style=>'color:#d3d3d3;'}%></li>	
+     			<li><%= link_to " SignUp", new_user_registration_path, {class:'glyphicon glyphicon-user',:style=>'color:#d3d3d3;'}  %></li>   			
+        	<% end %>
+        	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>       	
+      </div>
+    
+    </div>   
+  </div>
+</nav>

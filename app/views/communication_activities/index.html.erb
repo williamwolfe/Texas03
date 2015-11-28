@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Communication Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Mono</th>
+      <th>Slow</th>
+      <th>High voice</th>
+      <th>Ascending</th>
+      <th>Terse</th>
+      <th>Abrupt speed</th>
+      <th>High pitch</th>
+      <th>Aloof</th>
+      <th>Abrupt</th>
+      <th>Shy</th>
+      <th>Aggressive</th>
+      <th>Helpful</th>
+      <th>Unprepared</th>
+      <th>Bored</th>
+      <th>Content</th>
+      <th>Unhappy</th>
+      <th>Careless</th>
+      <th>Passive</th>
+      <th>Caring</th>
+      <th>Imaginative</th>
+      <th>Eager</th>
+      <th>Activity3 1</th>
+      <th>Activity3 2</th>
+      <th>Activity3 3</th>
+      <th>Activity3 4</th>
+      <th>Activity3 5</th>
+      <th>Activity3 6</th>
+      <th>Activity4</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @communication_activities.each do |communication_activity| %>
+      <tr>
+        <td><%= communication_activity.user_id %></td>
+        <td><%= communication_activity.mono %></td>
+        <td><%= communication_activity.slow %></td>
+        <td><%= communication_activity.high_voice %></td>
+        <td><%= communication_activity.ascending %></td>
+        <td><%= communication_activity.terse %></td>
+        <td><%= communication_activity.abrupt_speed %></td>
+        <td><%= communication_activity.high_pitch %></td>
+        <td><%= communication_activity.aloof %></td>
+        <td><%= communication_activity.abrupt %></td>
+        <td><%= communication_activity.shy %></td>
+        <td><%= communication_activity.aggressive %></td>
+        <td><%= communication_activity.helpful %></td>
+        <td><%= communication_activity.unprepared %></td>
+        <td><%= communication_activity.bored %></td>
+        <td><%= communication_activity.content %></td>
+        <td><%= communication_activity.unhappy %></td>
+        <td><%= communication_activity.careless %></td>
+        <td><%= communication_activity.passive %></td>
+        <td><%= communication_activity.caring %></td>
+        <td><%= communication_activity.imaginative %></td>
+        <td><%= communication_activity.eager %></td>
+        <td><%= communication_activity.activity3_1 %></td>
+        <td><%= communication_activity.activity3_2 %></td>
+        <td><%= communication_activity.activity3_3 %></td>
+        <td><%= communication_activity.activity3_4 %></td>
+        <td><%= communication_activity.activity3_5 %></td>
+        <td><%= communication_activity.activity3_6 %></td>
+        <td><%= communication_activity.activity4 %></td>
+        <td><%= link_to 'Show', communication_activity %></td>
+        <td><%= link_to 'Edit', edit_communication_activity_path(communication_activity) %></td>
+        <td><%= link_to 'Destroy', communication_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Communication activity', new_communication_activity_path %>
