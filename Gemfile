@@ -10,6 +10,9 @@ gem 'pg'
 # devise gem
 gem 'devise'
 
+gem 'rails_12factor', group: :production
+
+
 #from gotealeaf bootstrap tutorial:
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
