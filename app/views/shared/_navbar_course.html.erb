@@ -1,0 +1,31 @@
+
+
+<!--<nav class="navbar navbar-inverse" role="navigation">-->
+<!--<div class="container-fluid">-->
+		 
+		 
+<nav class="navbar navbar-inverse navbar-static-top">
+		 <div class="container">  		 
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span> 
+			  </button>   
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			 
+			  <ul class="nav navbar-nav">
+				<li><%= link_to "CourseHome", course_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#d3d3d3;'} %></li> 
+				<li><%= link_to "Planning", planning_pages_planning_home_path, { :style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Student Evaluation", student_evaluation_home_path, {:style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Communication", communication_pages_home_path, { :style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Teaching and Learning", teaching_pages_home_path, { :style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Quiz", quiz_display_path, {:style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Course Evaluation", new_evaluation_path, {:style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "TxConsortiumHome", pages_home_path, {:style=>'color:#d3d3d3;'} %></li>
+        	  
+			  </ul>
+			</div>
+		  </div>
+</nav>   

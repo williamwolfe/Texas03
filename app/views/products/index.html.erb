@@ -1,3 +1,38 @@
+
+<% if !@prior_purchases.empty? %>
+<h2>Recent Purchases:</h2>
+<table class="table-striped">
+  <thead>
+    <tr>
+    	<th>cart_id</th>
+    	<th>product_id</th>
+    	<th>user_id</th>
+    	<th>purchased_at</th>
+    	<th>status</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prior_purchases.each do |x| %>
+      <tr>
+        <td><%= x.id %></td>
+        <td><%= x.product_id %></td>
+        <td><%= x.user_id%></td>
+        <td><%= x.purchased_at%></td>
+        <td><%= x.status%></td>
+      </tr>
+      <% if x.product_id == 2 %>
+      
+      	<tr> <td colspan= 5><%= link_to "Start Clinical Instructor Certification Course", course_home_path, {class: 'btn btn-success'}%>
+      	</td>
+      	</tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+<br>
+
 <h1>Available Courses</h1>
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><%= link_to 'Products', products_path %></li>
@@ -16,14 +51,12 @@
   		<li class="list-group-item"><%=product.description%></li>
   		<li class="list-group-item">$<%= product.price %>.00</li>
   		<!--<li class="list-group-item"><%= link_to 'Show', product, class: 'btn btn-primary btn-xs' %></li>-->
-  		<li class="list-group-item"><%= link_to 'Show', {controller:"cart_items", action:"new", product_id:product.id}, class: 'btn btn-primary btn-xs' %></li>
+  		<li class="list-group-item"><%= link_to 'Show', {controller:"cart_items", action:"new", product_id:product.id}, class: 'btn btn-success' %></li>
 	</ul>
   </div>
 </div>
     
 <% end %>
-
-
 
 
 <br>
@@ -56,36 +89,7 @@
   <i class="glyphicon glyphicon-plus"></i> New Product
 <% end %>
 
-<br>
-<% if !@prior_purchases.empty? %>
-<h2>Recent Cart Items</h2>
-<table class="table-striped">
-  <thead>
-    <tr>
-    	<th>cart_id</th>
-    	<th>product_id</th>
-    	<th>user_id</th>
-    	<th>purchased_at</th>
-    	<th>status</th>      
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @prior_purchases.each do |x| %>
-      <tr>
-        <td><%= x.id %></td>
-        <td><%= x.product_id %></td>
-        <td><%= x.user_id%></td>
-        <td><%= x.purchased_at%></td>
-        <td><%= x.status%></td>
-      </tr>
-      <% if x.product_id == 2 %>
-      	<%= link_to "Start Clinical Instructor Certification Course", course_home_path%>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<% end %>
 
 
 
