@@ -16,25 +16,31 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 			 
 			  <ul class="nav navbar-nav">
-			  	<li><%= link_to "PlanningHome", planning_pages_planning_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#d3d3d3;'} %></li> 
+			  	
+			    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"}>Home<span class="caret"></span></a>
+          			<ul class="dropdown-menu">
+            			<li><%= link_to "Planning Module Home", planning_pages_planning_home_path %></li>
+						<li><%= link_to "Course Home", course_home_path %></li>
+						<li><%= link_to "Texas Consortium Home", pages_home_path %></li>
+						
+          			</ul>
+        		</li> 
+			    
 			    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PlanningSections<span class="caret"></span></a>
           			<ul class="dropdown-menu">
             			
-						<li><%= link_to "TXConsortium", planning_pages_tx_consortium_path%></li>
+						<li><%= link_to "Texas Consortium", planning_pages_tx_consortium_path%></li>
 						<li><%= link_to "Philosophy", planning_pages_philosophy_path%></li>
 						<li><%= link_to "APTA", planning_pages_apta_link_path%></li>
-						<li><%= link_to "SiteDev", planning_pages_site_development_path%></li>
+						<li><%= link_to "Site Development", planning_pages_site_development_path%></li>
 						<li><%= link_to "Scheduling", planning_pages_scheduling_path%></li>
-						<li><%= link_to "ClinicalEd", planning_pages_clinical_education_path%></li>
-						<li><%= link_to "Learning", planning_pages_learning_experiences_path%></li>
-						<li><%= link_to "Legal", planning_pages_legal_issues_path%></li>
+						<li><%= link_to "Clinical Education", planning_pages_clinical_education_path%></li>
+						<li><%= link_to "Learning Experiences", planning_pages_learning_experiences_path%></li>
+						<li><%= link_to "Legal Issues", planning_pages_legal_issues_path%></li>
           			</ul>
         		</li> 
 				<li><%= link_to "CaseStudy_1", new_planning_case1_path, {:style=>'color:#d3d3d3;'} %></li>
 				<li><%= link_to "To_Receive_Credit", new_planning_credit_path, {:style=>'color:#d3d3d3;'} %></li>
-				
-				<li><%= link_to "CourseHome", course_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#d3d3d3;'} %></li> 
-        	    <li><%= link_to "TxConsortiumHome", pages_home_path, {class:'glyphicon glyphicon-home',:style=>'color:#d3d3d3;'} %></li>
 			  </ul>
 			</div>
 		  </div>
