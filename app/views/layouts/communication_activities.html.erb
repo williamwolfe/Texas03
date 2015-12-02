@@ -8,59 +8,13 @@
 </head>
 <body>
  
-
+<%= render 'shared/navbar_communication' %>
 <div class="inner">
  	<%=yield%>
- 	<div class="container-narrow">
-    	<div class="col-lg-6">
-      	  <div class="box">     	
-          	<h4><%= link_to "CommunicatsionHome", communication_pages_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#ff1e1e;'} %></h4>         
-          </div>
-		  <br>
-          <div class="box">
-          	<h4><%= link_to "Communication", communication_pages_communication_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-          <br>
-          <div class="box">
-          	<h4><%= link_to "ThreeMajorIssues", communication_pages_three_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-		  <br>
-		  <div class="box">
-          	<h4><%= link_to "VerbalFactors", communication_pages_verbal_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-		  <br>
-		</div>
-    	<div class="col-lg-6">
-          <div class="box">
-          <h4><%= link_to "Non-VerbalFactors", communication_pages_nonverbal_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-		  <br>
-          <div class="box">
-          <h4><%= link_to "FeedbackvCommunication", communication_pages_feedback_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-          <br>
-          <div class="box">
-          <h4><%= link_to "Activities", new_communication_activity_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-		  <br>
-		  <div class="box">
-          <h4><%= link_to "xxxxx", '#', {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></h4>
-          </div>
-		  <br>		  
-    	</div>
-    
-  
-   
-   		<div class="footer">
-        	<p>&copy; Company 2013</p>
-      	</div>
+ 	<div class="footer">
+    	<p>&copy; Company 2015</p>
+	</div>	
+</div>
 
-    </div> <!-- /container -->
-
-   
-  </body>
-
-
-
+</body>
 </html>
-

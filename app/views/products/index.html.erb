@@ -23,7 +23,7 @@
       </tr>
       <% if x.product_id == 2 %>
       
-      	<tr> <td colspan= 5><%= link_to "Start Clinical Instructor Certification Course", course_home_path, {class: 'btn btn-success'}%>
+      	<tr> <td colspan= 5><%= link_to "Start Clinical Instructor Certification Course", course_home_path, {class: 'btn btn-info btn-lg'}%>
       	</td>
       	</tr>
       <% end %>
@@ -51,7 +51,7 @@
   		<li class="list-group-item"><%=product.description%></li>
   		<li class="list-group-item">$<%= product.price %>.00</li>
   		<!--<li class="list-group-item"><%= link_to 'Show', product, class: 'btn btn-primary btn-xs' %></li>-->
-  		<li class="list-group-item"><%= link_to 'Show', {controller:"cart_items", action:"new", product_id:product.id}, class: 'btn btn-success' %></li>
+  		<li class="list-group-item"><%= link_to 'Add to Cart', {controller:"cart_items", action:"new", product_id:product.id}, class: 'btn btn-info btn-lg' %></li>
 	</ul>
   </div>
 </div>

@@ -1,8 +1,6 @@
-<h1><%= @product_title %> <small>(Product ID: <%= @product_id %>)<small></h1>
-
 <p>
-  <strong>Product Description:</strong>
-  <%= @product_description %>
+  <strong>Product Title:</strong>
+  <%= @product_title %>
 </p>
 
 <p>
@@ -10,6 +8,10 @@
   $<%= @product_price %>.00
 </p>
 
+<p>
+  <strong>Description:</strong>
+  <%= @product_description %>
+</p>
 
 <%= render 'form' %>
 

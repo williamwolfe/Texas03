@@ -19,28 +19,28 @@
 			  	
 			    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"}>Home<span class="caret"></span></a>
           			<ul class="dropdown-menu">
-            			<li><%= link_to "Planning Module Home", planning_pages_planning_home_path %></li>
+            			<li><%= link_to "Student Evaluation Module Home", student_evaluation_home_path %></li>
 						<li><%= link_to "Course Home", course_home_path %></li>
 						<li><%= link_to "Texas Consortium Home", pages_home_path %></li>
 						
           			</ul>
         		</li> 
 			    
-			    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">PlanningSections<span class="caret"></span></a>
+			    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">StudentEvaluationSections<span class="caret"></span></a>
           			<ul class="dropdown-menu">
             			
-						<li><%= link_to "Texas Consortium", planning_pages_tx_consortium_path%></li>
-						<li><%= link_to "Philosophy", planning_pages_philosophy_path%></li>
-						<li><%= link_to "APTA", planning_pages_apta_link_path%></li>
-						<li><%= link_to "Site Development", planning_pages_site_development_path%></li>
-						<li><%= link_to "Scheduling", planning_pages_scheduling_path%></li>
-						<li><%= link_to "Clinical Education", planning_pages_clinical_education_path%></li>
-						<li><%= link_to "Learning Experiences", planning_pages_learning_experiences_path%></li>
-						<li><%= link_to "Legal Issues", planning_pages_legal_issues_path%></li>
+						<li><%= link_to "Clinical Performance", student_evaluation_performance_path%>
+						<li><%= link_to "Evaluation Tool", student_evaluation_tool_path%></li>
+						<li><%= link_to "Suggested Structure", student_evaluation_structure_path%></li>
+						<li><%= link_to "PT MACS", student_evaluation_ptmacs_path%></li>
+						<li><%= link_to "Learning", student_evaluation_learning_path%></li>
+						<li><%= link_to "Tool Use", student_evaluation_use_path%></li>
+						
+						
           			</ul>
         		</li> 
-				<li><%= link_to "CaseStudy1", new_planning_case1_path, {:style=>'color:#d3d3d3;'} %></li>
-				<li><%= link_to "To Receive Credit", new_planning_credit_path, {:style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "CaseStudy2", new_student_evaluation_case2_path, {:style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "To Receive Credit", new_evaluation_credit_path, {:style=>'color:#d3d3d3;'} %></li>
 				<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', method:'delete'} %></li>
 			  </ul>
 			</div>
