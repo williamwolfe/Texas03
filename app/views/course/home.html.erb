@@ -1,7 +1,26 @@
 <h3>Clinical Instructor Certification Course - Part I</h3>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <!--<a href="#" class="nav-link active">Active</a>-->
+    <%=link_to "Planning a CE Program", planning_pages_planning_home_path%>
+  </li>
+  <li class="nav-item">
+    <!--<a href="#" class="nav-link">Link</a>-->
+    <%=link_to "Student Evaluation", student_evaluation_home_path%>
+  </li>
+  <li class="nav-item">
+    <!--<a href="#" class="nav-link">Another link</a>-->
+     <%=link_to "Communication", communication_pages_home_path%>
+  </li>
+  <!--<li class="nav-item disabled">-->
+    <!--<a href="#" class="nav-link">Disabled</a>-->
+    <li class="nav-item">
+    <%=link_to "Teaching and Learning", teaching_pages_home_path%>
+  </li>
+</ul>
  
- 
- <div class="panel panel-info">
+<div class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">Welcome</h3>
   </div>
@@ -87,4 +106,18 @@
    </ul>
   </div>
 </div>
+
+<nav>
+  <ul class="pager">  	
+	
+    
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<%=link_to "Module 1: Planning", planning_pages_planning_home_path%>
+  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</button>
+	</li>
+   
+  </ul>
+</nav>
 

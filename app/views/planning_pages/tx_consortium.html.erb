@@ -1,10 +1,36 @@
 <h3>Texas Consortium</h3>
+ 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Physical Therapy Programs in Texas</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">In Texas, most of the physical therapist programs belong to the Texas Consortium for Physical Therapy Clinical Education, Inc.</li>
+  	 <li class="list-group-item">The Consortium was formed in 1977 following a grant award to develop a clinical education evaluation tool. </li>
+  	 
+  	 <li class="list-group-item">This was the birth of the original The Blue MACS (Mastery and Assessment of Clinical Skills). </li>
+   </ul>
+  </div>
+</div>
 
-<p>
 
-In Texas, most of the physical therapist programs belong to the Texas Consortium for Physical Therapy Clinical Education, Inc. The Consortium was formed in 1977 following a grant award to develop a clinical education evaluation tool. This was the birth of the original The Blue MACS (Mastery and Assessment of Clinical Skills).
- </p>
 
-<p><%=link_to "Home", pages_home_path%>	</p>
-<p><%=link_to "PlanningHome", planning_pages_planning_home_path%></p>
-<p><%=link_to "Next", planning_pages_philosophy_path%>
+<nav>
+  <ul class="pager">  	
+	
+    
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<%=link_to "Next", planning_pages_philosophy_path%>
+  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</button>
+	</li>
+
+	<br>
+
+   	<li><%=link_to "Course Home", course_home_path%></li>
+   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+   
+  </ul>
+</nav>

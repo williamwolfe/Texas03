@@ -1,21 +1,55 @@
 <h3>Scheduling Students</h3>
+ 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Voluntary Uniform Mailing Date</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  		<li class="list-group-item">The PT program sends a request for the dates of their clinical experiences to be offered in the following year. Most PT programs, including the programs in the Consortium, comply with a Voluntary Uniform Mailing Date. Early March is the designated mailing date.</li>
+  	 	<li class="list-group-item">The site will provide the requested information to the PT program regarding types of clinical experiences and dates for which they can accommodate students.</li> 	 
+  	 	<li class="list-group-item">The ACCE/DCE sends the packet of information regarding the student to the CCCE.</li>
+   </ul>
+  </div>
+</div>
 
-<p>
-The PT program sends a request for the dates of their clinical experiences to be offered in the following year. Most PT programs, including the programs in the Consortium, comply with a Voluntary Uniform Mailing Date. Early March is the designated mailing date.
-
-The site will provide the requested information to the PT program regarding types of clinical experiences and dates for which they can accommodate students.
-
-The ACCE/DCE sends the packet of information regarding the student to the CCCE.
-
-The CCCE in turn, is responsible for scheduling students on-site:
-
-Students can be placed with one CI.
-
-Two part-time CIs
-
-Two or more students can be placed with one CI.
-
-Current research provides positive evidence for collaborative learning outcomes.
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Scheduling Students On-Site</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  		
+  	 	<li class="list-group-item">The CCCE in turn, is responsible for scheduling students on-site.</li>
+  	 	<li class="list-group-item">Students can be placed with one CI.</li>
+  	 	<li class="list-group-item">Two part-time CIs</li>
+  	 	<li class="list-group-item">Two or more students can be placed with one CI.</li>
+  	 	<li class="list-group-item">Current research provides positive evidence for collaborative learning outcomes.</li>
+   </ul>
+  </div>
+</div>
 
 
+<nav>
+  <ul class="pager">  	
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  			<%=link_to "Previous", planning_pages_site_development_path%>
+		</button>
+	</li>
+    
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<%=link_to "Next", planning_pages_clinical_education_path%>
+  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</button>
+	</li>
+
+	<br>
+
+   	<li><%=link_to "Course Home", course_home_path%></li>
+   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+   
+  </ul>
+</nav>

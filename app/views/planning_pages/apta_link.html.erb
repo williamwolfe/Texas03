@@ -1,10 +1,41 @@
-<h3>APTA CCCE and CI Guidelines</h3>
-<p>(Find me in app/views/planning_pages/apta_link.html.erb)</p>
 
 
-<p>
-LINK for APTA Members (http://www.apta.org/Educators/Clinical/) 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">APTA CCCE and CI Guidelines</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item"> <button type="button" class="btn btn-secondary"><%=link_to "Link", "http://www.apta.org/Educators/Clinical/" %></button></li>
+  
+   </ul>
+  </div>
+</div>
 
-<%=link_to "APTA Members",  "http://www.apta.org/Educators/Clinical/" %>
 
-</p>
+
+<nav>
+  <ul class="pager">
+
+   	
+<li>
+<button type="button" class="btn btn-default" aria-label="Left Align">
+  <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  <%=link_to "Previous", planning_pages_philosophy_path%>
+</button>
+</li>
+    
+<li>
+<button type="button" class="btn btn-default" aria-label="Left Align">
+  <%=link_to "Next", planning_pages_site_development_path %>
+  <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+</button>
+</li>
+
+<br>
+
+   	<li><%=link_to "Course Home", course_home_path%></li>
+   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+   
+  </ul>
+</nav>

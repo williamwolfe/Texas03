@@ -1,9 +1,62 @@
 <h3>Philosophy</h3>
 
-<p>
-The Consortium’s philosophy for PT clinical education centers around the clinical education experiences. These experiences are designed to develop clinical decision-making skills in the student PT. At the culmination of these experiences, the newly graduated PT should acquire all of the professional and patient care management skills to demonstrate safe and effective entry level skills in professional practice.
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Clinical Education Experiences</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">The Consortium’s philosophy for PT clinical education centers around clinical education experiences. </li>
+   </ul>
+  </div>
+</div>
 
-<p><%=link_to "Home", pages_home_path%>	</p>
-<p><%=link_to "PlanningHome", planning_pages_planning_home_path%></p>
-<p><%=link_to "Next", planning_pages_players_path%>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Clinical Decision Making Skills</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">These experiences are designed to develop clinical decision-making skills in the student PT.</li>
+   </ul>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Outcomes</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">At the culmination of these experiences, the newly graduated PT should acquire all of the professional and patient care management skills to demonstrate safe and effective entry level skills in professional practice.</li>
+   </ul>
+  </div>
+</div>
+
+
+
+
+<nav>
+  <ul class="pager">  	
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  			<%=link_to "Previous", planning_pages_tx_consortium_path%>
+		</button>
+	</li>
+    
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<%=link_to "Next", planning_pages_apta_link_path%>
+  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</button>
+	</li>
+
+	<br>
+
+   	<li><%=link_to "Course Home", course_home_path%></li>
+   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+   
+  </ul>
+</nav>
+

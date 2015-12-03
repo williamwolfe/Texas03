@@ -1,23 +1,77 @@
 <h3>Site Development</h3>
+ 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Steps in the Process</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">When a clinical site’s PT department agrees to provide clinical instruction, there are several aspects that go into the process and planning stages. </li>
+  	 <li class="list-group-item">The first step is for the CCCE to complete the APTA Clinical Site Information Form (CSIF).</li>
+  	 
+  	 <li class="list-group-item">This form can be sent electronically or by hard copy to the ACCE/DCE for review. You can save this electronic version and send it to any PT or PTA program that requires it-it is a national CSIF form.</li>
+   </ul>
+  </div>
+</div>
 
-<p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Repository for CSIF Forms </h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">The APTA has created a repository for CSIF forms (http://www.apta.org/CSIF/) and you can upload them directly to that data bank.</li>
+  	 <li class="list-group-item">HOWEVER-PT programs must PAY to access these CSIF forms-they are not made available to the schools without a yearly fee. At this time, the PT Programs in Texas do not subscribe to this process. So please note that if you upload this form to the APTA website, Texas PT programs will not be able to access it. </li>
 
-When a clinical site’s PT department agrees to provide clinical instruction, there are several aspects that go into the process and planning stages. The first step is for the CCCE to complete the APTA Clinical Site Information Form (CSIF).
+   </ul>
+  </div>
+</div>
 
-This form can be sent electronically or by hard copy to the ACCE/DCE for review. You can save this electronic version and send it to any PT or PTA program that requires it-it is a national CSIF form.
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Site Visit</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">Based on the information from the CSIF, the ACCE/DCE decides if the site meets the needs of the academic institution. A personal site visit is then warranted by the ACCE/DCE. </li>
+   </ul>
+  </div>
+</div>
 
-The APTA has created a repository for CSIF forms (http://www.apta.org/CSIF/) and you can upload them directly to that data bank. HOWEVER-PT programs must PAY to access these CSIF forms-they are not made available to the schools without a yearly fee. At this time, the PT Programs in Texas do not subscribe to this process. So please note that if you upload this form to the APTA website, Texas PT programs will not be able to access it. 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Contract</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  	<li class="list-group-item">After both parties are in agreement, a contract must be negotiated between the academic institution and the site. </li>
+  	<li class="list-group-item">Typically, academic institutions have their own contractual agreements. However, if the site requires a corporate contract, both legal departments will review the contract to ensure that all requirements for each party are met.</li>
+  	 	<li class="list-group-item">Once both parties sign the contract, the site should be ready to accept a student.</li>
+   </ul>
+  </div>
+</div>
 
-Based on the information from the CSIF, the ACCE/DCE decides if the site meets the needs of the academic institution. A personal site visit is then warranted by the ACCE/DCE. 
 
-After both parties are in agreement, a contract must be negotiated between the academic institution and the site. 
+<nav>
+  <ul class="pager">  	
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  			<%=link_to "Previous", planning_pages_apta_link_path%>
+		</button>
+	</li>
+    
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<%=link_to "Next", planning_pages_scheduling_path%>
+  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</button>
+	</li>
 
-Typically, academic institutions have their own contractual agreements. However, if the site requires a corporate contract, both legal departments will review the contract to ensure that all requirements for each party are met. 
+	<br>
 
-Once both parties sign the contract, the site should be ready to accept a student.
-</p>
-
-
-<p><%=link_to "Home", pages_home_path%>	</p>
-<p><%=link_to "PlanningHome", planning_pages_planning_home_path%></p>
-<p><%=link_to "Next", planning_pages_scheduling_path%>
+   	<li><%=link_to "Course Home", course_home_path%></li>
+   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+   
+  </ul>
+</nav>

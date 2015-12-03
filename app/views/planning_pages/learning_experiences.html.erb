@@ -1,23 +1,46 @@
 <h3>Learning Experiences</h3>
+ 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Learning Opportunities</h3>
+  </div>
+  <div class="panel-body">
+   <ul class="list-group">
+  		<li class="list-group-item">Learning experiences are not solely related to patient care. There are many opportunities that your site has to offer the student. </li>
+  		<li class="list-group-item">To decide how to determine which learning experiences should be taken advantage of, the CI should use the clinical evaluation tool (e.g. the PT MACS) to assist in selecting optimal learning experiences.
+</li>
+  		<li class="list-group-item">The student should identify his/her strengths and weaknesses.</li>
+  		<li class="list-group-item">The CI and student should discuss the list in the planning process.</li>
+  		<li class="list-group-item">Both determine which skills can be addressed and if there are any special needs.</li>
+  		<li class="list-group-item">Both identify expectations and objectives.</li>
+  		<li class="list-group-item">The CI facilitates learning experiences to help the student meet the objectives.</li>
+  		<li class="list-group-item">Both establish the means of how and where the student will be evaluated on meeting the objectives.</li>
+   </ul>
+  </div>
+</div>
 
-<p>
-Learning experiences are not solely related to patient care. There are many opportunities that your site has to offer the student. 
 
-To decide how to determine which learning experiences should be taken advantage of, the CI should use the clinical evaluation tool (e.g. the PT MACS) to assist in selecting optimal learning experiences.
+<nav>
+  <ul class="pager">  	
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  			<%=link_to "Previous", planning_pages_clinical_education_path%>
+		</button>
+	</li>
+    
+	<li>
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+  			<%=link_to "Next", planning_pages_legal_issues_path%>
+  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		</button>
+	</li>
 
-The student should identify his/her strengths and weaknesses.
+	<br>
 
-The CI and student should discuss the list in the planning process.
+   	<li><%=link_to "Course Home", course_home_path%></li>
+   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+   
+  </ul>
+</nav>
 
-Both determine which skills can be addressed and if there are any special needs.
-
-Both identify expectations and objectives.
-
-The CI facilitates learning experiences to help the student meet the objectives.
-
-Both establish the means of how and where the student will be evaluated on meeting the objectives.
-</p>
-
-<p><%=link_to "Home", pages_home_path%>	</p>
-<p><%=link_to "PlanningHome", planning_pages_planning_home_path%></p>
-<p><%=link_to "Next", planning_pages_legal_issues_path%>
