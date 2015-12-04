@@ -14,7 +14,13 @@ class PlanningCase1sController < ApplicationController
 
   # GET /planning_case1s/new
   def new
-    @planning_case1 = PlanningCase1.new
+  #Client.find_by first_name: 'Lifo'
+  	if(PlanningCase1.find_by(user_id:current_user.id))
+  		@planning_case1 = PlanningCase1.find_by(user_id:current_user.id)
+  	else 
+    	@planning_case1 = PlanningCase1.new
+    end
+    
   end
 
   # GET /planning_case1s/1/edit

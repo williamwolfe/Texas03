@@ -13,30 +13,56 @@
 
   <div class="field">    
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%='hidden field --> user_id: '%>
-    <%=current_user.id%>
+    <!--<%='hidden field user_id:' %>-->
+    <!--<%=current_user.id%>-->
 </div>
 
+
+<fieldset class="form-group">
+    <label for="experiences">1. How should Sally plan this student’s learning experiences?</label>
+    <!--<input type="text" class="form-control" id="experiences">-->
+    <%= f.text_area :experiences,  class:'form-control', value:@planning_case1.experiences%>
+</fieldset> 
+
+<!-- 
   <div class="field">
-  <p><h4>How should Sally plan this student’s learning experiences?</h4></p>
+  	<p><h4>How should Sally plan this student’s learning experiences?</h4></p>
     <%= f.label :experiences %><br>
     <%= f.text_area :experiences %>
   </div>
-  
+-->
 
+<fieldset class="form-group">
+    <label for="experiences">2. What should Sally’s on-site orientation include on day one?</label>
+    <!--<input type="text" class="form-control" id="orientation">-->
+    <%= f.text_area :orientation,  class:'form-control'%>
+</fieldset>
+  
+  
+<!--  
   <div class="field">
   <p><h4>What should Sally’s on-site orientation include on day one?</h4></p>
     <%= f.label :orientation %><br>
     <%= f.text_area :orientation %>
   </div>
+--> 
   
-  
+<fieldset class="form-group">
+    <label for="experiences">3. How will Sally decide if the learning experiences are appropriate?</label>
+    <!--<input type="text" class="form-control" id="appropriate">-->
+    <%= f.text_area :appropriate,  class:'form-control'%>
+</fieldset>
+
+<!--
   <div class="field">  
   <p><h4> How will Sally decide if the learning experiences are appropriate?</h4></p>
     <%= f.label :appropriate %><br>
     <%= f.text_area :appropriate %>
   </div>
+--> 
+  
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
