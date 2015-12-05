@@ -5,23 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+  <style>
+ body { padding-top: 60px; }
+ </style> 
 </head>
 <body>
 
-
-
- 
-<!--<div class="masthead"> -->
 <div>
 	<%= render 'shared/navbar0' %>
 </div>
 
 <div class="inner">
-
+<% if (controller.action_name == "home") %>
 	<div class="jumbotron"></div>
+<% end %>
+	
 	
 	<div><%=yield%></div>
-  	<div class="footer"><p>&copy; Company 2015</p></div>    
+  	<div class="footer"><p>&copy; Company 2016</p></div>    
 </div>         
   </body>
 </html>

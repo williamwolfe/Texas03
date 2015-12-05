@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
 
+  get 'home_tabs/home'
+
+  get 'home_tabs/incorporation'
+
+  get 'home_tabs/purpose'
+
+  get 'home_tabs/programs'
+
+  get 'home_tabs/calendar'
+
   get 'course/home'
 
   resources :teaching_activities
@@ -112,7 +122,9 @@ get 'planning_pages/planning_home'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   
-  root 'pages#home'
+  #root 'pages#home'
+  
+  root 'home_tabs#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

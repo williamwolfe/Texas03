@@ -21,7 +21,10 @@
 <fieldset class="form-group">
     <label for="experiences">1. How should Sally plan this student’s learning experiences?</label>
     <!--<input type="text" class="form-control" id="experiences">-->
-    <%= f.text_area :experiences,  class:'form-control', value:@planning_case1.experiences%>
+    <br>
+     	<div class="col-xs-6">
+    		<%= f.text_area :experiences,  class:'form-control', value:@planning_case1.experiences%>
+    	</div>
 </fieldset> 
 
 <!-- 
@@ -33,9 +36,12 @@
 -->
 
 <fieldset class="form-group">
-    <label for="experiences">2. What should Sally’s on-site orientation include on day one?</label>
+    <label for="orientation">2. What should Sally’s on-site orientation include on day one?</label>
     <!--<input type="text" class="form-control" id="orientation">-->
-    <%= f.text_area :orientation,  class:'form-control'%>
+     <br>
+     <div class="col-xs-6">
+    	<%= f.text_area :orientation,  class:'form-control'%>
+     </div>
 </fieldset>
   
   
@@ -46,11 +52,18 @@
     <%= f.text_area :orientation %>
   </div>
 --> 
+ 
+
+ 
+ 
   
 <fieldset class="form-group">
-    <label for="experiences">3. How will Sally decide if the learning experiences are appropriate?</label>
+    <label for="appropriate">3. How will Sally decide if the learning experiences are appropriate?</label>
+    <br>
     <!--<input type="text" class="form-control" id="appropriate">-->
-    <%= f.text_area :appropriate,  class:'form-control'%>
+    <div class="col-xs-6">
+    	<%= f.text_area :appropriate,  class:'form-control'%>
+    </div>
 </fieldset>
 
 <!--
@@ -62,7 +75,7 @@
 --> 
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit my answers" %>
   </div>
 <% end %>
 

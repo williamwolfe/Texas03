@@ -1,18 +1,37 @@
-<p>
-  <strong>Product Title:</strong>
-  <%= @product_title %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  $<%= @product_price %>.00
-</p>
+<table class="table">
+	<tr>
+		<td>
+  			<strong>Product Title:</strong>
+  		</td>
+  		<td>
+  			<%= @product_title %>
+  		</td>
+  	</tr>
+  	
+  	
+  	<tr>
+		<td>
+  			<strong>Price:</strong>
+  		</td>
+  		<td>
+  			$<%= @product_price %>.00
+  		</td>
+  	</tr>
+  	
+  	<tr>
+		<td>
+  			<strong>Description:</strong>
+  		</td>
+  		<td>
+  			 <%= @product_description %>
+  		</td>
+  	</tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product_description %>
-</p>
+</table>
 
 <%= render 'form' %>
 
+<!--
 <%= link_to 'Back', cart_items_path %>
+-->

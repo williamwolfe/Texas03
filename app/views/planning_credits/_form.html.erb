@@ -13,59 +13,109 @@
     </div>
   <% end %>
 
-<p>Site type:</p>
+
 <div class="field">    
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%='hidden field --> user_id: '%>
-    <%=current_user.id%>
+    <!--<%='hidden field user_id: '%>-->
+    <!--<%=current_user.id%>-->
 </div>
+
+<h4>Site type: <small>(check all that apply)</small></h4>
+<table class="table-responsive">
+  <tr>  
+  	<td>
+  		<div class="field">
+  			<%= f.check_box :acute %> 
+  			<%= f.label :acute%> &nbsp;  &nbsp;	 		
+  		</div>
+  			
+  	</td>
+  	<td>
+  		<div class="field">
+  			<%= f.check_box :IP %>
+    		<%= f.label :IP %>  &nbsp;  &nbsp;	  		
+  		</div>
+  	</td>
+  	<td>	
+  		<div class="field">
+  			<%= f.check_box :private %>
+    		<%= f.label :private %> &nbsp;  &nbsp;	
+  		</div> 		
+  	</td>
+  	  	<td>	
+  		 <div class="field">
+  		 <%= f.check_box :corporate %>
+    		<%= f.label :corporate %>&nbsp;  &nbsp;
+    		
+  		</div>		
+  	</td>
+  	
+  	  	<td>	
+  			<div class="field">
+  			<%= f.check_box :nonprofit %>
+    			<%= f.label :nonprofit %>&nbsp;  &nbsp;
+    			
+  			</div>		
+  		</td>
+  </tr>
+  <tr>
+<td>
   <div class="field">
-    <%= f.label :acute %><br>
-    <%= f.check_box :acute %>
-  </div>
-  <div class="field">
-    <%= f.label :IP %><br>
-    <%= f.check_box :IP %>
-  </div>
-  <div class="field">
-    <%= f.label :private %><br>
-    <%= f.check_box :private %>
-  </div>
-  <div class="field">
-    <%= f.label :corporate %><br>
-    <%= f.check_box :corporate %>
-  </div>
-  <div class="field">
-    <%= f.label :nonprofit %><br>
-    <%= f.check_box :nonprofit %>
-  </div>
-  <div class="field">
-    <%= f.label :pediatric %><br>
+   
     <%= f.check_box :pediatric %>
+     <%= f.label :pediatric %>&nbsp;  &nbsp;
   </div>
+</td>
+<td>
   <div class="field">
-    <%= f.label :school %><br>
+    
     <%= f.check_box :school %>
+    <%= f.label :school %>&nbsp;  &nbsp;
   </div>
+</td>
+<td>
   <div class="field">
-    <%= f.label :SNU %><br>
+   
     <%= f.check_box :SNU %>
+     <%= f.label :SNU %>&nbsp;  &nbsp;
   </div>
+</td>
+<td>
   <div class="field">
-    <%= f.label :SNF %><br>
+   
     <%= f.check_box :SNF %>
+     <%= f.label :SNF %>&nbsp;  &nbsp;
   </div>
+</td>
+<td>
   <div class="field">
-    <%= f.label :LTC %><br>
+   
     <%= f.check_box :LTC %>
+     <%= f.label :LTC %>&nbsp;  &nbsp;
   </div>
+</td>
+</tr>
+</table>
+ 
+<table class="table-responsive">
+	<tr>
+	 <div class="field">
+		<td valign="top">
+   			 <%= f.label :other %>:&nbsp;<br>
+  		</td>
+  		<td>
+  		 	<%= f.text_area :other %>
+  		</td>
+  	</div>
+  	</tr>
+</table>
+  
+  
+<h4>Compile a list of activities that you would include in a CI/Student orientation checklist. You may not need to complete each row depending on the needs of your setting.</h4>
   <div class="field">
-    <%= f.label :other %><br>
-    <%= f.text_area :other %>
-  </div>
-  <p>Compile a list of activities that you would include in a CI/Student orientation checklist. You may not need to complete each row depending on the needs of your setting.</p>
-  <div class="field">
-    <%= f.label :list %><br>
+
+    <%= f.label :list %>:&nbsp;<br>
+
     <%= f.text_area :list %>
   </div>
   <div class="actions">

@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
-    @prior_purchases = CartItem.where(user_id:current_user.id)
+    @prior_purchases = CartItem.where(user_id:current_user.id,status:"Completed")
   end
 
   # GET /products/1

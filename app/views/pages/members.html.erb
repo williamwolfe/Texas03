@@ -1,153 +1,353 @@
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top',
+        trigger : 'hover'
+    });
+});
+</script>
+<style type="text/css">
+	.bs-example{
+    	margin: 150px 50px;
+    }
+</style>
+
 <div class="page-header">
-  <h2>Consortium Members <small></small></h2>
+  <h2>Consortium Members</h2>
 </div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Hardin Simmons University</h3>
-  </div>
-  <div class="panel-body">
-  <ul class="list-group">
-  		<li class="list-group-item">Mary Lou Garrett, PT, DPT, PCS, DCE</li>
-	</ul>
-    
-  </div>
-</div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Texas State University</h3>
-  </div>
-  <div class="panel-body">
-  	<ul class="list-group">
-  		<li class="list-group-item">Steve Spivey, PT, DPT, DCE</li>
-  		<li class="list-group-item">Shannon Williams, PT, DPT, Asst DCE</li>
-	</ul>
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Texas Tech University Health Sciences Center</h3>
-  </div>
-  <div class="panel-body">
-  	<ul class="list-group">
-  		<li class="list-group-item">Nathan Burgess, PT, MPT, NCS, DCE  </li>
-  		<li class="list-group-item">Joan Potter-Brunet, PT, MS, DPT, Assistant DCE</li>
-	</ul>
+ <button type="button" class="btn btn-link" data-toggle="popover" title="Hardin Simmons University" data-content="Mary Lou Garrett, PT, DPT, PCS, DCE">Hardin Simmons University</button>
+ <br>
+ <br>
+ 
+ <button type="button" class="btn btn-link" data-toggle="popover" title="Texas State University" data-content="Steve Spivey PT DPT DCE, Shannon Williams PT DPT Asst DCE">Texas State University</button>
+ <br>
+ <br>
+ 
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md" data-toggle="modal" data-target="#myModal">Hardin Simmons University</button>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Hardin Simmons University</h4>
+      </div>
+      <div class="modal-body">
+        <p>Mary Lou Garrett, PT, DPT, PCS, DCE</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Texas Woman's University – Dallas</h3>
-  </div>
-  <div class="panel-body">
-  	<ul class="list-group">
-  		<li class="list-group-item">Dale Anderle, PT, DPT, DCE</li>
-  		<li class="list-group-item">Kathleen Luedtke-Hoffmann, PT, MBA, PhD, Assistant DCE</li>
-  		<li class="list-group-item">Dr. Linda Csiza, Asst DCE</li>
-	</ul>
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal2">Texas State University</button>
+<!-- Modal -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Texas State University</h4>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+  			<li class="list-group-item">Steve Spivey, PT, DPT, DCE</li>
+  			<li class="list-group-item">Shannon Williams, PT, DPT, Asst DCE</li>
+		</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Texas Woman's University – Houston</h3>
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal3">Texas Tech University Health Sciences Center</button>
+<!-- Modal -->
+<div id="myModal3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Texas Tech University Health Sciences Center</h4>
+      </div>
+      <div class="modal-body">
+       	<ul class="list-group">
+  			<li class="list-group-item">Nathan Burgess, PT, MPT, NCS, DCE  </li>
+  			<li class="list-group-item">Joan Potter-Brunet, PT, MS, DPT, Assistant DCE</li>
+		</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
-  <div class="panel-body">
-  	<ul class="list-group">
+</div>
+
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal4">Texas Woman's University – Dallas</button>
+<!-- Modal -->
+<div id="myModal4" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Texas Woman's University – Dallas</h4>
+      </div>
+      <div class="modal-body">
+      	<ul class="list-group">
+  			<li class="list-group-item">Dale Anderle, PT, DPT, DCE</li>
+  			<li class="list-group-item">Kathleen Luedtke-Hoffmann, PT, MBA, PhD, Assistant DCE</li>
+  			<li class="list-group-item">Dr. Linda Csiza, Asst DCE</li>
+		</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal5">Texas Woman's University – Houston</button>
+<!-- Modal -->
+<div id="myModal5" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Texas Woman's University – Houston</h4>
+      </div>
+      <div class="modal-body">
+     	<ul class="list-group">
   		<li class="list-group-item">Peggy Gleeson, PT, PhD, DCE</li>
   		<li class="list-group-item">Anne Turner O'Donnell, PT, PhD, Assistant DCE</li>
   		<li class="list-group-item">Victoria Millet Zegarrundo, PT, DPT, Assistant DCE</li>
   		<li class="list-group-item">Lauren Szot, PT, DPT, NCS, Assistant DCE</li>
 	</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
+<br>
+<br>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">The University of North Texas Health Science Center</h3>
-  </div>
-  <div class="panel-body">
-  <ul class="list-group">
-  		<li class="list-group-item">Brandy Brewster Schwarz PT, DPT, OT, MBA, DCE</li>
-	</ul>
-    
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal6">The University of North Texas Health Science Center</button>
+<!-- Modal -->
+<div id="myModal6" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">The University of North Texas Health Science Center</h4>
+      </div>
+      <div class="modal-body">
+     	 <ul class="list-group">
+  			<li class="list-group-item">Brandy Brewster Schwarz PT, DPT, OT, MBA, DCE</li>
+		</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
+<br>
+<br>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">The University of Texas at El Paso</h3>
-  </div>
-  <div class="panel-body">
-  <ul class="list-group">
-  		<li class="list-group-item">Loretta Dillon, PT, DPT, MS, DCE</li>
-	</ul>
-    
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal7">The University of Texas at El Paso</button>
+<!-- Modal -->
+<div id="myModal7" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">The University of Texas at El Paso</h4>
+      </div>
+      <div class="modal-body">
+     	<ul class="list-group">
+  			<li class="list-group-item">Loretta Dillon, PT, DPT, MS, DCE</li>
+		</ul>    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
+<br>
+<br>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">University of Texas Health Science Center at San Antonio</h3>
-  </div>
-  <div class="panel-body">
-  <ul class="list-group">
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal8">University of Texas Health Science Center at San Antonio</button>
+<!-- Modal -->
+<div id="myModal8" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">University of Texas Health Science Center at San Antonio</h4>
+      </div>
+      <div class="modal-body">
+      <ul class="list-group">
   		<li class="list-group-item">Mike Geelhoed, PT, DPT, OCS, MTC</li>
-	</ul>
-    
+	</ul>    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">University of Texas Medical Branch</h3>
-  </div>
-  <div class="panel-body">
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal9">University of Texas Medical Branch</button>
+<!-- Modal -->
+<div id="myModal9" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">University of Texas Medical Branch</h4>
+      </div>
+      <div class="modal-body">
   	<ul class="list-group">
   		<li class="list-group-item">Rebecca Galloway, PT, PhD, GCS, DCE</li>
   		<li class="list-group-item">Laurie Farroni, PT, DPT, Assistant DCE</li>
 	</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">University of Texas Southwestern Medical Center</h3>
-  </div>
-  <div class="panel-body">
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal10">University of Texas Southwestern Medical Center</button>
+<!-- Modal -->
+<div id="myModal10" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">University of Texas Southwestern Medical Center</h4>
+      </div>
+      <div class="modal-body">
   	<ul class="list-group">
   		<li class="list-group-item">Julie DeVahl, PT, MS, OCS, DCE</li>
   		<li class="list-group-item">Tara Widgins Dickson, PT, DPT, CSCS</li>
 	</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">University of the Incarnate Word</h3>
-  </div>
-  <div class="panel-body">
-  	<ul class="list-group">
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal11">University of the Incarnate Word</button>
+<!-- Modal -->
+<div id="myModal11" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">University of the Incarnate Word</h4>
+      </div>
+      <div class="modal-body">
+    	<ul class="list-group">
   		<li class="list-group-item">Chad Jackson, PT, DPT, OCS</li>
 	</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">University of St. Augustine-Texas</h3>
-  </div>
-  <div class="panel-body">
+<br>
+<br>
+
+<!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-link btn-md"  data-toggle="modal" data-target="#myModal12">University of St. Augustine-Texas</button>
+<!-- Modal -->
+<div id="myModal12" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">University of St. Augustine-Texas</h4>
+      </div>
+      <div class="modal-body">
   	<ul class="list-group">
   		<li class="list-group-item">Dr. Kathleen Manella, DCE</li>
   		<li class="list-group-item">Dr. Martha Sneary, DCE</li>
 	</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
+
+
+<div class="bs-example">
+    <button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="Default popover">Popover</button>
+    <button type="button" class="btn btn-success" data-toggle="popover" title="Popover title" data-content="Another popover">Another popover</button>
+    <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="A larger popover to demonstrate the max-width of the Bootstrap popover.">Large popover</button>
+    <button type="button" class="btn btn-warning" data-toggle="popover" title="Popover title" data-content="The last popover!">Last popover</button>
+</div>
+

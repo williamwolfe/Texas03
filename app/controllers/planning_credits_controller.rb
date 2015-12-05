@@ -14,7 +14,14 @@ class PlanningCreditsController < ApplicationController
 
   # GET /planning_credits/new
   def new
-    @planning_credit = PlanningCredit.new
+  
+  	if(PlanningCredit.find_by(user_id:current_user.id))
+  		@planning_credit = PlanningCredit.find_by(user_id:current_user.id)
+  	else 
+    	 @planning_credit = PlanningCredit.new
+    end
+  
+   
   end
 
   # GET /planning_credits/1/edit
