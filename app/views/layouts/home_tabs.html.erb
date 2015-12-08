@@ -5,6 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+ <style> 
+	.panel > .panel-heading {
+    	background-image: none;
+   	 	background-color: white;
+    	color: black;
+
+	}
+</style>
 </head>
 <body>
 
@@ -58,11 +66,9 @@ end
   <li role="presentation" class="<%=@activeHome%>"><%=link_to "Welcome", home_tabs_home_path, {:style => 'color: #000000'} %></li>
   <li role="presentation" class="<%=@activeIncorporation%>"><%=link_to "Incorporation", home_tabs_incorporation_path, {:style => 'color: #000000'}%></li>
   <li role="presentation" class="<%=@activePurpose%>"><%=link_to "Purpose",  home_tabs_purpose_path, {:style => 'color: #000000'}%></li>
-  <li role="presentation" class="<%=@activeProgams%>"><%=link_to "Programs",  home_tabs_programs_path, {:style => 'color: #000000'}%></li>
+  <li role="presentation" class="<%=@activePrograms%>"><%=link_to "Programs",  home_tabs_programs_path, {:style => 'color: #000000'}%></li>
   <li role="presentation" class="<%=@activeCalendar%>"><%=link_to "Calendar",  home_tabs_calendar_path, {:style => 'color: #000000'}%></li>
-
 </ul>
-
 		
 	<div><%=yield%></div>
   	<div class="footer"><p>&copy; Company 2015</p></div>    
