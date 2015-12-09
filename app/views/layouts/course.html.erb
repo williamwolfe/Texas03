@@ -5,20 +5,26 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+<style>
+ body { padding-top: 60px; }
+ 
+ 	div.content {
+    /*border: 1px solid black;*/
+    background-color: light blue;
+    padding: 10px 20px 10px 20px;
+	}
+</style>
 </head>
 <body>
 
+<div>
 <%= render 'shared/navbar_course' %>
+</div>
 
 <div class="inner">
 <div class="jumbotron1"></div>
-<!--<%=image_tag("chad1.jpg") %>-->
-<!--<%=image_tag("spotlight.jpg", height: '32', width: '32') %>-->
-
-
-<!--<%=image_tag("spotlight.jpg") %>-->
-<!--<%=image_tag("Educational.jpg") %>-->
-<!--<%=image_tag("pic12.jpg") %>-->
+<div class = "content">
  	<%=yield%>
 </div>
 

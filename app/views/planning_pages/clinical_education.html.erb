@@ -1,3 +1,30 @@
+<ol class="breadcrumb">
+  <li><%=link_to "Course Home", course_home_path%></li>
+  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+</ol>
+  	<nav>
+  		<ul class="pagination">
+    		<li>
+    			<%= link_to planning_pages_scheduling_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+    		<li><a href="#">1</a></li>
+    		<li><a href="#">2</a></li>
+    		<li><a href="#">3</a></li>
+    		<li><a href="#">4</a></li>
+    		<li><a href="#">5</a></li>
+    		<li class="active"><a href="#">6</a></li>
+    		<li><a href="#">7</a></li>
+    		<li><a href="#">8</a></li>
+    		<li>
+
+				<%= link_to planning_pages_learning_experiences_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+	</nav>
 <h3>Clinical Education</h3>
  
 <div class="panel panel-info">

@@ -1,4 +1,33 @@
+<ol class="breadcrumb">
+  <li><%=link_to "Course Home", course_home_path%></li>
+  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+</ol>
+  	<nav>
+  		<ul class="pagination">
+    		<li>
+    			<%= link_to planning_pages_philosophy_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+    		<li><a href="#">1</a></li>
+    		<li><a href="#">2</a></li>
+    		<li class="active"><a href="#">3</a></li>
+    		<li><a href="#">4</a></li>
+    		<li><a href="#">5</a></li>
+    		<li><a href="#">6</a></li>
+    		<li><a href="#">7</a></li>
+    		<li><a href="#">8</a></li>
+    		<li>
 
+				<%= link_to planning_pages_site_development_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+	</nav>
+
+
+<h3>Important Guidelines</h3>
 
 <div class="panel panel-info">
   <div class="panel-heading">
@@ -6,6 +35,7 @@
   </div>
   <div class="panel-body">
    <ul class="list-group">
+  	<li class="list-group-item">Link to the American Physical Therapy Association Clinical Educators Website:</button></li>
   	<li class="list-group-item"> <button type="button" class="btn btn-secondary"><%=link_to "Link", "http://www.apta.org/Educators/Clinical/" %></button></li>
   
    </ul>

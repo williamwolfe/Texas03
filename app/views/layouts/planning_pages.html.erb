@@ -6,11 +6,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<style>
+ body { padding-top: 60px; }
+ 
+	div.content {
+    /*border: 1px solid black;*/
+    background-color: light blue;
+    padding: 10px 20px 10px 20px;
+	}
+	
+	div.page_navigation {
+		text-align: center 
+	}
+</style>
 <body>
  
 <%= render 'shared/navbar_planning' %>
 <div class="inner">
+<div class="content">
  	<%=yield%>
+ </div>
  	<div class="footer">
     	<p>&copy; Company 2013</p>
 	</div>	

@@ -1,3 +1,33 @@
+
+<ol class="breadcrumb">
+  <li><%=link_to "Course Home", course_home_path%></li>
+  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+</ol>
+  	<nav>
+  		<ul class="pagination">
+    		<li>
+    			<%= link_to planning_pages_planning_home_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+    		<li><a href="#">1</a></li>
+    		<li><a href="#">2</a></li>
+    		<li><a href="#">3</a></li>
+    		<li><a href="#">4</a></li>
+    		<li><a href="#">5</a></li>
+    		<li><a href="#">6</a></li>
+    		<li><a href="#">7</a></li>
+    		<li><a href="#">8</a></li>
+    		<li>
+
+				<%= link_to planning_pages_tx_consortium_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+	</nav>
+	
+	
 <h3>Module 1: PLANNING A CLINICAL EDUCATION PROGRAM</h3>
 
 
@@ -34,14 +64,14 @@
   </div>
   <div class="panel-body">
  <ul>
- <li><%= link_to "Texas Consortium", planning_pages_tx_consortium_path%></li>
-<li><%= link_to "Philosophy", planning_pages_philosophy_path%></li>
-<li><%= link_to "APTA", planning_pages_apta_link_path%></li>
-<li><%= link_to "Site Development", planning_pages_site_development_path%></li>
-<li><%= link_to "Scheduling", planning_pages_scheduling_path%></li>
-<li><%= link_to "Clinical Education", planning_pages_clinical_education_path%></li>
-<li><%= link_to "Learning Experiences", planning_pages_learning_experiences_path%></li>
-<li><%= link_to "Legal Issues", planning_pages_legal_issues_path%></li>
+<li>Section 1: <%= link_to "Texas Consortium", planning_pages_tx_consortium_path%></li>
+<li>Section 2: <%= link_to "Philosophy", planning_pages_philosophy_path%></li>
+<li>Section 3: <%= link_to "APTA", planning_pages_apta_link_path%></li>
+<li>Section 4: <%= link_to "Site Development", planning_pages_site_development_path%></li>
+<li>Section 5: <%= link_to "Scheduling", planning_pages_scheduling_path%></li>
+<li>Section 6: <%= link_to "Clinical Education", planning_pages_clinical_education_path%></li>
+<li>Section 7: <%= link_to "Learning Experiences", planning_pages_learning_experiences_path%></li>
+<li>Section 8: <%= link_to "Legal Issues", planning_pages_legal_issues_path%></li>
  </ul>
   </div>
 </div>

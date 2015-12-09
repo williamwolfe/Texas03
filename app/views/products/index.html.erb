@@ -20,7 +20,7 @@
    				<ul class="list-group">
   					<li class="list-group-item"><%=product.description%></li>
   					<li class="list-group-item">$<%= product.price %>.00</li>
-  					<li class="list-group-item"><%= link_to "Start Clinical Instructor Certification Course", course_home_path, {class: 'btn btn-info btn-lg'}%></li>
+  					<li class="list-group-item"><%= link_to "Start Clinical Instructor Certification Course", course_home_path, {class: 'btn btn-info btn-md', target:'_top'}%></li>
 				</ul>
   			</div>
 		</div>
@@ -34,7 +34,7 @@
    				<ul class="list-group">
   					<li class="list-group-item"><%=product.description%></li>
   					<li class="list-group-item">$<%= product.price %>.00</li>
-  					<li class="list-group-item"><%= link_to 'Add to Cart', {controller:"cart_items", action:"new", product_id:product.id}, class: 'btn btn-info btn-lg' %></li>
+  					<li class="list-group-item"><%= link_to 'Add to Cart', {controller:"cart_items", action:"new", product_id:product.id}, class: 'btn btn-info btn-md' %></li>
 				</ul>
   			</div>
 		</div>

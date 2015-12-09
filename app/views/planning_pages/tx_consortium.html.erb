@@ -1,3 +1,33 @@
+<div class="page_navigation">
+<ol class="breadcrumb">
+  <li><%=link_to "Course Home", course_home_path%></li>
+  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+  <li>Texas Consortium</li>
+</ol>
+  	<nav>
+  		<ul class="pagination">
+    		<li>
+    			<%= link_to planning_pages_planning_home_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+    		<li class="active"><a href="#">1</a></li>
+    		<li><a href="#">2</a></li>
+    		<li><a href="#">3</a></li>
+    		<li><a href="#">4</a></li>
+    		<li><a href="#">5</a></li>
+    		<li><a href="#">6</a></li>
+    		<li><a href="#">7</a></li>
+    		<li><a href="#">8</a></li>
+    		<li>
+
+				<%= link_to planning_pages_philosophy_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+	</nav>
+</div>
 <h3>Texas Consortium</h3>
  
 <div class="panel panel-info">
@@ -19,18 +49,11 @@
 <nav>
   <ul class="pager">  	
 	
-    
-	<li>
-		<button type="button" class="btn btn-default" aria-label="Left Align">
-  			<%=link_to "Next", planning_pages_philosophy_path%>
-  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		</button>
+   	<li>
+		<%= link_to  planning_pages_philosophy_path do %>
+			Next <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		<% end %>
 	</li>
-
-	<br>
-
-   	<li><%=link_to "Course Home", course_home_path%></li>
-   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
    
   </ul>
 </nav>

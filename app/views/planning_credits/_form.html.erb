@@ -20,7 +20,7 @@
     <!--<%=current_user.id%>-->
 </div>
 
-<h4>Site type: <small>(check all that apply)</small></h4>
+<h4>1. Site type: <small>(check all that apply)</small></h4>
 <table class="table-responsive">
   <tr>  
   	<td>
@@ -104,21 +104,30 @@
    			 <%= f.label :other %>:&nbsp;<br>
   		</td>
   		<td>
-  		 	<%= f.text_area :other %>
+  		 	<%= f.text_area :other, :cols => "25", :rows => "2" %>
   		</td>
   	</div>
   	</tr>
 </table>
   
-  
-<h4>Compile a list of activities that you would include in a CI/Student orientation checklist. You may not need to complete each row depending on the needs of your setting.</h4>
-  <div class="field">
+<br/>
+<h4>2. Compile a list of activities that you would include in a CI/Student orientation checklist. You may not need to complete each row depending on the needs of your setting.</h4>
+<table class="table-responsive">
+  	<tr>
+  		<div class="field">
+  			<td valign="top">
+    			<%= f.label :list %>:&nbsp;<br>
+    		</td>
+    		<td valign="top">
+				<%= f.text_area :list, :cols => "50", :rows => "10"%>
+			</td>
+  		</div>
+  	</tr>
+</table>
 
-    <%= f.label :list %>:&nbsp;<br>
-
-    <%= f.text_area :list %>
-  </div>
+<br/>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit"%>
   </div>
 <% end %>
+

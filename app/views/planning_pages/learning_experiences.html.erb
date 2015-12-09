@@ -1,4 +1,31 @@
-<h3>Learning Experiences</h3>
+<ol class="breadcrumb">
+  <li><%=link_to "Course Home", course_home_path%></li>
+  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
+</ol>
+  	<nav>
+  		<ul class="pagination">
+    		<li>
+    			<%= link_to planning_pages_clinical_education_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+    		<li><a href="#">1</a></li>
+    		<li><a href="#">2</a></li>
+    		<li><a href="#">3</a></li>
+    		<li><a href="#">4</a></li>
+    		<li><a href="#">5</a></li>
+    		<li><a href="#">6</a></li>
+    		<li class="active"><a href="#">7</a></li>
+    		<li><a href="#">8</a></li>
+    		<li>
+
+				<%= link_to planning_pages_legal_issues_path, :class => 'button white' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+	</nav>
+<h3>Learning Experiences and Opportunities</h3>
  
 <div class="panel panel-info">
   <div class="panel-heading">
@@ -7,8 +34,7 @@
   <div class="panel-body">
    <ul class="list-group">
   		<li class="list-group-item">Learning experiences are not solely related to patient care. There are many opportunities that your site has to offer the student. </li>
-  		<li class="list-group-item">To decide how to determine which learning experiences should be taken advantage of, the CI should use the clinical evaluation tool (e.g. the PT MACS) to assist in selecting optimal learning experiences.
-</li>
+  		<li class="list-group-item">To decide how to determine which learning experiences should be taken advantage of, the CI should use the clinical evaluation tool (e.g. the PT MACS) to assist in selecting optimal learning experiences.</li>
   		<li class="list-group-item">The student should identify his/her strengths and weaknesses.</li>
   		<li class="list-group-item">The CI and student should discuss the list in the planning process.</li>
   		<li class="list-group-item">Both determine which skills can be addressed and if there are any special needs.</li>
