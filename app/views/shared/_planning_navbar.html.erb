@@ -10,15 +10,15 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 			 
 			  <ul class="nav navbar-nav">
-				<li><%= link_to "PlanHome", planning_pages_planning_home_path, {class:'glyphicon glyphicon-home', :style=>'color:#d3d3d3;'} %></li> 
-				<li><%= link_to "TxConsort", planning_pages_tx_consortium_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>
-				<li><%= link_to "Philos", planning_pages_philosophy_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
-				<li><%= link_to "APTA", planning_pages_apta_link_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
-				<li><%= link_to "SiteDev", planning_pages_site_development_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
-				<li><%= link_to "Sched", planning_pages_scheduling_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
-				<li><%= link_to "ClinEd", planning_pages_clinical_education_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
-				<li><%= link_to "Learning", planning_pages_learning_experiences_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
-				<li><%= link_to "Legal", planning_pages_legal_issues_path, {class:'glyphicon glyphicon-file', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "PlanHome", planning_pages_planning_home_path, {class:'glyphicon glyphicon-home', target:'_top', :style=>'color:#d3d3d3;'} %></li> 
+				<li><%= link_to "TxConsort", planning_pages_tx_consortium_path, {class:'glyphicon glyphicon-file', target:'_top', :style=>'color:#d3d3d3;'} %></li>
+				<li><%= link_to "Philos", planning_pages_philosophy_path, {class:'glyphicon glyphicon-file', target:'_top', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "APTA", planning_pages_apta_link_path, {class:'glyphicon glyphicon-file',  target:'_top',:style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "SiteDev", planning_pages_site_development_path, {class:'glyphicon glyphicon-file', target:'_top', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "Sched", planning_pages_scheduling_path, {class:'glyphicon glyphicon-file', target:'_top', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "ClinEd", planning_pages_clinical_education_path, {class:'glyphicon glyphicon-file', target:'_top', :style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "Learning", planning_pages_learning_experiences_path, {class:'glyphicon glyphicon-file',  target:'_top',:style=>'color:#d3d3d3;'} %></li>  
+				<li><%= link_to "Legal", planning_pages_legal_issues_path, {class:'glyphicon glyphicon-file',  target:'_top',:style=>'color:#d3d3d3;'} %></li>  
 			
 	
 			<% if (user_signed_in?) %>
