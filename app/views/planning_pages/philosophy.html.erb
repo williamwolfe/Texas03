@@ -1,70 +1,44 @@
-<div class="page_navigation">
-<ol class="breadcrumb">
-  <li><%=link_to "Course Home", course_home_path%></li>
-  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
-  <li>Philosophy</li>
-</ol>
-  	<nav>
-  		<ul class="pagination">
-    		<li>
-    			<%= link_to planning_pages_tx_consortium_path, :class => 'button white' do %>
-   					<span aria-hidden="true">&laquo;</span>
-				<% end %>
-			</li>
-    		<li><a href="#">1</a></li>
-    		<li class="active"><a href="#">2</a></li>
-    		<li><a href="#">3</a></li>
-    		<li><a href="#">4</a></li>
-    		<li><a href="#">5</a></li>
-    		<li><a href="#">6</a></li>
-    		<li><a href="#">7</a></li>
-    		<li><a href="#">8</a></li>
-    		<li>
 
-				<%= link_to planning_pages_apta_link_path, :class => 'button white' do %>
-   					<span aria-hidden="true">&raquo;</span>
-				<% end %>	
-    		</li>
-  		</ul>
-	</nav>
-</div>	
-	
-<h3>Philosophy</h3>
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Clinical Education Experiences</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  	<li class="list-group-item">The Consortium’s philosophy for PT clinical education centers around clinical education experiences. </li>
-   </ul>
-  </div>
-</div>
+			<h3>Philosophy</h3>
+			<ul class= "nav nav-tabs nav-justified">
+				<li class="tab active"><a href="#tab1" data-toggle="tab"><font color="black">Educational Experiences</font></a></li>
+				<li><a href="#tab2" data-toggle="tab"><font color="black">Decision Making Skills</font></a></li>
+				<li><a href="#tab3" data-toggle="tab"><font color="black">Outcomes</font></a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab1">
+					<div class="panel panel-info">
+  						
+  						<div class="panel-body">
+   							<ul class="list-group">
+  								<li class="list-group-item">The Consortium’s philosophy for PT clinical education centers around clinical education experiences. </li>
+   							</ul>
+  						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="tab2">
+					<div class="panel panel-info">
+  						
+  						<div class="panel-body">
+  						 	<ul class="list-group">
+  								<li class="list-group-item">These experiences are designed to develop clinical decision-making skills in the student PT.</li>
+   							</ul>
+  						</div>
+					</div>
+				</div>
+				<div class="tab-pane" id="tab3">
+					<div class="panel panel-info">
+  						
+  						<div class="panel-body">
+   							<ul class="list-group">
+  								<li class="list-group-item">At the culmination of these experiences, the newly graduated PT should acquire all of the professional and patient care management skills to demonstrate safe and effective entry level skills in professional practice.</li>
+   							</ul>
+  						</div>
+					</div>
+				</div>
+			</div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Clinical Decision Making Skills</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  	<li class="list-group-item">These experiences are designed to develop clinical decision-making skills in the student PT.</li>
-   </ul>
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Outcomes</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  	<li class="list-group-item">At the culmination of these experiences, the newly graduated PT should acquire all of the professional and patient care management skills to demonstrate safe and effective entry level skills in professional practice.</li>
-   </ul>
-  </div>
-</div>
-
-
-
+			
 <nav>
   <ul class="pager">  	
 	<li>

@@ -1,82 +1,57 @@
-<ol class="breadcrumb">
-  <li><%=link_to "Course Home", course_home_path%></li>
-  <li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
-</ol>
-  	<nav>
-  		<ul class="pagination">
-    		<li>
-    			<%= link_to planning_pages_site_development_path, :class => 'button white' do %>
-   					<span aria-hidden="true">&laquo;</span>
-				<% end %>
-			</li>
-    		<li><a href="#">1</a></li>
-    		<li><a href="#">2</a></li>
-    		<li><a href="#">3</a></li>
-    		<li><a href="#">4</a></li>
-    		<li class="active"><a href="#">5</a></li>
-    		<li><a href="#">6</a></li>
-    		<li><a href="#">7</a></li>
-    		<li><a href="#">8</a></li>
-    		<li>
 
-				<%= link_to planning_pages_clinical_education_path, :class => 'button white' do %>
-   					<span aria-hidden="true">&raquo;</span>
-				<% end %>	
-    		</li>
-  		</ul>
-	</nav>
-<h3>Scheduling Students</h3>
- 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Voluntary Uniform Mailing Date</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  		<li class="list-group-item">The PT program sends a request for the dates of their clinical experiences to be offered in the following year. Most PT programs, including the programs in the Consortium, comply with a Voluntary Uniform Mailing Date. Early March is the designated mailing date.</li>
-  	 	<li class="list-group-item">The site will provide the requested information to the PT program regarding types of clinical experiences and dates for which they can accommodate students.</li> 	 
-  	 	<li class="list-group-item">The ACCE/DCE sends the packet of information regarding the student to the CCCE.</li>
-   </ul>
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Scheduling Students On-Site</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
+			<h3>Student Scheduling</h3>
+			<ul class= "nav nav-tabs nav-justified">
+				<li class="tab active"><a href="#tab1" data-toggle="tab"><font color="black">Voluntary Uniform Mailing Date</font></a></li>
+				<li><a href="#tab2" data-toggle="tab"><font color="black">Scheduling Students On-Site</font></a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab1">
+					<div class="panel panel-info">
+  						
+  						 <div class="panel-body">
+   							<ul class="list-group">
+  								<li class="list-group-item">The PT program sends a request for the dates of their clinical experiences to be offered in the following year. Most PT programs, including the programs in the Consortium, comply with a Voluntary Uniform Mailing Date. Early March is the designated mailing date.</li>
+  	 							<li class="list-group-item">The site will provide the requested information to the PT program regarding types of clinical experiences and dates for which they can accommodate students.</li> 	 
+  	 							<li class="list-group-item">The ACCE/DCE sends the packet of information regarding the student to the CCCE.</li>
+   							</ul>
+  						</div>
+  
+					</div>
+				</div>
+				<div class="tab-pane" id="tab2">
+					<div class="panel panel-info">
+  						
+  						<div class="panel-body">
+   							<ul class="list-group">
   		
-  	 	<li class="list-group-item">The CCCE in turn, is responsible for scheduling students on-site.</li>
-  	 	<li class="list-group-item">Students can be placed with one CI.</li>
-  	 	<li class="list-group-item">Two part-time CIs</li>
-  	 	<li class="list-group-item">Two or more students can be placed with one CI.</li>
-  	 	<li class="list-group-item">Current research provides positive evidence for collaborative learning outcomes.</li>
-   </ul>
-  </div>
-</div>
+  	 							<li class="list-group-item">The CCCE in turn, is responsible for scheduling students on-site.</li>
+  	 							<li class="list-group-item">Students can be placed with one CI.</li>
+  	 							<li class="list-group-item">Two part-time CIs</li>
+  	 							<li class="list-group-item">Two or more students can be placed with one CI.</li>
+  	 							<li class="list-group-item">Current research provides positive evidence for collaborative learning outcomes.</li>
+   							</ul>
+  						</div>
+					
+					</div>
+				</div>
+				
+			</div>
 
-
+			
 <nav>
   <ul class="pager">  	
 	<li>
-		<button type="button" class="btn btn-default" aria-label="Left Align">
+		<%=link_to planning_pages_site_development_path do%>	
   			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-  			<%=link_to "Previous", planning_pages_site_development_path%>
-		</button>
+  			Previous
+		<% end %>
 	</li>
-    
-	<li>
-		<button type="button" class="btn btn-default" aria-label="Left Align">
-  			<%=link_to "Next", planning_pages_clinical_education_path%>
-  			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		</button>
+   	<li>
+		<%= link_to  planning_pages_clinical_education_path do %>
+			Next 
+			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		<% end %>
 	</li>
-
-	<br>
-
-   	<li><%=link_to "Course Home", course_home_path%></li>
-   	<li><%=link_to "Planning Module Home", planning_pages_planning_home_path%></li>
    
   </ul>
 </nav>

@@ -6,14 +6,22 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
  <style> 
-	.panel > .panel-heading {
+ 	body { 
+ 		padding-top: 0px; 
+ 	}
+ 	
+ 	.panel > .panel-heading {
     	background-image: none;
    	 	background-color: white;
     	color: black;
 
 	}
 	
- 
+ 	div.content {
+    /*border: 1px solid black;*/
+    background-color: light blue;
+    padding: 0px 20px 10px 20px;
+	}
 </style>
 </head>
 <body>
@@ -63,17 +71,20 @@ end
 #controller.action_name
 
 %>
-<h3>Texas Consortium for Physical Therapy Home Page</h3>
-<ul class="nav nav-tabs">
-  <li role="presentation" class="<%=@activeHome%>"><%=link_to "Welcome", home_tabs_home_path, {:style => 'color: #000000'} %></li>
-  <li role="presentation" class="<%=@activeIncorporation%>"><%=link_to "Incorporation", home_tabs_incorporation_path, {:style => 'color: #000000'}%></li>
-  <li role="presentation" class="<%=@activePurpose%>"><%=link_to "Purpose",  home_tabs_purpose_path, {:style => 'color: #000000'}%></li>
-  <li role="presentation" class="<%=@activePrograms%>"><%=link_to "Programs",  home_tabs_programs_path, {:style => 'color: #000000'}%></li>
-  <li role="presentation" class="<%=@activeCalendar%>"><%=link_to "Calendar",  home_tabs_calendar_path, {:style => 'color: #000000'}%></li>
-</ul>
+<div class="content">
+	<h3>Texas Consortium for Physical Therapy Home Page</h3>
+	<ul class="nav nav-tabs">
+  		<li role="presentation" class="<%=@activeHome%>"><%=link_to "Welcome", home_tabs_home_path, {:style => 'color: #000000'} %></li>
+  		<li role="presentation" class="<%=@activeIncorporation%>"><%=link_to "Incorporation", home_tabs_incorporation_path, {:style => 'color: #000000'}%></li>
+  		<li role="presentation" class="<%=@activePurpose%>"><%=link_to "Purpose",  home_tabs_purpose_path, {:style => 'color: #000000'}%></li>
+  		<li role="presentation" class="<%=@activePrograms%>"><%=link_to "Programs",  home_tabs_programs_path, {:style => 'color: #000000'}%></li>
+  		<li role="presentation" class="<%=@activeCalendar%>"><%=link_to "Calendar",  home_tabs_calendar_path, {:style => 'color: #000000'}%></li>
+	</ul>
 		
 	<div><%=yield%></div>
-  	<div class="footer"><p>&copy; Company 2015</p></div>    
+  	<div class="footer">
+  		<p>&copy; Company 2015</p>
+  	</div>    
 </div>         
   </body>
 </html>

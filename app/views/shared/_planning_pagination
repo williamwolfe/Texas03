@@ -1,0 +1,109 @@
+<% 
+
+if (controller.action_name == "planning_home")
+	@active_1 = "active"
+	@next_page = planning_pages_tx_consortium_path
+	@previous_page = "#"
+else 
+	@active_1= ""
+end
+
+if (controller.action_name == "tx_consortium")
+	@active_1 = "active"
+	@next_page = planning_pages_philosophy_path
+	@previous_page = planning_pages_planning_home_path
+else 
+	@active_1= ""
+end
+
+if (controller.action_name == "philosophy")
+	@active_2 = "active"
+	@next_page = planning_pages_apta_link_path
+	@previous_page = planning_pages_tx_consortium_path
+else 
+	@active_2= ""
+end
+
+if (controller.action_name == "apta_link")
+	@active_3 = "active"
+	@next_page = planning_pages_site_development_path
+	@previous_page = planning_pages_philosophy_path
+else 
+	@active_3= ""
+end
+
+if (controller.action_name == "site_development")
+	@active_4 = "active"
+	@next_page = planning_pages_scheduling_path
+	@previous_page = planning_pages_apta_link_path
+else 
+	@active_4= ""
+end
+
+if (controller.action_name == "scheduling")
+	@active_5 = "active"
+	@next_page = planning_pages_clinical_education_path
+	@previous_page = planning_pages_site_development_path
+else 
+	@active_5= ""
+end
+
+if (controller.action_name == "clinical_education")
+	@active_6 = "active"
+	@next_page = planning_pages_learning_experiences_path
+	@previous_page = planning_pages_scheduling_path
+else 
+	@active_6= ""
+end
+
+if (controller.action_name == "learning_experiences")
+	@active_7 = "active"
+	@next_page = planning_pages_legal_issues_path
+	@previous_page = planning_pages_clinical_education_path
+else 
+	@active_7= ""
+end
+
+if (controller.action_name == "legal_issues")
+	@active_8 = "active"
+	@next_page = new_planning_case1_path
+	@previous_page = planning_pages_learning_experiences_path
+else 
+	@active_8= ""
+end
+
+#controller_name
+#controller.action_name
+
+%>
+
+<ol class="breadcrumb">
+  	<li><%=link_to "course home", course_home_path%></li>
+  	<li><%=link_to "planning module home", planning_pages_planning_home_path%></li>
+	<li><%=controller.action_name%></li>
+</ol>
+<div class="page_navigation">
+  	<nav>
+  		<ul class="pagination pagination-sm">
+    		<li>
+    			<%= link_to @previous_page, :class => 'button white', :target => '_top' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+    		<li class=<%=@active_1%>><a href="#">1</a></li>
+    		<li class=<%=@active_2%>><a href="#">2</a></li>
+    		<li class=<%=@active_3%>><a href="#">3</a></li>
+    		<li class=<%=@active_4%>><a href="#">4</a></li>
+    		<li class=<%=@active_5%>><a href="#">5</a></li>
+    		<li class=<%=@active_6%>><a href="#">6</a></li>
+    		<li class=<%=@active_7%>><a href="#">7</a></li>
+    		<li class=<%=@active_8%>><a href="#">8</a></li>
+    		<li>
+
+				<%= link_to @next_page, :class => 'button white', :target => '_top' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+	</nav>
+</div>	

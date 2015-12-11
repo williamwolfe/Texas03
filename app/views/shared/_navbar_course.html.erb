@@ -20,8 +20,8 @@
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Home<span class="caret"></span></a>
           			<ul class="dropdown-menu">
             			
-						<li><%= link_to "Course Home", course_home_path %></li>
-						<li><%= link_to "Texas Consortium Home", pages_home_path %></li>
+						<li><%= link_to "Course Home", course_home_path, :target => '_top' %></li>
+						<li><%= link_to "Texas Consortium Home", pages_home_path, :target => '_top' %></li>
 						
           			</ul>
         		</li> 
@@ -29,10 +29,10 @@
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Course Modules<span class="caret"></span></a>
           			<ul class="dropdown-menu">
             			
-						<li><%= link_to "1. Planning Module", planning_pages_planning_home_path %></li>
-						<li><%= link_to "2. Student Evaluation Module", student_evaluation_home_path %></li>
-						<li><%= link_to "3. Communication Module", communication_pages_home_path %></li>
-						<li><%= link_to "4. Teaching and Learning Module", teaching_pages_home_path%></li>
+						<li><%= link_to "1. Planning Module", planning_pages_planning_home_path , :target => '_top'%></li>
+						<li><%= link_to "2. Student Evaluation Module", student_evaluation_home_path, :target => '_top' %></li>
+						<li><%= link_to "3. Communication Module", communication_pages_home_path, :target => '_top' %></li>
+						<li><%= link_to "4. Teaching and Learning Module", teaching_pages_home_path, :target => '_top'%></li>
 						
           			</ul>
         		</li> 
@@ -40,9 +40,9 @@
 				
 				
 				
-				<li><%= link_to "Course Exam", quiz_display_path, {:style=>'color:#d3d3d3;'} %></li>
-				<li><%= link_to "Course Evaluation", new_evaluation_path, {:style=>'color:#d3d3d3;'} %></li>
-				<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', method:'delete'} %></li>
+				<li><%= link_to "Course Exam", quiz_display_path, {:style=>'color:#d3d3d3;', :target => '_top'} %></li>
+				<li><%= link_to "Course Evaluation", new_evaluation_path, {:style=>'color:#d3d3d3;', :target => '_top'} %></li>
+				<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', :target => '_top', method:'delete'} %></li>
 			
         	  
 			  </ul>

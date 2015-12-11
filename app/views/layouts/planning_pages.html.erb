@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <style>
- body { padding-top: 60px; }
+ 	body { 
+ 		padding-top: 60px; 
+ 	}
  
 	div.content {
     /*border: 1px solid black;*/
@@ -18,14 +20,24 @@
 	div.page_navigation {
 		text-align: center 
 	}
+	
+	
+.panel {
+    border: 0;
+}
+</style>
+
+	
+
 </style>
 <body>
  
 <%= render 'shared/navbar_planning' %>
 <div class="inner">
-<div class="content">
- 	<%=yield%>
- </div>
+	<div class="content">
+		<%= render 'shared/planning_pagination' %>
+ 		<%=yield%>
+ 	</div>
  	<div class="footer">
     	<p>&copy; Company 2013</p>
 	</div>	

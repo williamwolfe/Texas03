@@ -6,8 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
  <style>
- body { padding-top: 60px; }
-
+ 	body { 
+ 		padding-top: 60px; 
+ 	}
 	div.content {
     /*border: 1px solid black;*/
     background-color: light blue;
@@ -16,17 +17,12 @@
 
  </style> 
 </head>
-
 <body>
-
-<div> <%= render 'shared/navbar0' %></div>
-
-<div class="inner">
-	<!--<div class="jumbotron"></div>-->
-	<div class="content"><%=yield%></div> 
-
-	<div class="footer"><p>&copy; Company 2015</p></div> 
-</div>          
-  </body>
+	<div> <%= render 'shared/navbar0' %></div>
+	<div class="inner">
+		<div class="content"><%=yield%></div> 
+		<div class="footer"><p>&copy; Company 2015</p></div> 
+	</div>          
+</body>
 </html>
 
