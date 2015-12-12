@@ -1,42 +1,42 @@
-
-
-			<h3>Guidelines</h3>
+	<h3>APTA CCCE and CI Guidelines</h3>
+			
 			<ul class= "nav nav-tabs nav-justified">
-				<li class="tab active"><a href="#tab1" data-toggle="tab"><font color="black">APTA CCCE and CI Guidelines</font></a></li>
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 %>															
+					<li class="tab <%=active_tab%>"><a href="#<%=tab[0]%>" data-toggle="tab"><font color="black"><%=tab[1]%></font></a></li>			
+				<% end %>
 			</ul>
+				
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab1">
-					<div class="panel panel-info">
-  
-  						<div class="panel-body">
-   							<ul class="list-group">
-  								<li class="list-group-item">Link to the American Physical Therapy Association Clinical Educators Website:</button></li>
-  								<li class="list-group-item"> <button type="button" class="btn btn-secondary"><%=link_to "Link", "http://www.apta.org/Educators/Clinical/" %></button></li>
-  
-   							</ul>
-  						</div>
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 	
+					 	render_page = 'shared/apta_link/' + tab[0]
+					 %>		
+					<div class="tab-pane <%=active_tab%>" id="<%=tab[0]%>">
+						<div class="panel panel-info">
+  						
+  							<div class="panel-body">
+   								<ul class="list-group">
+  									<li class="list-group-item"><%= render render_page%></li>
+   								</ul>
+  							</div>
+						</div>
 					</div>
 
-				</div>
-				
+				<% end %>
 			</div>
 
 
-<nav>
-  <ul class="pager">  	
-	<li>
-		<%=link_to  planning_pages_philosophy_path do%>	
-  			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-  			Previous
-		<% end %>
-	</li>
-   	<li>
-		<%= link_to   planning_pages_site_development_path do %>
-			Next 
-			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		<% end %>
-	</li>
-   
-  </ul>
-</nav>
+			
+
 

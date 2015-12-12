@@ -19,6 +19,10 @@ class PlanningPagesController < ApplicationController
 	@active_1 = "active"
 	@next_page = planning_pages_philosophy_path
 	@previous_page = planning_pages_planning_home_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Texas Consortium"
+	@tabs["tab2"] = "Founded 1977"
+	@tabs["tab3"] = "The Blue MACS"
   end
 
   def philosophy
@@ -38,12 +42,21 @@ class PlanningPagesController < ApplicationController
 	@active_3 = "active"
 	@next_page = planning_pages_site_development_path
 	@previous_page = planning_pages_philosophy_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Guidelines for Clinical Educators"
+	@tabs["tab2"] = "Link to APTA Website"
+	@tabs["tab3"] = "Website Overview"
   end
 
   def site_development
 	@active_4 = "active"
 	@next_page = planning_pages_scheduling_path
 	@previous_page = planning_pages_apta_link_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Steps"
+	@tabs["tab2"] = "Repository"
+	@tabs["tab3"] = "Site Visit"
+	@tabs["tab4"] = "Contract"
   end
 
   def scheduling

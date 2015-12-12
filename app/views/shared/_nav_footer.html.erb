@@ -1,0 +1,17 @@
+<nav>
+  <ul class="pager">  	
+	<li>
+		<%=link_to  @previous_page do%>	
+  			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+  			Previous
+		<% end %>
+	</li>
+   	<li>
+		<%= link_to  @next_page do %>
+			Next 
+			<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+		<% end %>
+	</li>
+   
+  </ul>
+</nav>

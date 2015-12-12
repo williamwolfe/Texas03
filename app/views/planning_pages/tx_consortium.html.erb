@@ -1,30 +1,40 @@
-
-<h3>Texas Consortium</h3>
- 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Physical Therapy Programs in Texas</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  	<li class="list-group-item">In Texas, most of the physical therapist programs belong to the Texas Consortium for Physical Therapy Clinical Education, Inc.</li>
-  	 <li class="list-group-item">The Consortium was formed in 1977 following a grant award to develop a clinical education evaluation tool. </li>
-  	 
-  	 <li class="list-group-item">This was the birth of the original The Blue MACS (Mastery and Assessment of Clinical Skills). </li>
-   </ul>
-  </div>
-</div>
-
-
-
-<nav>
-  <ul class="pager">  	
+			<h3>Texas Consortium for Physical Therapy Clinical Education</h3>
+			<ul class= "nav nav-tabs nav-justified">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 %>															
+					<li class="tab <%=active_tab%>"><a href="#<%=tab[0]%>" data-toggle="tab"><font color="black"><%=tab[1]%></font></a></li>			
+				<% end %>
+			</ul>
+			
+			
 	
-   	<li>
-		<%= link_to  planning_pages_philosophy_path do %>
-			Next <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-		<% end %>
-	</li>
-   
-  </ul>
-</nav>
+			<div class="tab-content">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 	
+					 	render_page = 'shared/tx_consortium/' + tab[0]
+					 %>		
+					<div class="tab-pane <%=active_tab%>" id="<%=tab[0]%>">
+						<div class="panel panel-info">
+  						
+  							<div class="panel-body">
+   								<ul class="list-group">
+  									<li class="list-group-item"><%= render render_page%></li>
+   								</ul>
+  							</div>
+						</div>
+					</div>
+
+				<% end %>
+			</div>
+			
+			
