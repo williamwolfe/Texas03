@@ -11,43 +11,35 @@
 					<li class="tab <%=active_tab%>"><a href="#<%=tab[0]%>" data-toggle="tab"><font color="black"><%=tab[1]%></font></a></li>			
 				<% end %>
 			</ul>
+			
+			
 	
-
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab1">
-					<div class="panel panel-info">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 	
+					 	render_page = 'shared/philosophy/' + tab[0]
+					 %>		
+					<div class="tab-pane <%=active_tab%>" id="<%=tab[0]%>">
+						<div class="panel panel-info">
   						
-  						<div class="panel-body">
-   							<ul class="list-group">
-  								<li class="list-group-item">The Consortium’s philosophy for PT clinical education centers around clinical education experiences. </li>
-   							</ul>
-  						</div>
+  							<div class="panel-body">
+   								<ul class="list-group">
+  									<li class="list-group-item"><%= render render_page%></li>
+   								</ul>
+  							</div>
+						</div>
 					</div>
-				</div>
-				
-				<div class="tab-pane" id="tab2">
-					<div class="panel panel-info">
-  						
-  						<div class="panel-body">
-  						 	<ul class="list-group">
-  								<li class="list-group-item">These experiences are designed to develop clinical decision-making skills in the student PT.</li>
-   							</ul>
-  						</div>
-					</div>
-				</div>
-				
-				<div class="tab-pane" id="tab3">
-					<div class="panel panel-info">
-  						
-  						<div class="panel-body">
-   							<ul class="list-group">
-  								<li class="list-group-item">At the culmination of these experiences, the newly graduated PT should acquire all of the professional and patient care management skills to demonstrate safe and effective entry level skills in professional practice.</li>
-   							</ul>
-  						</div>
-					</div>
-				</div>
-			</div>
 
+				<% end %>
+			</div>
+			
+			
+	
 			
 <nav>
   <ul class="pager">  	
