@@ -63,24 +63,50 @@ class PlanningPagesController < ApplicationController
 	@active_5 = "active"
 	@next_page = planning_pages_clinical_education_path
 	@previous_page = planning_pages_site_development_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Mailing Date"
+	@tabs["tab2"] = "Accomodation"
+	@tabs["tab3"] = "Information Packet"
+	@tabs["tab4"] = "On-Site Scheduling"
   end
 
   def clinical_education
 	@active_6 = "active"
 	@next_page = planning_pages_learning_experiences_path
 	@previous_page = planning_pages_scheduling_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Research"
+	@tabs["tab2"] = "Assignments"
+	@tabs["tab3"] = "Contact"
+	@tabs["tab4"] = "OnSite"
+	@tabs["tab5"] = "Orientation"
+	@tabs["tab6"] = "CI"
   end
 
   def learning_experiences
 	@active_7 = "active"
 	@next_page = planning_pages_legal_issues_path
 	@previous_page = planning_pages_clinical_education_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Opportunities"
+	@tabs["tab2"] = "PTMACS"
+	@tabs["tab3"] = "Process"
+	@tabs["tab4"] = "Objectives"
+	@tabs["tab5"] = "Evaluation"
   end
 
   def legal_issues
 	@active_8 = "active"
 	@next_page = new_planning_case1_path
 	@previous_page = planning_pages_learning_experiences_path
+	@tabs = Hash.new
+	@tabs["tab1"] = "Supervision"
+	@tabs["tab2"] = "Act"
+	@tabs["tab3"] = "Consent"
+	@tabs["tab4"] = "Harassment"
+	@tabs["tab5"] = "Employee?"
+	@tabs["tab6"] = "ADA"
+	@tabs["tab7"] = "HIPAA"
   end
 
   def case_study

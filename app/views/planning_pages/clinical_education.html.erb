@@ -1,98 +1,44 @@
-
 <h3>Clinical Education</h3>
- 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Current Research</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  		<li class="list-group-item">The reference page at the end of this module will provide you with further articles to support collaborative learning.</li>
-   </ul>
-  </div>
-</div>
+			
+			<ul class= "nav nav-tabs nav-justified">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 %>															
+					<li class="tab <%=active_tab%>"><a href="#<%=tab[0]%>" data-toggle="tab"><font color="black"><%=tab[1]%></font></a></li>			
+				<% end %>
+			</ul>
+			
+			
+	
+			<div class="tab-content">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 	
+					 	render_page = 'shared/clinical_education/' + tab[0]
+					 %>		
+					<div class="tab-pane <%=active_tab%>" id="<%=tab[0]%>">
+						<div class="panel panel-info">
+  						
+  							<div class="panel-body">
+   								<ul class="list-group">
+  									<li class="list-group-item"><%= render render_page%></li>
+   								</ul>
+  							</div>
+						</div>
+					</div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Assigning Students</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-   	<li class="list-group-item">The ACCE/DCE should provide the CCCE with the following information:
-   		<ul>
-   			<li>Prior coursework the student has had</li>
-  			<li>Which clinical experience this is, and the type preferred</li>
-  			<li>The PT program’s grading criteria</li>
-  			<li>The student biographical information</li> 
-  		</ul>
-  	</li>
-  	<li class="list-group-item">All of this information should assist the CCCE in assigning the student to the appropriate CI.</li>
-   </ul>
-  </div>
-</div>
+				<% end %>
+			</div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Contacting Students</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  		<li class="list-group-item">The CCCE should contact the student via mail, e-mail or phone. The student feels welcomed with a letter of introduction telling him/her about the upcoming clinical experience.</li>
-  		<li class="list-group-item">The “need to know” information should be shared in writing so the student may refer back to it if necessary. </li>
-  		<li class="list-group-item">The clinic policies, hours and expectations for performance should be given to the student prior to the start of the clinical experience.</li>
-  		<li class="list-group-item">Some sites have a student questionnaire they like to have returned by the student prior to the clinical experience.</li>
-   </ul>
-  </div>
-</div>
 
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Students On-Site</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-  		<li class="list-group-item">Once on-site, the students need to feel welcomed by the CI. </li>
-  		<li class="list-group-item">The CI should establish a professional relationship and open lines of communication</li>
-   </ul>
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Facility Orientation</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-   		<li class="list-group-item">The student will need an orientation to the facility, including the following:
-  		<ul>
-   			<li>Facility policies and procedures</li>
-  			<li>Documentation requirements</li>
-  			<li>Other need to know information</li>
-  			 
-  		</ul>
-  		</li>
-   </ul>
-  </div>
-</div> 
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-    <h3 class="panel-title">Initial Meeting with the CI</h3>
-  </div>
-  <div class="panel-body">
-   <ul class="list-group">
-   
-   		<li class="list-group-item">The initial meeting with the CI should include:
-   			<ul>
-   				<li>Review of the clinical education tool</li>
-  				<li>Setting goals for the clinical experience</li>
-  			</ul>
-  		</li>
-  		<li class="list-group-item">If the CI gives too much information in one sitting, the student may not remember all of it. </li>
-  		<li class="list-group-item">Remember how overwhelming the first clinical experience can be. The first day should be reserved for “need to know” information.</li>
-   </ul>
-  </div>
-</div>
 
 			
 

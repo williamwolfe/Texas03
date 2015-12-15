@@ -4,8 +4,14 @@
   	<li><%=link_to "module 1: planning", planning_pages_planning_home_path%></li>
 	<li><%=controller.action_name%></li>
 </ol>
+
+
+
+
 <div class="page_navigation">
   	<nav>
+  		<section>
+  		<h5>Planning Module Sections:</h5>
   		<ul class="pagination pagination-sm">
     		<li>
     			<%= link_to @previous_page, :class => 'button white', :target => '_top' do %>
@@ -28,5 +34,6 @@
 				<% end %>	
     		</li>
   		</ul>
+  		</section>
 	</nav>
 </div>	

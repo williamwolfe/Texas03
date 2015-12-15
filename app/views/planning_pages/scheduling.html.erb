@@ -1,41 +1,42 @@
-
-			<h3>Student Scheduling</h3>
+	<h3>Student Scheduling</h3>
 			<ul class= "nav nav-tabs nav-justified">
-				<li class="tab active"><a href="#tab1" data-toggle="tab"><font color="black">Voluntary Uniform Mailing Date</font></a></li>
-				<li><a href="#tab2" data-toggle="tab"><font color="black">Scheduling Students On-Site</font></a></li>
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 %>															
+					<li class="tab <%=active_tab%>"><a href="#<%=tab[0]%>" data-toggle="tab"><font color="black"><%=tab[1]%></font></a></li>			
+				<% end %>
 			</ul>
+			
+			
+	
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab1">
-					<div class="panel panel-info">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 	
+					 	render_page = 'shared/scheduling/' + tab[0]
+					 %>		
+					<div class="tab-pane <%=active_tab%>" id="<%=tab[0]%>">
+						<div class="panel panel-info">
   						
-  						 <div class="panel-body">
-   							<ul class="list-group">
-  								<li class="list-group-item">The PT program sends a request for the dates of their clinical experiences to be offered in the following year. Most PT programs, including the programs in the Consortium, comply with a Voluntary Uniform Mailing Date. Early March is the designated mailing date.</li>
-  	 							<li class="list-group-item">The site will provide the requested information to the PT program regarding types of clinical experiences and dates for which they can accommodate students.</li> 	 
-  	 							<li class="list-group-item">The ACCE/DCE sends the packet of information regarding the student to the CCCE.</li>
-   							</ul>
-  						</div>
-  
+  							<div class="panel-body">
+   								<ul class="list-group">
+  									<li class="list-group-item"><%= render render_page%></li>
+   								</ul>
+  							</div>
+						</div>
 					</div>
-				</div>
-				<div class="tab-pane" id="tab2">
-					<div class="panel panel-info">
-  						
-  						<div class="panel-body">
-   							<ul class="list-group">
-  		
-  	 							<li class="list-group-item">The CCCE in turn, is responsible for scheduling students on-site.</li>
-  	 							<li class="list-group-item">Students can be placed with one CI.</li>
-  	 							<li class="list-group-item">Two part-time CIs</li>
-  	 							<li class="list-group-item">Two or more students can be placed with one CI.</li>
-  	 							<li class="list-group-item">Current research provides positive evidence for collaborative learning outcomes.</li>
-   							</ul>
-  						</div>
-					
-					</div>
-				</div>
-				
+
+				<% end %>
 			</div>
+
 
 			
 			
