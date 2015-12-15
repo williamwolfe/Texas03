@@ -1,5 +1,6 @@
 class PlanningCase1sController < ApplicationController
   before_action :set_planning_case1, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /planning_case1s
   # GET /planning_case1s.json

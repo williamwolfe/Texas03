@@ -1,6 +1,7 @@
 
 <ol class="breadcrumb">
-  	<li><%=link_to "course", course_home_path%></li>
+	<li><%=link_to "consortium home", home_tabs_home_path%></li>
+  	<li><%=link_to "CI course home", course_home_path%></li>
   	<li><%=link_to "module 1: planning", planning_pages_planning_home_path%></li>
 	<li><%=controller.action_name%></li>
 </ol>

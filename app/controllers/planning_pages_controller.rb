@@ -1,4 +1,7 @@
 class PlanningPagesController < ApplicationController
+
+	before_action :authenticate_user!
+	
 	@active_0 = ""
 	@active_1 = ""
 	@active_2 = ""

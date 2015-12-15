@@ -1,5 +1,6 @@
 class TeachingActivitiesController < ApplicationController
   before_action :set_teaching_activity, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /teaching_activities
   # GET /teaching_activities.json

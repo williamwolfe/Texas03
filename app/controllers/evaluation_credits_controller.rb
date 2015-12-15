@@ -1,6 +1,6 @@
 class EvaluationCreditsController < ApplicationController
   before_action :set_evaluation_credit, only: [:show, :edit, :update, :destroy]
-
+before_action :authenticate_user!
   # GET /evaluation_credits
   # GET /evaluation_credits.json
   def index

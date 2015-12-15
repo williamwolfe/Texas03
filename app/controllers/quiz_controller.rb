@@ -1,4 +1,6 @@
 class QuizController < ApplicationController
+	before_action :authenticate_user!
+  
   def display
   	@questions = Question.all
   	@attempt 	= Attempt.new 	

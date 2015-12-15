@@ -1,6 +1,6 @@
 class StudentEvaluationCase2sController < ApplicationController
   before_action :set_student_evaluation_case2, only: [:show, :edit, :update, :destroy]
-
+before_action :authenticate_user!
   # GET /student_evaluation_case2s
   # GET /student_evaluation_case2s.json
   def index

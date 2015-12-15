@@ -1,6 +1,7 @@
 class PlanningCreditsController < ApplicationController
-  before_action :set_planning_credit, only: [:show, :edit, :update, :destroy]
-
+  	before_action :set_planning_credit, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!
+  
   # GET /planning_credits
   # GET /planning_credits.json
   def index
