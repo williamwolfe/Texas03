@@ -1,69 +1,124 @@
 <p id="notice"><%= notice %></p>
 
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Your submitted answers are as follows:</strong></div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Student:</strong></div>
+  <div class="panel-body">
+    user id: <%= @planning_credit.user_id %><br/>
+    email: <%=current_user.email %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>1. Site Type:</strong></div>
+  <div class="panel-body">
 <p>
-  <strong>User:</strong>
-  <%= @planning_credit.user_id %>
+  	<% if @planning_credit.acute %>
+  			<strong>Acute:</strong>
+  			<%= @planning_credit.acute %>
+	<% end %>
+</p>
+<p>
+ 	<% if @planning_credit.IP %>
+  			<strong>IP:</strong>
+  			<%= @planning_credit.IP %>
+	<% end %>
 </p>
 
 <p>
-  <strong>Acute:</strong>
-  <%= @planning_credit.acute %>
-</p>
-
-<p>
-  <strong>Ip:</strong>
-  <%= @planning_credit.IP %>
-</p>
-
-<p>
+<% if @planning_credit.private %>
   <strong>Private:</strong>
   <%= @planning_credit.private %>
+<% end %>
 </p>
 
 <p>
+<% if @planning_credit.corporate %>
   <strong>Corporate:</strong>
   <%= @planning_credit.corporate %>
+<%end%>
 </p>
 
 <p>
+
+<% if @planning_credit.nonprofit %>
   <strong>Nonprofit:</strong>
   <%= @planning_credit.nonprofit %>
+<% end %>
 </p>
 
 <p>
+<% if @planning_credit.pediatric %>
   <strong>Pediatric:</strong>
   <%= @planning_credit.pediatric %>
+<% end %>
 </p>
 
 <p>
+<% if @planning_credit.school %>
   <strong>School:</strong>
   <%= @planning_credit.school %>
+<% end %>
 </p>
 
 <p>
-  <strong>Snu:</strong>
+<% if @planning_credit.SNU %>
+  <strong>SNU:</strong>
   <%= @planning_credit.SNU %>
+<% end %>
 </p>
 
 <p>
-  <strong>Snf:</strong>
+<% if @planning_credit.SNF %>
+  <strong>SNF:</strong>
   <%= @planning_credit.SNF %>
+<% end %>
 </p>
 
 <p>
-  <strong>Ltc:</strong>
+<% if @planning_credit.LTC %>
+  <strong>LTC:</strong>
   <%= @planning_credit.LTC %>
+<% end %>
 </p>
 
 <p>
+<% if @planning_credit.other %>
   <strong>Other:</strong>
   <%= @planning_credit.other %>
+<% end %>
 </p>
 
-<p>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>2. Orientation List:</strong></div>
+  <div class="panel-body">
+    <p>
   <strong>List:</strong>
   <%= @planning_credit.list %>
 </p>
+  </div>
+</div>
+
+
+<div>
+<strong>To edit/resubmit your answers: <button type="button" class="btn btn-link"><%=link_to "Edit", new_planning_credit_path%></button>
+</strong>
+</div>
+
+
+<!--
 
 <%= link_to 'Edit', edit_planning_credit_path(@planning_credit) %> |
 <%= link_to 'Back', planning_credits_path %>
+
+-->

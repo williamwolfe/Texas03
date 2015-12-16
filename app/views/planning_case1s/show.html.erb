@@ -1,24 +1,49 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @planning_case1.user_id %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Your submitted answers are as follows:</strong></div>
+</div>
 
-<p>
-  <strong>Experiences:</strong>
-  <%= @planning_case1.experiences %>
-</p>
 
-<p>
-  <strong>Orientation:</strong>
-  <%= @planning_case1.orientation %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Student:</strong></div>
+  <div class="panel-body">
+    user id: <%= @planning_case1.user_id %><br/>
+    email: <%=current_user.email %>
+  </div>
+</div>
 
-<p>
-  <strong>Appropriate:</strong>
-  <%= @planning_case1.appropriate %>
-</p>
 
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>1. How should Sally plan this student’s learning experiences?</strong></div>
+  <div class="panel-body">
+     <%= @planning_case1.experiences %>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>2. What should Sally’s on-site orientation include on day one?</strong> </div>
+  <div class="panel-body">
+     <%= @planning_case1.orientation %>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>3. How will Sally decide if the learning experiences are appropriate?</strong></div>
+  <div class="panel-body">
+     <%= @planning_case1.appropriate %>
+  </div>
+</div>
+
+<div>
+<strong>To edit/resubmit your answers: <button type="button" class="btn btn-link"><%=link_to "Edit", new_planning_case1_path%></button>
+</strong>
+</div>
+
+
+<!--
 <%= link_to 'Edit', edit_planning_case1_path(@planning_case1) %> |
 <%= link_to 'Back', planning_case1s_path %>
+-->

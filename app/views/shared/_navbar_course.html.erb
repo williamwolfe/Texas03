@@ -42,8 +42,10 @@
 				
 				<li><%= link_to "Course Exam", quiz_display_path, {:style=>'color:#d3d3d3;', :target => '_top'} %></li>
 				<li><%= link_to "Course Evaluation", new_evaluation_path, {:style=>'color:#d3d3d3;', :target => '_top'} %></li>
-				<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', :target => '_top', method:'delete'} %></li>
-			
+				
+				</ul>
+			<ul class="nav navbar-nav navbar-right">	
+				<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', :target => '_top', method:'delete'} %></li>		
         	  
 			  </ul>
 			</div>

@@ -5,22 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
-
 </head>
 <body>
+	<div>
+		<%= render 'shared/navbar_course' %>
+	</div>
 
-<div>
-<%= render 'shared/navbar_course' %>
-</div>
+	<div class="inner">
 
-<div class="inner">
-<div class="jumbotron1"></div>
-<div class = "content">
- 	<%=yield%>
-</div>
+		<div class="jumbotron1">
+		</div>
 
-
-</div>
+		<div class = "content">
+ 			<%=yield%>
+		</div>
+	</div>
 </body>
 </html>

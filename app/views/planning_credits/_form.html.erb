@@ -20,8 +20,16 @@
     <!--<%=current_user.id%>-->
 </div>
 
-<h4>1. Site type: <small>(check all that apply)</small></h4>
-<table class="table-responsive">
+
+ 
+<div class="panel panel-info">
+  	<div class="panel-heading">
+    	<h2 class="panel-title">1. Site Type: <small>(check all that apply)</small></h2>
+  	</div>
+  	<div class="panel-body">
+   		<ul class="list-group">
+   		<li class="list-group-item">
+			<table class="table-responsive">
   <tr>  
   	<td>
   		<div class="field">
@@ -96,34 +104,49 @@
 </td>
 </tr>
 </table>
- 
-<table class="table-responsive">
-	<tr>
-	 <div class="field">
-		<td valign="top">
-   			 <%= f.label :other %>:&nbsp;<br>
-  		</td>
-  		<td>
-  		 	<%= f.text_area :other, :cols => "25", :rows => "2" %>
-  		</td>
+  		</li>
+  		</ul>
   	</div>
-  	</tr>
-</table>
+</div>
+
+<div class="panel panel-info">
+  	<div class="panel-heading">
+    	<h2 class="panel-title">Other Site Type Not Listed Above:</h2>
+  	</div>
+  	<div class="panel-body">
+   		<ul class="list-group">
+   		<li class="list-group-item">
+			<div class="field">
+		
+   			<%= f.label :other %>:&nbsp;<br>
+  		 	<%= f.text_area :other, :cols => "25", :rows => "2" %>
+  			</div>
+  		</li>
+  		</ul>
+  	</div>
+</div>
+  	
   
-<br/>
-<h4>2. Compile a list of activities that you would include in a CI/Student orientation checklist. You may not need to complete each row depending on the needs of your setting.</h4>
-<table class="table-responsive">
-  	<tr>
-  		<div class="field">
-  			<td valign="top">
-    			<%= f.label :list %>:&nbsp;<br>
-    		</td>
-    		<td valign="top">
+<div class="panel panel-info">
+  	<div class="panel-heading">
+    	<h2 class="panel-title">2. Compile a list of activities that you would include in a CI/Student orientation checklist.</h2>
+  	</div>
+  
+  	<div class="panel-body">
+   		<ul class="list-group">
+   			
+  			<li class="list-group-item">
+  			<div class="field">
+    			<%= f.label :list %>:&nbsp; (Please number the list items: 1. (list item 1), 2. (list item 2), etc.<br>
 				<%= f.text_area :list, :cols => "50", :rows => "10"%>
-			</td>
-  		</div>
-  	</tr>
-</table>
+  			</div>
+  			</li>
+   		</ul>
+  	</div>
+</div>
+  
+  
+
 
 <br/>
   <div class="actions">
