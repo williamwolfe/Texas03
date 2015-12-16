@@ -44,7 +44,8 @@
             			<li><%= link_to "Become a Member", products_path, {target:'_top'} %></li>
           			</ul>
         		</li> 
-				
+			</ul>
+			<ul class="nav navbar-nav navbar-right">	
 			<% if (user_signed_in?) %>
      			<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', method:'delete', target:'_top'} %></li>
         	<% else %>
