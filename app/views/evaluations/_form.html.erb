@@ -11,131 +11,440 @@
     </div>
   <% end %>
   
-<div class="field">    
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%='hidden field --> user_id: '%>
-    <%=current_user.id%>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">User</h3>
+  </div>
+  <div class="panel-body">
+   	<div class="field">    
+    	<%= f.hidden_field :user_id, value: current_user.id %>
+    	<!--<%='hidden field --> user_id: '%>-->
+    	user email: <%=current_user.email%>
+	</div>
+  </div>
 </div>
 
-  <div class="field">
-    <%= f.label :completion_date %><br>
-    <%= f.date_select :completion_date %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">We Need Your Feedback</h3>
   </div>
-  <div class="field">
-    <%= f.label :license %><br>
-    <%= f.text_field :license %>
+  <div class="panel-body">
+   	<div class="field">    
+    	Evaluation of the course is necessary for compliance with CEU application as well as to ensure that the course meets the needs of the learner. If you prefer this evaluation to be anonymous, do not complete the following identifying information. Your information will be entered into a database with reference to complete/not completed.
+
+	</div>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Course Completion Date:</h3>
+  </div>
+  <div class="panel-body">
+  
+   	  	<div class="field">
+    		<%= f.date_select :completion_date %>
+  		</div> 
+  
+  </div>
+</div>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">License:</h3>
+  </div>
+  <div class="panel-body">
+  
+   	  	<div class="field">
+    		<%= f.text_field :license %>
+  		</div>
+  
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Address:</h3>
+  </div>
+  <div class="panel-body">
+  
+   <div class="field">
     <%= f.text_field :address %>
   </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
+  
   </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">City:</h3>
+  </div>
+  <div class="panel-body">
+  
   <div class="field">
-    <%= f.label :state %><br>
+
+    City: <%= f.text_field :city %>
+  </div>
+  
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">State:</h3>
+  </div>
+  <div class="panel-body">
+  
+ <div class="field">
+    <!--<%= f.label :state %><br>-->
     <%= f.text_field :state %>
   </div>
-  <div class="field">
-    <%= f.label :zip %><br>
+  
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Zip:</h3>
+  </div>
+  <div class="panel-body">
+  
+   <div class="field">
+    <!--<%= f.label :zip %><br>-->
     <%= f.text_field :zip %>
   </div>
   
-  <div class="field">
-    <%= f.label :overall %><br>
-    <!--<%= f.text_field :overall %>-->
-	<!--<%= f.radio_button :overall, 1, checked:'checked'%>-->
-	<%= f.radio_button :overall, 1 %>  
-	<%= f.radio_button :overall, 2 %> 
-	<%= f.radio_button :overall, 3 %> 
-	<%= f.radio_button :overall, 4 %> 
-	<%= f.radio_button :overall, 5 %>  
   </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Ratings</h3>
+  </div>
+  <div class="panel-body">
+   	<div class="field">    
+    	Your opinion is very valuable to us and will help us serve you better in the future. Please rate the following items using the scale below. You may write additional comments in the space provided.
+	</div>
+	<div>
+<table class="table table-bordered table-condensed">
+	<tr>
+		<th>Scale</th><th>Ease of Use</th><th>Course Content</th>
+	</tr>
+	<tr>
+		<td>4</td><td>Excellent</td><td>Interesting and Informative</td>
+	</tr>	
+	<tr>
+		<td>3</td><td>Good</td><td>Useful information</td>
+	</tr>
+	<tr>
+		<td>2</td><td>Average</td><td>Adequate, minimal information</td>
+	</tr>
+	<tr>
+		<td>1</td><td>Unsatisfactory</td><td>Information not needed</td>
+	</tr>
+	<tr>
+		<td>n/a</td><td>Unable to Rate</td><td>&nbsp;</td>
+	</tr>
+</table>
+	</div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Overall, the Part I CI course was:</h3>
+  </div>
+  <div class="panel-body">
+  
+    	<div class="field">
+   		 	  	
+   		<label class="radio-inline">
+  			<%= f.radio_button :overall, 4 %>4
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :overall, 3 %>3
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :overall, 2 %>2
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :overall, 1 %>1
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :overall, 0 %>n/a
+		</label>
+	
+  		</div>
+    
+    	<div class="field">
+    		Comments: <br/><%= f.text_area :overall_comments, size: "60x3"%>
+		</div>
+  
+  </div>
+
+</div>
 
 
   
-<div class="field">
-    <%= f.label :overall_comments %><br>
-    <%= f.text_area :overall_comments, size: "60x3"%>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Developing and Administering a Clinical Education Program:</h3>
+  </div>
+  <div class="panel-body">
+  
+ <div class="field">
+      	<label class="radio-inline">
+  			<%= f.radio_button :develop, 4 %>4
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :develop, 3 %>3
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :develop, 2 %>2
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :develop, 1 %>1
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :develop, 0 %>n/a
+		</label>
+		
+  </div>
+   	<div class="field">
+    	Comments: <br/><%= f.text_area :develop_comments, size: "60x3"%>
+  	</div>
+
+  
+  </div>
 </div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Use of the PT MACS:</h3>
+  </div>
+  <div class="panel-body">
+  
+  <div class="field">
+      	<label class="radio-inline">
+  			<%= f.radio_button :use, 4 %>4
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :use, 3 %>3
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :use, 2 %>2
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :use, 1 %>1
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :use, 0 %>n/a
+		</label> 
+  </div>
+ 	<div class="field">
+    	Comments: <br/><%= f.text_area :use_comments, size: "60x3" %>
+  	</div>
+  
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Communication and Feedback:</h3>
+  </div>
+  <div class="panel-body">
+  
+ 	<div class="field">
+      	<label class="radio-inline">
+  			<%= f.radio_button :feedback, 4 %>4
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :feedback, 3 %>3
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :feedback, 2 %>2
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :feedback, 1 %>1
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :feedback, 0 %>n/a
+		</label> 
+  
+  	</div>
+  
+	<div class="field">
+    	Comments: <br/><%= f.text_area :feedback_comments, size: "60x3" %>
+  	</div>
+  	
+	</div>
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Teaching and Learning:</h3>
+  </div>
+  <div class="panel-body">
+  
+    <div class="field">
+      	<label class="radio-inline">
+  			<%= f.radio_button :teaching, 4 %>4
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :teaching, 3 %>3
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :teaching, 2 %>2
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :teaching, 1 %>1
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :teaching, 0 %>n/a
+		</label>   
+  </div>
+      	<div class="field">
+    		Comments: <br/><%= f.text_area :teaching_comments, size: "60x3" %>
+  		</div>
+
+
+  
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">1.  What topics would you like to have presented at future workshops?</h3>
+  </div>
+  <div class="panel-body">
+  
+    <div class="field">
+
+    <%= f.text_area :topics, size: "60x3" %>
+  </div>
+
+  
+  </div>
+</div>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">2. Would you like to see the Consortium sponsor an Advanced CI Certification course?</h3>
+  </div>
+  <div class="panel-body">
+  
+  	
+  
+   <div class="field">
+   
+   		<label class="radio-inline">
+  			<%= f.radio_button :advanced, 1 %>Yes
+		</label>
+		<label class="radio-inline">
+  			<%= f.radio_button :advanced, 2 %>No
+		</label>
+	
+  </div>
+
+  
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">3. If yes, what topics would you like to see addressed?</h3>
+  </div>
+  <div class="panel-body">
+   
+   
+   <div class="field">
+    <!--<%= f.label :advance_topics %><br>-->
+    <%= f.text_area :advance_topics, size: "60x3" %>
+  </div>
+
+  
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Thank you for taking this on line workshop. Any additional comments provided in the space below would be greatly appreciated.</h3>
+  </div>
+  <div class="panel-body">
+   
+   
+     	<div class="field">
+    		<%= f.text_area :add_comments, size: "60x3"  %>
+  		</div>
+
+  
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Submit Evaluation:</h3>
+  </div>
+  <div class="panel-body">
+   
+   
+      	<div class="actions">
+    		<%= f.submit %>
+  		</div>
+  </div>
+</div>
+<% end %>
+
+  
+ 
+
+  
 
  
   
   
-  <div class="field">
-    <%= f.label :develop %><br>
-    <!--<%= f.text_field :develop %>-->
-    
-    <%= f.radio_button :develop, 1 %>  
-	<%= f.radio_button :develop, 2 %> 
-	<%= f.radio_button :develop, 3 %> 
-	<%= f.radio_button :develop, 4 %> 
-	<%= f.radio_button :develop, 5 %>  
-  </div>
-  <div class="field">
-    <%= f.label :develop_comments %><br>
-    <%= f.text_area :develop_comments %>
-  </div>
-  <div class="field">
-    <%= f.label :use %><br>
-    <!--<%= f.text_field :use %>-->
-    
-    <%= f.radio_button :use, 1 %>  
-	<%= f.radio_button :use, 2 %> 
-	<%= f.radio_button :use, 3 %> 
-	<%= f.radio_button :use, 4 %> 
-	<%= f.radio_button :use, 5 %>  
-  </div>
-  <div class="field">
-    <%= f.label :use_comments %><br>
-    <%= f.text_area :use_comments %>
-  </div>
-  <div class="field">
-    <%= f.label :feedback %><br>
-    <!--<%= f.text_field :feedback %>-->
-    <%= f.radio_button :feedback, 1 %>  
-	<%= f.radio_button :feedback, 2 %> 
-	<%= f.radio_button :feedback, 3 %> 
-	<%= f.radio_button :feedback, 4 %> 
-	<%= f.radio_button :feedback, 5 %>  
-  </div>
-  <div class="field">
-    <%= f.label :feedback_comments %><br>
-    <%= f.text_area :feedback_comments %>
-  </div>
-  <div class="field">
-    <%= f.label :teaching %><br>
-    <!--<%= f.text_field :teaching %>-->
-    <%= f.radio_button :teaching, 1 %>  
-	<%= f.radio_button :teaching, 2 %> 
-	<%= f.radio_button :teaching, 3 %> 
-	<%= f.radio_button :teaching, 4 %> 
-	<%= f.radio_button :teaching, 5 %>     
-  </div>
-  <div class="field">
-    <%= f.label :teaching_comments %><br>
-    <%= f.text_area :teaching_comments %>
-  </div>
-  <div class="field">
-    <%= f.label :topics %><br>
-    <%= f.text_area :topics %>
-  </div>
-  <div class="field">
-    <%= f.label :advanced %><br>
-   <!-- <%= f.text_field :advanced %>-->
-    <%= f.radio_button :advanced, 1 %>  
-	<%= f.radio_button :advanced, 2 %> 
-  </div>
-  <div class="field">
-    <%= f.label :advance_topics %><br>
-    <%= f.text_area :advance_topics %>
-  </div>
-  <div class="field">
-    <%= f.label :add_comments %><br>
-    <%= f.text_area :add_comments %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+ 
+ 
+
+  
+ 
+
+ 
+
+
+ 
+ 
+
+

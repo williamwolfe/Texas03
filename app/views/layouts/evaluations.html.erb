@@ -8,10 +8,14 @@
 </head>
 <body>
 
-<%= render 'shared/navbar_course' %>
+<div>
+	<%= render 'shared/navbar_course' %>
+</div>
 
 <div class="inner">
- 	<%=yield%>
+	<div class="content">
+ 		<%=yield%>
+ 	</div>
 </div>
 
 </body>
