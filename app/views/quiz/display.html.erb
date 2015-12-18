@@ -20,26 +20,29 @@
 
   <div class="field">    
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%='hidden field --> user_id: '%>
-    <%=current_user.id%>
+    user email: <%=current_user.email%>
   </div>
   
 
-<table class="table-striped">
+<table class="table">
+
 <% @questions.each do |question| %>
+
 	<% answer = "answer" + question.number.to_s %>
 	<% if(@last_attempt) %>
 		<% this_choice = @last_attempt[answer] %>
 	<% end %>
 	
  <tr>
- 	<td>  <%= f.label question.number %> </td>
-    <td>  <%= f.label question.Qtext %> <%=this_choice%> </td>
-    
+ 	<td>  <%= f.label question.number %>.</td>
+    <td colspan=2>  <%= f.label question.Qtext %></td>   
  </tr>
     
    
-  <tr>
+<tr>
+	<td>
+  		&nbsp;
+  	</td>
   	<td> 
   		<% if (this_choice == 1) %>
   	 		<%= f.radio_button answer, 1, checked:'checked'%> 
@@ -47,22 +50,32 @@
   			<%= f.radio_button answer, 1 %>
   		<% end %>
   	</td>
-  <td>
-    <%= f.label :optionA, question.optionA %>
-  </td></tr>
   
-  <tr>
-   <td> 
+  	<td>
+    	<%= f.label :optionA, question.optionA %>
+  	</td>
+</tr>
+  
+<tr>
+	<td>
+  		&nbsp;
+  	</td>
+   	<td> 
   		<% if (this_choice == 2) %>
   	 		<%= f.radio_button answer, 2, checked:'checked'%> 
   		<% else %>
   			<%= f.radio_button answer, 2 %>
   		<% end %>
   	</td>
-    <td>  <%= f.label :optionB, question.optionB %> </td>
-  </tr>
+    <td>
+    	<%= f.label :optionB, question.optionB %>
+    </td>
+</tr>
   
-  <tr>
+<tr>
+	<td>
+  		&nbsp;
+  	</td>
     <td> 
   		<% if (this_choice == 3) %>
   	 		<%= f.radio_button answer, 3, checked:'checked'%> 
@@ -71,9 +84,12 @@
   		<% end %>
   	</td>
     <td>  <%= f.label :optionC, question.optionC %> </td>
-  </tr>
+</tr>
   
-  <tr>
+<tr>
+	<td>
+  		&nbsp;
+  	</td>
    <td> 
   		<% if (this_choice == 4) %>
   	 		<%= f.radio_button answer, 4, checked:'checked'%> 
@@ -82,20 +98,20 @@
   		<% end %>
   	</td>
     <td>  <%= f.label :optionD, question.optionD %> </td>
-  </tr>
+</tr>
   
-  <tr>
-  	<td colspan='2'><hr></td>
-  </tr>
+<tr>
+  	<td colspan='3'><hr></td>
+</tr>
 <% end %>
   
- <tr>
+<tr>
  	<td colspan='2' class="actions">
  	<div class = "actions">
     	<%= f.submit 'submit' %>
     </div>
     </td>
- </tr>
- </table>
+</tr>
+</table>
  <% end %>
 
