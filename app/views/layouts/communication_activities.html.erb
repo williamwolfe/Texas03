@@ -7,14 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
- 
-<%= render 'shared/navbar_communication' %>
-<div class="inner">
- 	<%=yield%>
- 	<div class="footer">
-    	<p>&copy; Company 2015</p>
+ 	<div>
+ 		<%= render 'shared/navbar_communication' %>
+ 	</div>
+	<div class="inner">
+		<div class="content">
+			<%= render 'shared/communication_pagination' %>
+ 			<%=yield%>
+ 		</div>
+ 	
+ 		<div>
+ 			<%= render 'shared/nav_footer'  %>
+ 		</div>
+ 	
+ 		<div class="footer">
+    		<p>&copy; Company 2016</p>
+		</div>		
 	</div>	
-</div>
 
 </body>
+
 </html>
+

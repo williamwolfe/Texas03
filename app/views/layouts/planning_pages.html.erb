@@ -9,23 +9,26 @@
 
 <body>
  
-<%= render 'shared/navbar_planning' %>
+<div>
+		<%= render 'shared/navbar_planning' %>
+</div>
 <div class="inner">
-	<div class="content">
-		<%= render 'shared/planning_pagination' %>
- 		<%=yield%>
- 	</div>
+		<div class="content">
+			<%= render 'shared/planning_pagination' %>
+ 			<%=yield%>
+ 		</div>
  	
- 	<div>
- 	<%= render 'shared/nav_footer'  %>
- 	</div>
+ 		<div>
+ 			<%= render 'shared/nav_footer'  %>
+ 		</div>
  	
- 	<div class="footer">
-    	<p>&copy; Company 2013</p>
-	</div>	
+ 		<div class="footer">
+    		<p>&copy; Company 2013</p>
+		</div>	
 	
 </div>
    
 </body>
 </html>
+
 

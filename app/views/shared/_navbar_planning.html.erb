@@ -15,7 +15,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			 
-			  <ul class="nav navbar-nav">
+			<ul class="nav navbar-nav">
 			  	
 			    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"}>Home<span class="caret"></span></a>
           			<ul class="dropdown-menu">
@@ -41,9 +41,24 @@
         		</li> 
 				<li><%= link_to "CaseStudy1", new_planning_case1_path, {:style=>'color:#d3d3d3;', :target => '_top'} %></li>
 				<li><%= link_to "To Receive Credit", new_planning_credit_path, {:style=>'color:#d3d3d3;', :target => '_top'} %></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
+
+			
+			</ul>
 				
+	
+          			
+          			
+          			
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Course Modules<span class="caret"></span></a>
+          			 	<ul class="dropdown-menu">
+            			
+							<li><%= link_to "1. Planning Module", planning_pages_planning_home_path , :target => '_top'%></li>
+							<li><%= link_to "2. Student Evaluation Module", student_evaluation_home_path, :target => '_top' %></li>
+							<li><%= link_to "3. Communication Module", communication_pages_home_path, :target => '_top' %></li>
+							<li><%= link_to "4. Teaching and Learning Module", teaching_pages_home_path, :target => '_top'%></li>					
+          				</ul>
+        			</li> 				
 					<li><%= link_to "Sign Out", destroy_user_session_path, {:style=>'color:#d3d3d3;', method:'delete', :target => '_top'} %></li>		  
 			  	</ul>
 			</div>

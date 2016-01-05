@@ -1,0 +1,38 @@
+
+<ol class="breadcrumb">
+	<li><%=link_to "consortium home", home_tabs_home_path%></li>
+  	<li><%=link_to "CI course home", course_home_path%></li>
+  	<li><%=link_to "module 2: student evaluation", student_evaluation_home_path%></li>
+	<li><%=controller.action_name%></li>
+</ol>
+
+
+
+
+<div class="page_navigation">
+  	<nav>
+  		<section>
+  		<h5>Student Evaluation Module - Sections:</h5>
+  		<ul class="pagination pagination-sm">
+    		<li>
+    			<%= link_to @previous_page, :class => 'button white', :target => '_top' do %>
+   					<span aria-hidden="true">&laquo;</span>
+				<% end %>
+			</li>
+			<li class=<%=@active_0%>><%=link_to "0", student_evaluation_home_path%></li>
+    		<li class=<%=@active_1%>><%=link_to "1", student_evaluation_performance_path%></li>
+    		<li class=<%=@active_2%>><%=link_to "2", student_evaluation_tool_path%></li>
+    		<li class=<%=@active_3%>><%=link_to "3", student_evaluation_structure_path%></li>
+    		<li class=<%=@active_4%>><%=link_to "4", student_evaluation_ptmacs_path%></li>
+    		<li class=<%=@active_5%>><%=link_to "5", student_evaluation_learning_path%></li>
+    		<li class=<%=@active_6%>><%=link_to "6", student_evaluation_use_path%></li>
+    		<li>
+
+				<%= link_to @next_page, :class => 'button white', :target => '_top' do %>
+   					<span aria-hidden="true">&raquo;</span>
+				<% end %>	
+    		</li>
+  		</ul>
+  		</section>
+	</nav>
+</div>	
