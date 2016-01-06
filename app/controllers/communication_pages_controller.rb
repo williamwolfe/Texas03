@@ -60,10 +60,10 @@ class CommunicationPagesController < ApplicationController
 	@tabs = Hash.new
 	@tabs["tab1"] = "Gestures"
 	@tabs["tab2"] = "Time"
-	@tabs["tab3"] = "Eye"
+	@tabs["tab3"] = "Alignment"
 	@tabs["tab4"] = "Space"
-	@tabs["tab5"] = "Speaker"
-	@tabs["tab6"] = "Listening"
+	@tabs["tab5"] = "Power"
+	@tabs["tab6"] = "Listen"
   end
 
   def feedback
