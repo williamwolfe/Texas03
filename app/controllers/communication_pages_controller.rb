@@ -45,9 +45,12 @@ class CommunicationPagesController < ApplicationController
 	@next_page = communication_pages_nonverbal_path
 	@previous_page = communication_pages_three_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
+	@tabs["tab1"] = "Factors"
+	@tabs["tab2"] = "Words"
+	@tabs["tab3"] = "Number"
+	@tabs["tab4"] = "Interruptions"
+	@tabs["tab5"] = "Tone"
+	@tabs["tab6"] = "Argument"
   end
 
   def nonverbal
@@ -55,10 +58,12 @@ class CommunicationPagesController < ApplicationController
 	@next_page = communication_pages_feedback_path
 	@previous_page = communication_pages_verbal_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
+	@tabs["tab1"] = "Gestures"
+	@tabs["tab2"] = "Time"
+	@tabs["tab3"] = "Eye"
+	@tabs["tab4"] = "Space"
+	@tabs["tab5"] = "Speaker"
+	@tabs["tab6"] = "Listening"
   end
 
   def feedback
@@ -66,12 +71,11 @@ class CommunicationPagesController < ApplicationController
 	@next_page = new_communication_activity_path
 	@previous_page = communication_pages_nonverbal_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
-	@tabs["tab5"] = "x"
-	@tabs["tab6"] = "x"
-	@tabs["tab7"] = "x"
+	@tabs["tab1"] = "Concepts"
+	@tabs["tab2"] = "Activities"
+	@tabs["tab3"] = "Court"
+	@tabs["tab4"] = "Keys"
+	@tabs["tab5"] = "Strategies"
+	@tabs["tab6"] = "Components"
   end
 end
