@@ -1,2 +1,38 @@
-<h1>StudentEvaluation#learning</h1>
-<p>Find me in app/views/student_evaluation/learning.html.erb</p>
+			<h3>EVALUATING STUDENT PERFORMANCE USING PT MACS: Planning Learning Experiences</h3>
+			<ul class= "nav nav-tabs nav-justified">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 %>															
+					<li class="tab <%=active_tab%>"><a href="#<%=tab[0]%>" data-toggle="tab"><font color="black"><%=tab[1]%></font></a></li>			
+				<% end %>
+			</ul>
+			
+			
+	
+			<div class="tab-content">
+				<% @tabs.each do |tab| %>
+					<% 	if tab[0] == "tab1"
+							active_tab = " active "
+					 	else
+					 		active_tab = ""
+					 	end
+					 	
+					 	render_page = 'shared/student_learning/' + tab[0]
+					 %>		
+					<div class="tab-pane <%=active_tab%>" id="<%=tab[0]%>">
+						<div class="panel panel-info">
+  						
+  							<div class="panel-body">
+   								<ul class="list-group">
+  									<li class="list-group-item"><%= render render_page%></li>
+   								</ul>
+  							</div>
+						</div>
+					</div>
+
+				<% end %>
+			</div>
