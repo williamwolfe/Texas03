@@ -44,12 +44,8 @@ class TeachingPagesController < ApplicationController
 	@next_page = teaching_pages_barriers_path
 	@previous_page = teaching_pages_adult_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
-	@tabs["tab5"] = "x"
-	@tabs["tab6"] = "x"
+	@tabs["tab1"] = "Bloom's Taxonomy"
+	@tabs["tab2"] = "Levels"
   end
 
   def barriers
@@ -57,12 +53,8 @@ class TeachingPagesController < ApplicationController
 	@next_page = teaching_pages_guiding_path
 	@previous_page = teaching_pages_domains_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
-	@tabs["tab5"] = "x"
-	@tabs["tab6"] = "x"
+	@tabs["tab1"] = "Learning Barriers"
+	@tabs["tab2"] = "Examples"
   end
 
   def guiding
@@ -70,12 +62,10 @@ class TeachingPagesController < ApplicationController
 	@next_page = teaching_pages_theory_path
 	@previous_page = teaching_pages_barriers_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
-	@tabs["tab5"] = "x"
-	@tabs["tab6"] = "x"
+	@tabs["tab1"] = "ABCDE Method"
+	@tabs["tab2"] = "Student Example"
+	@tabs["tab3"] = "Facility Example"
+	@tabs["tab4"] = "Activity"
   end
 
   def theory
@@ -83,12 +73,10 @@ class TeachingPagesController < ApplicationController
 	@next_page = teaching_pages_self_path
 	@previous_page = teaching_pages_guiding_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
-	@tabs["tab5"] = "x"
-	@tabs["tab6"] = "x"
+	@tabs["tab1"] = "Behaviorists"
+	@tabs["tab2"] = "Developmental"
+	@tabs["tab3"] = "InformationProcessing"
+	@tabs["tab4"] = "SocialCognitive"
   end
 
   def self
@@ -96,11 +84,9 @@ class TeachingPagesController < ApplicationController
 	@next_page = new_teaching_activity_path
 	@previous_page = teaching_pages_theory_path
 	@tabs = Hash.new
-	@tabs["tab1"] = "x"
-	@tabs["tab2"] = "x"
-	@tabs["tab3"] = "x"
-	@tabs["tab4"] = "x"
-	@tabs["tab5"] = "x"
-	@tabs["tab6"] = "x"
+	@tabs["tab1"] = "Goal"
+	@tabs["tab2"] = "Levels"
+	@tabs["tab3"] = "Model"
+	@tabs["tab4"] = "Conclusion"
   end
 end
