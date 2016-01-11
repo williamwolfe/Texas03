@@ -115,11 +115,36 @@
       
       
       
-      a:link {
-        color: #d3d3d3!important;
+ //     a:link {
+//      color: #008888!important;
+        //color: #d3d3d3!important;
         //color: #030303!important;
-      }
+//      }
       
+/* unvisited link */
+a:link {
+    color: gray;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+
+
+
 
       
       .container-narrow > hr {
