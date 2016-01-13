@@ -1,19 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @student_evaluation_case2.user_id %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading"><strong>Your submitted answers are as follows:</strong></div>
+</div>
 
-<p>
-  <strong>Rate:</strong>
-  <%= @student_evaluation_case2.rate %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading"><strong>Student:</strong></div>
+  <div class="panel-body">
+    user id: <%= @student_evaluation_case2.user_id %><br/>
+    email: <%=current_user.email %>
+  </div>
+</div>
 
-<p>
-  <strong>Plan:</strong>
-  <%= @student_evaluation_case2.plan %>
-</p>
 
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>1. How should Fred rate the interpersonal, professionalism, responsibility and communication skills in the PT MACS?</strong></div>
+  <div class="panel-body">
+    <%= @student_evaluation_case2.rate %>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>2. Based on your ratings, what should Fred's plan of action be to assist Mark in attaining entry-level ratings on the above skills?</strong></div>
+  <div class="panel-body">
+    <%= @student_evaluation_case2.plan %>
+  </div>
+</div>
+
+
+<div>
+<strong>To edit/resubmit your answers: <button type="button" class="btn btn-link"><%=link_to "Edit", new_student_evaluation_case2_path%></button>
+</strong>
+</div>
+
+<!--
 <%= link_to 'Edit', edit_student_evaluation_case2_path(@student_evaluation_case2) %> |
 <%= link_to 'Back', student_evaluation_case2s_path %>
+-->

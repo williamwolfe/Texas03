@@ -1,6 +1,6 @@
 class CommunicationActivitiesController < ApplicationController
-  before_action :set_communication_activity, only: [:show, :edit, :update, :destroy]
-
+  	before_action :set_communication_activity, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!
   # GET /communication_activities
   # GET /communication_activities.json
   def index
@@ -15,6 +15,12 @@ class CommunicationActivitiesController < ApplicationController
   # GET /communication_activities/new
   def new
     @communication_activity = CommunicationActivity.new
+    
+    if(CommunicationActivity.find_by(user_id:current_user.id))
+  		@communication_activity = CommunicationActivity.find_by(user_id:current_user.id)
+  	else 
+    	@communication_activity  = CommunicationActivity.new
+    end
   end
 
   # GET /communication_activities/1/edit

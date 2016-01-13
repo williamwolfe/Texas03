@@ -1,5 +1,3 @@
-
-
 <%= form_for(@planning_credit) do |f| %>
   <% if @planning_credit.errors.any? %>
     <div id="error_explanation">
@@ -16,8 +14,6 @@
 
 <div class="field">    
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <!--<%='hidden field user_id: '%>-->
-    <!--<%=current_user.id%>-->
 </div>
 
 
@@ -29,7 +25,7 @@
   	<div class="panel-body">
    		<ul class="list-group">
    		<li class="list-group-item">
-			<table class="table-responsive">
+<table class="table-responsive">
   <tr>  
   	<td>
   		<div class="field">
@@ -41,7 +37,8 @@
   	<td>
   		<div class="field">
   			<%= f.check_box :IP %>
-    		<%= f.label :IP %>  &nbsp;  &nbsp;	  		
+  			<b>IP</b>
+    		<!--<%= f.label :IP %>-->  &nbsp;  &nbsp;	  		
   		</div>
   	</td>
   	<td>	
@@ -65,8 +62,8 @@
     			
   			</div>		
   		</td>
-  </tr>
-  <tr>
+</tr>
+<tr>
 <td>
   <div class="field">
    
@@ -85,21 +82,24 @@
   <div class="field">
    
     <%= f.check_box :SNU %>
-     <%= f.label :SNU %>&nbsp;  &nbsp;
+    <b>SNU</b>
+     <!--<%= f.label :SNU %>-->&nbsp;  &nbsp;
   </div>
 </td>
 <td>
   <div class="field">
    
     <%= f.check_box :SNF %>
-     <%= f.label :SNF %>&nbsp;  &nbsp;
+    <b>SNF</b>
+     <!--<%= f.label :SNF %>-->&nbsp;  &nbsp;
   </div>
 </td>
 <td>
   <div class="field">
    
     <%= f.check_box :LTC %>
-     <%= f.label :LTC %>&nbsp;  &nbsp;
+    <b>LTC</b>
+     <!--<%= f.label :LTC %>-->&nbsp;  &nbsp;
   </div>
 </td>
 </tr>
@@ -151,6 +151,11 @@
 <br/>
   <div class="actions">
     <%= f.submit "submit"%>
+
   </div>
+  
+	<div><small>Note: After you click "submit" your answers will be saved.  You can change/edit your answers at a later date by returning to this page and editing your answers.
+		</small>
+	</div>
 <% end %>
 

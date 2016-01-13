@@ -11,124 +11,342 @@
     </div>
   <% end %>
 
+
+
  <div class="field">    
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%='hidden field --> user_id: '%>
-    <%=current_user.id%>
+    <%=current_user.id%>    
 </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Activity 1 - Tone of Voice</h3>
+  </div>
+  <div class="panel-body">
+    Deep chest tones communicate firmness, self-assurance, and strength, thin and high-pitched voices suggest insecurity, weakness, indecisiveness. Below are a list of possible characteristics. (Bolton 1979) Type your responses as to how they may be reflected in the tone or pitch of the voice.
+  </div>
+</div>
+
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Characteristic</th>
+        <th>Reflection</th>
+      </tr>
+    </thead>
+    <tbody>
+      	<tr>
+  			<div class="field">
+    			<td><%= f.label :mono, "Monotonic Voice: "  %></td>
+    			<td><%= f.text_area :mono, cols:"60", rows:"1" %></td>
+  			</div>
+    	</tr>
+<tr>    
   <div class="field">
-    <%= f.label :mono %><br>
-    <%= f.text_area :mono %>
+    <td><%= f.label :slow, "Slow Speed, High Pitch: " %></td>
+    <td><%= f.text_area :slow, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :slow %><br>
-    <%= f.text_area :slow %>
+   <td> <%= f.label :high_voice, "High Voice, Emphatic Pitch: " %></td>
+    <td><%= f.text_area :high_voice, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :high_voice %><br>
-    <%= f.text_area :high_voice %>
+    <td><%= f.label :ascending, "Ascending Tone: " %></td>
+    <td><%= f.text_area :ascending, cols:"60", rows:"1"  %></td>
   </div>
+ </tr>  
+<tr>
   <div class="field">
-    <%= f.label :ascending %><br>
-    <%= f.text_area :ascending %>
+    <td><%= f.label :terse, "Terse Speed, Loud Tone: " %></td>
+    <td><%= f.text_area :terse, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :terse %><br>
-    <%= f.text_area :terse %>
+    <td><%= f.label :abrupt_speed, "Abrupt Speed: " %></td>
+    <td><%= f.text_area :abrupt_speed, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :abrupt_speed %><br>
-    <%= f.text_area :abrupt_speed %>
+    <td><%= f.label :high_pitch, "High Pitch, Drawn Out Speech: " %></td>
+    <td><%= f.text_area :high_pitch, cols:"60", rows:"1"  %></td>
   </div>
+</tr> 
+
+   </tbody>
+  </table>
+
+<div class="panel panel-default">
+  	<div class="panel-heading">
+    	<h3 class="panel-title">Activity 2 - Describing Words</h3>
+  	</div>
+  	<div class="panel-body">
+    	Practice describing the following adjectives/adverbs/behaviors in nouns and verbs.
+
+		<br>What do these words look like?
+	</div>
+</div>
+
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Characteristic</th>
+        <th>Reflection</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      
+<tr>
   <div class="field">
-    <%= f.label :high_pitch %><br>
-    <%= f.text_area :high_pitch %>
+    <td><%= f.label :aloof %></td>
+    <td><%= f.text_area :aloof, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :aloof %><br>
-    <%= f.text_area :aloof %>
+    <td><%= f.label :abrupt %></td>
+    <td><%= f.text_area :abrupt, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :abrupt %><br>
-    <%= f.text_area :abrupt %>
+    <td><%= f.label :shy %></td>
+    <td><%= f.text_area :shy, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :shy %><br>
-    <%= f.text_area :shy %>
+   <td><%= f.label :aggressive %></td>
+    <td><%= f.text_area :aggressive, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :aggressive %><br>
-    <%= f.text_area :aggressive %>
+    <td><%= f.label :helpful %></td>
+    <td><%= f.text_area :helpful, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :helpful %><br>
-    <%= f.text_area :helpful %>
+    <td><%= f.label :unprepared %></td>
+    <td><%= f.text_area :unprepared, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :unprepared %><br>
-    <%= f.text_area :unprepared %>
+    <td><%= f.label :bored %></td>
+    <td><%= f.text_area :bored, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :bored %><br>
-    <%= f.text_area :bored %>
+    <td><%= f.label :content %></td>
+    <td><%= f.text_area :content, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+    <td><%= f.label :unhappy %></td>
+    <td><%= f.text_area :unhappy, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :unhappy %><br>
-    <%= f.text_area :unhappy %>
+    <td><%= f.label :careless %></td>
+    <td><%= f.text_area :careless, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :careless %><br>
-    <%= f.text_area :careless %>
+    <td><%= f.label :passive %></td>
+    <td><%= f.text_area :passive, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :passive %><br>
-    <%= f.text_area :passive %>
+    <td><%= f.label :caring %></td>
+    <td><%= f.text_area :caring, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :caring %><br>
-    <%= f.text_area :caring %>
+    <td><%= f.label :imaginative %></td>
+    <td><%= f.text_area :imaginative, cols:"60", rows:"1"  %></td>
   </div>
+</tr>   
+<tr>
   <div class="field">
-    <%= f.label :imaginative %><br>
-    <%= f.text_area :imaginative %>
+    <td><%= f.label :eager %></td>
+    <td><%= f.text_area :eager, cols:"60", rows:"1"  %></td>
   </div>
+</tr>
+
+   </tbody>
+  </table>
+
+
+<div class="panel panel-default">
+  	<div class="panel-heading">
+    	<h3 class="panel-title">Activity 3 - (Schweid 1994) Bowling</h3>
+  	</div>
+  	<div class="panel-body">
+  		<div class="panel panel-default">
+  		<div class="panel-heading">
+    		<h4 class="panel-title">Read the following paragraph.</h4>
+  		</div>
+  		<div class="panel-body">
+
+Millions of people enjoy bowling. Besides the social aspects of the game, bowling is fun because:
+<ul>
+<li>There is an attainable goal-the pins at the end of the alley.</li>
+<li>There is an expected level of performance-your average.</li>
+<li>There is satisfaction for exceeding expected performance levels-pride or praise.</li>
+<li>There is immediate feedback on performance-you know the result of each ball thrown, and if necessary, make adjustments to improve your performance.</li>
+</ul>
+<p>
+Now write your opinion regarding the effect on the bowler if the following changes were made in the game:
+</p>
+
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">1. The pins were hidden by hanging a drape halfway down the alley.</h3>
+  </div>
+  <div class="panel-body">
+    <div class="field">
+    <%= f.label :activity3_1 %>
+    <%= f.text_area :activity3_1, cols:"60", rows:"2"  %>
+  </div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">2. A person stood by the drape and, at the end of the game, only told the bowler about the bad balls rolled.</h3>
+  </div>
+  <div class="panel-body">
+    <div class="field">
+    <td><%= f.label :activity3_2 %></td>
+    <td><%= f.text_area :activity3_2, cols:"60", rows:"2"  %></td>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">3. A person stood by the drape and provided feedback after every ball was rolled.</h3>
+  </div>
+  <div class="panel-body">
+<div class="field">
+    <%= f.label :activity3_3 %>
+    <%= f.text_area :activity3_3, cols:"60", rows:"2"  %>
+</div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">4. If a good score was attained, the person standing by the drape took most of the credit. But if the score wasn't good, the bowler got most of the blame.</h3>
+  </div>
+  <div class="panel-body">
   <div class="field">
-    <%= f.label :eager %><br>
-    <%= f.text_area :eager %>
+    <%= f.label :activity3_4 %>
+    <%= f.text_area :activity3_4, cols:"60", rows:"2"  %>
   </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">5. How would each of these situations affect the bowler?</h3>
+  </div>
+  <div class="panel-body">
+ <div class="field">
+    <%= f.label :activity3_5 %>
+    <%= f.text_area :activity3_5, cols:"60", rows:"2"  %>
+  </div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">6. How could you imagine that these situations would translate into instances where the CI is giving feedback to the student during the internship?</h3>
+  </div>
+  <div class="panel-body">
   <div class="field">
-    <%= f.label :activity3_1 %><br>
-    <%= f.text_area :activity3_1 %>
+    <%= f.label :activity3_6 %>
+    <%= f.text_area :activity3_6, cols:"60", rows:"1"  %>
   </div>
-  <div class="field">
-    <%= f.label :activity3_2 %><br>
-    <%= f.text_area :activity3_2 %>
   </div>
-  <div class="field">
-    <%= f.label :activity3_3 %><br>
-    <%= f.text_area :activity3_3 %>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Activity 4 - Components of Feedback</h3>
   </div>
-  <div class="field">
-    <%= f.label :activity3_4 %><br>
-    <%= f.text_area :activity3_4 %>
+  <div class="panel-body">
+  		
+  		
+  		<div class="panel panel-default">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Consider the Following:</h3>
+  			</div>
+  			<div class="panel-body">
+  				A student has been present for a team conference where all members of the team are deciding on a discharge placement for a patient. After the meeting, the CI tells the student, "You were very inattentive during that meeting. Please be more attentive from now on." The student hears what the CI is telling her, but thinks to herself, "I was paying attention. I heard everything that was being said." She then dismisses the CI's perceptions as incorrect. The next meeting, the student does not change any of her behaviors and the CI pulls her aside afterwards and says, "I told you to be more attentive and you weren't." The student now feels unjustly criticized and the CI is angry that her comments were ignored. 			
+    		</div>
+    		
+    		<div class="panel-body">
+  				What went wrong with this communication?<br>
+  				<div class="field">
+    				<%= f.label :activity4%>
+    				<%= f.text_area :activity4, cols:"60", rows:"3" %>
+  				</div>
+  			</div>
+		</div>
   </div>
-  <div class="field">
-    <%= f.label :activity3_5 %><br>
-    <%= f.text_area :activity3_5 %>
+</div>
+
+
+
+    <div class="actions">
+    	<%= f.submit "submit"%>
+  	</div> 
+  	
+  	  	<div>
+  			<small>Note: After you click "submit" your answers will be saved.  You can change/edit your answers at a later date by returning to this page and editing your answers.</small>
+  		</div>
+  	
   </div>
-  <div class="field">
-    <%= f.label :activity3_6 %><br>
-    <%= f.text_area :activity3_6 %>
-  </div>
-  <div class="field">
-    <%= f.label :activity4 %><br>
-    <%= f.text_area :activity4 %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
+
+
+
+
+
+ 
+  
+
 <% end %>

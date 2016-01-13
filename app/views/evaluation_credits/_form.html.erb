@@ -2,7 +2,6 @@
   <% if @evaluation_credit.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@evaluation_credit.errors.count, "error") %> prohibited this evaluation_credit from being saved:</h2>
-
       <ul>
       <% @evaluation_credit.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,36 +10,193 @@
     </div>
   <% end %>
 
- <div class="field">    
+<div class="field">    
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%='hidden field --> user_id: '%>
-    <%=current_user.id%>
+    <!--<%='hidden field is user_id: '%>-->
+    <!--<%=current_user.id%>-->
 </div>
-  <div class="field">
-    <%= f.label :list_skills_1 %><br>
-    <%= f.text_area :list_skills_1 %>
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Select from the List of Skills all those skills that might be applicable to the above scenario.</h3>
   </div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Place your answers in the box:</h3>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		  	<div class="field">
+    			<!--<%= f.label :list_skills_1 %><br>-->
+    			<%= f.text_area :list_skills_1, cols:"60", rows:"6" %>
+  			</div>
+	</div>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Using Skill # 17.1 Patient Related Instruction, rate this student's performance based on expectations of your facility for entry level performance.</h3>
+  </div>
+  <div class="panel-heading">
+    <h3 class="panel-title">Pick a rating:</h3>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		<div class="field">
+    		<div>
+  				<%= f.radio_button :rating_1, 1 %> 
+  				<%= f.label :rating_1, "+ (Above Entry Level)"%>
+  			</div> 
+    		<div>
+  				<%= f.radio_button :rating_1, 2 %> 
+  				<%= f.label :rating_1, "v (check) (Entry Level)"%>
+  			</div>
+  
+    		<div>
+  				<%= f.radio_button :rating_1, 3 %> 
+  				<%= f.label :rating_1, "NI (Needs Improvement)"%>
+  			</div>  
+    		<div>
+  				<%= f.radio_button :rating_1, 4 %> 
+  				<%= f.label :rating_1, "U (Unacceptable)"%>
+  			</div>
+  		</div>
+	</div>
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+<!--
   <div class="field">
     <%= f.label :rating_1 %><br>
     <%= f.text_field :rating_1 %>
   </div>
-  <div class="field">
-    <%= f.label :list_skills_2 %><br>
-    <%= f.text_area :list_skills_2 %>
+-->  
+
+
+<hr>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Scenario #2:</h3>
   </div>
-  <div class="field">
-    <%= f.label :selected_skill %><br>
-    <%= f.text_field :selected_skill %>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		<div class="panel-heading">
+    		<h3 class="panel-title">Observe the student behaviors in the following video clips.</h3>
+  		</div>
+  		<div class="panel-body">
+    			<ol>
+    				<li><%=link_to "Clip 1 (opens new window)", "http://www.texasconsortium.org/videos/s2_c1.mpg"%></li>
+    				<li><%=link_to "Clip 2 (opens new window)", "http://www.texasconsortium.org/videos/s2_c2.mpg"%></li>
+    				<li><%=link_to "Clip 3 (opens new window)", "http://www.texasconsortium.org/videos/s2_c3.mpg"%></li>
+    			</ol>
+  		</div>
+	</div>
   </div>
-  <div class="field">
-    <%= f.label :rating_2 %><br>
-    <%= f.text_field :rating_2 %>
+</div>
+
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Select from the List of Skills all those skills that might be applicable to the above scenario.</h3>
   </div>
-  <div class="field">
-    <%= f.label :support %><br>
-    <%= f.text_area :support %>
+  <div class="panel-heading">
+    <h3 class="panel-title">Place your answers in the box:</h3>
   </div>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		  	<div class="field">
+    			<%= f.text_area :list_skills_2, cols:"60", rows:"6" %>
+  			</div>
+	</div>
+  </div>
+</div>
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Select one of the following skills and rate this student's performance based on expectations of your facility for entry level performance:</h3>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		  	<div class="field">
+    			<div>
+  					<%= f.radio_button :selected_skill, 1 %> 
+  					<%= f.label :selected_skill, "7 Professionalism"%>
+  				</div>
+  			</div>
+  			<div class="field">
+    			<div>
+  					<%= f.radio_button :selected_skill, 2 %> 
+  					<%= f.label :selected_skill, "11 Safety During PT Management"%>
+  				</div>
+			</div>
+
+	</div>
+  </div>
+</div>
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Pick a rating:</h3>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		<div class="field">
+    		<div>
+  				<%= f.radio_button :rating_2, 1 %> 
+  				<%= f.label :rating_2, "+ (Above Entry Level)"%>
+  			</div> 
+    		<div>
+  				<%= f.radio_button :rating_2, 2 %> 
+  				<%= f.label :rating_2, "v (check) (Entry Level)"%>
+  			</div>
+  
+    		<div>
+  				<%= f.radio_button :rating_2, 3 %> 
+  				<%= f.label :rating_2, "NI (Needs Improvement)"%>
+  			</div>  
+    		<div>
+  				<%= f.radio_button :rating_2, 4 %> 
+  				<%= f.label :rating_2, "U (Unacceptable)"%>
+  			</div>
+  		</div>
+	</div>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Provide supporting documentation for your rating.  </h3>
+  </div>
+  <div class="panel-body">
+    <div class="panel panel-info">
+  		<div class="field">
+    		 <div class="field">
+    			<%= f.label :support %><br>
+    			<%= f.text_area :support, cols:"60", rows:"6" %>
+  			</div>
+  		</div>
+	</div>
+  </div>
+</div> 
+
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit" %>
+  </div>
+  
+  <div>
+  	<small>Note: After you click "submit" your answers will be saved.  You can change/edit your answers at a later date by returning to this page and editing your answers.</small>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 class EvaluationCreditsController < ApplicationController
-  before_action :set_evaluation_credit, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_user!
+  	before_action :set_evaluation_credit, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!
   # GET /evaluation_credits
   # GET /evaluation_credits.json
   def index
@@ -15,6 +15,12 @@ before_action :authenticate_user!
   # GET /evaluation_credits/new
   def new
     @evaluation_credit = EvaluationCredit.new
+    
+    if(EvaluationCredit.find_by(user_id:current_user.id))
+  		@evaluation_credit = EvaluationCredit.find_by(user_id:current_user.id)
+  	else 
+    	@evaluation_credit = EvaluationCredit.new
+    end
   end
 
   # GET /evaluation_credits/1/edit

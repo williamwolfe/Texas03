@@ -1,6 +1,7 @@
 class StudentEvaluationCase2sController < ApplicationController
-  before_action :set_student_evaluation_case2, only: [:show, :edit, :update, :destroy]
-before_action :authenticate_user!
+  	before_action :set_student_evaluation_case2, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!
+  
   # GET /student_evaluation_case2s
   # GET /student_evaluation_case2s.json
   def index
@@ -14,7 +15,13 @@ before_action :authenticate_user!
 
   # GET /student_evaluation_case2s/new
   def new
-    @student_evaluation_case2 = StudentEvaluationCase2.new
+    # @student_evaluation_case2 = StudentEvaluationCase2.new       
+    if(StudentEvaluationCase2.find_by(user_id:current_user.id))
+  		@student_evaluation_case2 = StudentEvaluationCase2.find_by(user_id:current_user.id)
+  	else 
+    	@student_evaluation_case2 = StudentEvaluationCase2.new
+    end
+    
   end
 
   # GET /student_evaluation_case2s/1/edit

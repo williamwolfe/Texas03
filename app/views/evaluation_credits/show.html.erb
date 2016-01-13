@@ -1,39 +1,72 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @evaluation_credit.user_id %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading"><strong>Your submitted answers are as follows:</strong></div>
+</div>
 
-<p>
-  <strong>List skills 1:</strong>
-  <%= @evaluation_credit.list_skills_1 %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading"><strong>Student:</strong></div>
+  <div class="panel-body">
+    user id: <%=@evaluation_credit.user_id %><br/>
+    email: <%=current_user.email %>
+  </div>
+</div>
 
-<p>
-  <strong>Rating 1:</strong>
-  <%= @evaluation_credit.rating_1 %>
-</p>
 
-<p>
-  <strong>List skills 2:</strong>
-  <%= @evaluation_credit.list_skills_2 %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>List skills 1:</strong></div>
+  <div class="panel-body">
+    <%= @evaluation_credit.list_skills_1 %>
+  </div>
+</div>
 
-<p>
-  <strong>Selected skill:</strong>
-  <%= @evaluation_credit.selected_skill %>
-</p>
 
-<p>
-  <strong>Rating 2:</strong>
-  <%= @evaluation_credit.rating_2 %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Rating 1:</strong></div>
+  <div class="panel-body">
+    <%= @evaluation_credit.rating_1 %>
+  </div>
+</div>
 
-<p>
-  <strong>Support:</strong>
-  <%= @evaluation_credit.support %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>List skills 2:</strong></div>
+  <div class="panel-body">
+     <%= @evaluation_credit.list_skills_2 %>
+  </div>
+</div>
 
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Selected skill:</strong></div>
+  <div class="panel-body">
+    <%= @evaluation_credit.selected_skill %>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Rating 2:</strong></div>
+  <div class="panel-body">
+    <%= @evaluation_credit.rating_2 %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Support:</strong></div>
+  <div class="panel-body">
+   <%= @evaluation_credit.support %>
+  </div>
+</div>
+
+
+<div>
+<strong>To edit/resubmit your answers: <button type="button" class="btn btn-link"><%=link_to "Edit", new_evaluation_credit_path%></button>
+</strong>
+</div>
+
+
+
+<!--
 <%= link_to 'Edit', edit_evaluation_credit_path(@evaluation_credit) %> |
 <%= link_to 'Back', evaluation_credits_path %>
+-->
+

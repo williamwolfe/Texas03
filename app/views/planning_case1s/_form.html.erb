@@ -4,23 +4,21 @@
       <h2><%= pluralize(@planning_case1.errors.count, "error") %> prohibited this planning_case1 from being saved:</h2>
 
       <ul>
-      <% @planning_case1.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+      	<% @planning_case1.errors.full_messages.each do |message| %>
+        	<li><%= message %></li>
+      	<% end %>
       </ul>
+      
     </div>
   <% end %>
 
-  <div class="field">    
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <!--<%='hidden field user_id:' %>-->
-    <!--<%=current_user.id%>-->
-</div>
+  	<div class="field">    
+    	<%= f.hidden_field :user_id, value: current_user.id %>
+	</div>
 
 
 <fieldset class="form-group">
     <label for="experiences">1. How should Sally plan this student’s learning experiences?</label>
-    <!--<input type="text" class="form-control" id="experiences">-->
     <br>
      	<div class="col-xs-8">
     		<%= f.text_area :experiences,  class:'form-control', value:@planning_case1.experiences%>
@@ -30,7 +28,6 @@
 
 <fieldset class="form-group">
     <label for="orientation">2. What should Sally’s on-site orientation include on day one?</label>
-    <!--<input type="text" class="form-control" id="orientation">-->
      <br>
      <div class="col-xs-8">
     	<%= f.text_area :orientation,  class:'form-control'%>
@@ -42,7 +39,6 @@
 <fieldset class="form-group">
     <label for="appropriate">3. How will Sally decide if the learning experiences are appropriate?</label>
     <br>
-    <!--<input type="text" class="form-control" id="appropriate">-->
     <div class="col-xs-8">
     	<%= f.text_area :appropriate,  class:'form-control'%>
     </div>
@@ -50,7 +46,8 @@
 
   
   <div class="actions">
-    <%= f.submit "submit my answers" %>
+    <%= f.submit "submit" %><br/><small>Note: After you "submit" your answers will be saved.  You can change/edit your answers at a later date by returning to this page and editing your answers.
+  </small>
   </div>
   
 <% end %>
