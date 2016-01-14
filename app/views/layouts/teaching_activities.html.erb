@@ -6,16 +6,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
- 
- 
-<%= render 'shared/navbar_teaching' %>
-<div class="inner">
- 	<%=yield%>
- 	<div class="footer">
-    	<p>&copy; Company 2015</p>
-	</div>	
-</div>
 
-</body>
+
+	<body>
+		<div>
+ 			<%= render 'shared/navbar_teaching' %>
+ 		</div>
+
+		<div class="inner">
+			<div class = "content">
+			<%= render 'shared/teaching_pagination' %>
+ 				<%=yield%>
+ 			</div>
+ 		
+ 			<div class="footer">
+        		<p>&copy; Company 2015</p>
+    		</div>
+ 		</div>  
+  	</body>
+  	
 </html>

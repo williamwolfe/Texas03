@@ -15,7 +15,13 @@ class TeachingActivitiesController < ApplicationController
 
   # GET /teaching_activities/new
   def new
-    @teaching_activity = TeachingActivity.new
+    #@teaching_activity = TeachingActivity.new
+    
+    if(TeachingActivity.find_by(user_id:current_user.id))
+  		@teaching_activity = TeachingActivity.find_by(user_id:current_user.id)
+  	else 
+    	@teaching_activity = TeachingActivity.new
+    end
   end
 
   # GET /teaching_activities/1/edit

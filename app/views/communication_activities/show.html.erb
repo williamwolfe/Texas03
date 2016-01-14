@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Your Answers</h2>
 <p>
   <strong>User:</strong>
   <%= @communication_activity.user_id %>
@@ -149,6 +149,56 @@
 <strong>To edit/resubmit your answers: <button type="button" class="btn btn-link"><%=link_to "Edit", new_communication_activity_path%></button>
 </strong>
 </div>
+
+<h1>Answer Key</h1>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Activity 1 - Tone of Voice</h3>
+  </div>
+  <div class="panel-body">
+  
+    <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Characteristic</th>
+        <th>Reflection</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Monotone voice</td>				<td>boredom</td></tr>
+      <tr><td>Slow speed, low pitch</td>		<td>depression</td></tr>
+      <tr><td>High voice, emphatic pitch</td>	<td>enthusiasm</td></tr>
+      <tr><td>Ascending tone</td>				<td>astonishment</td></tr>
+      <tr><td>Terse speed, loud tone</td>		<td>anger</td></tr>
+      <tr><td>Abrupt speech</td>				<td>defensiveness</td></tr>
+      <tr><td>High pitch, drawn-out speech</td>	<td>disbelief</td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+  </div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Activity 4 - Components of Feedback</h3>
+  </div>
+  <div class="panel-body">
+  	<ul>
+  		<li>When we hear the word "inattentive", we know what this looks like. We can picture the student shuffling papers, playing with a pencil, looking around the room, not maintaining eye contact with the speaker--these are some of the behaviors that we associate with the word "inattentive". This is what "inattentive" looks like.</li>
+		<li>The student knows that she was hearing everything that was said, she could even repeat back to the CI most of the conversation verbatim, if asked. She knows she was paying attention. So she has no reason to change any of her behaviors.</li>
+    	<li>The CI cannot make the student be attentive. She can only ask for behaviors that demonstrate that the student is paying attention. And she has every right to ask for these behaviors. Her communication with the student needs to address these behaviors, because the behaviors can be changed.</li>
+	</ul>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
 <!--
 <%= link_to 'Edit', edit_communication_activity_path(@communication_activity) %> |
 <%= link_to 'Back', communication_activities_path %>
