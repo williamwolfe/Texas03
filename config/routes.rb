@@ -109,6 +109,8 @@ get 'planning_pages/planning_home'
   get 'pages/cart_items'
 
   get 'pages/sign_in'
+  
+  get 'creatives/index'
 
   resources :cart_items
   resources :products

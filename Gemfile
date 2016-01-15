@@ -20,6 +20,8 @@ gem 'less-rails', '~> 2.7.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'frontend-generators'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
