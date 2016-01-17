@@ -3,6 +3,13 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+ 
+   	/* tan = #D2B48C */
+    /* brick/brown = #9C661F */
+    /* original orange = #f05f40 */
+    /* lighter orange = #f27f62 */
+    /* steel blue = #36648B */
+    /* turquois = #00C5CD */
 
 html,
 body {
@@ -16,7 +23,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #fff ;
     border-width: 3px;
 }
 
@@ -52,7 +59,9 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    /*background-color: #f05f40;*/
+    background-color: #36648B;
+    /* lighter orange = #f27f62 */
 }
 
 .bg-dark {
@@ -84,17 +93,24 @@ aside {
     -moz-transition: all .35s;
     transition: all .35s;
 }
-
+  	/* tan = #D2B48C */
+    /* brick/brown = #9C661F */
+    /* original orange = #f05f40 */
+    /* lighter/softer orange = #f27f62 */
+    /* steel blue = #36648B */
+    
+    
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
-    color: #f05f40;
+    /*color: #f05f40;*/
+    color: #36648B;
 }
 
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+    color: #36648B;
 }
 
 .navbar-default .nav > li>a,
@@ -153,7 +169,8 @@ aside {
 
     .navbar-default.affix .navbar-header .navbar-brand {
         font-size: 14px;
-        color: #f05f40;
+        /*color: #f05f40;*/
+        color: #36648B;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
@@ -168,7 +185,9 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+    
+        /*color: #f05f40;*/
+        color: #f27f62;
     }
 }
 
@@ -179,12 +198,36 @@ header {
     text-align: center;
     color: #fff;
     background-image: asset-data-url("creative/header.jpg");
+    /*opacity: 0.5;*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+       
+	/*-webkit-filter: blur(5px);*/
+  	/*-moz-filter: blur(5px);*/
+  	/*-o-filter: blur(5px);*/
+  	/*-ms-filter: blur(5px);*/
+  	/*filter: blur(5px);*/
+  	    
 }
+
+/*
+.background-image {
+  background-image: url('creative/header.jpg');
+  width: 100vw;
+  height: 100vh;
+
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+*/
+
+
 
 header .header-content {
     position: relative;
@@ -197,18 +240,28 @@ header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: 700;
+  /*  color: rgba(161,134,72,0.8);*/
+   
+    /* color: rgba(72,99,160,0.8); //steel blue*/
+/*color: rgba(0,64,255,0.8);*/
+    /*color: rgba(63,172,97,0.8);*/
+    /*color: rgba(56,142,142,1.0);*/
+   color: rgba(255,250,250,.9);
+    font-weight: 900;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 header .header-content .header-content-inner hr {
     margin: 30px auto;
 }
 
+/* teal #388E8E	56	142	142	*/
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     color: rgba(255,255,255,.7);
+    
 }
 
 @media(min-width:768px) {
@@ -274,7 +327,8 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    /*background: rgba(240,95,64,.9);*/
+    background: rgba(54,100,139,.9);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -323,7 +377,8 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    /*color: #f05f40;*/
+    color: #00C5CD;
 }
 
 .no-gutter > [class*=col-] {
@@ -385,9 +440,14 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
-    color: #fff;
-    background-color: #f05f40;
+  	/* tan = #D2B48C */
+    /* brick/brown = #9C661F */
+    /* original orange = #f05f40 */
+    /* lighter orange = #f27f62 */
+    
+    border-color: #f05f40;   
+    color: #333;
+    background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;

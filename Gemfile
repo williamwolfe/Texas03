@@ -21,6 +21,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
 gem 'frontend-generators'
+gem 'vider', github: 'wazery/vider'
 
 
 # Use SCSS for stylesheets
