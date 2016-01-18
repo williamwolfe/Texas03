@@ -8,4 +8,3 @@
 //= require creative/wow.min
 //= require creative/creative
 //= require_self
-
