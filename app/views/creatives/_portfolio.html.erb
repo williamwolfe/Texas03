@@ -2,8 +2,6 @@
     <div class="container-fluid">
         <div class="row no-gutter">
             <div class="col-lg-4 col-sm-6">
-            <%= link_to pages_members_path do %>
-                <!--<a href="#" class="portfolio-box">-->
                 <div class="portfolio-box"> 
                     <%= image_tag "creative/portfolio/1.jpg", class: "img-responsive", alt: "" %>
                     <div class="portfolio-box-caption">
@@ -12,17 +10,13 @@
                                 Category
                             </div>
                             <div class="project-name">
-                                Consortium Members
+                                <%=link_to "Consortium Members", pages_members_path%>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--</a>-->
-            <% end %>
             </div>
             <div class="col-lg-4 col-sm-6">
-            <%= link_to pages_clinician_path do %>
-                <!--<a href="#" class="portfolio-box">-->
                 <div class="portfolio-box"> 
                     <%= image_tag "creative/portfolio/2.jpg", class: "img-responsive", alt: "" %>
                     <div class="portfolio-box-caption">
@@ -31,17 +25,13 @@
                                 Category
                             </div>
                             <div class="project-name">
-                                Clinician Members
+                                <%=link_to "Clinician Members", pages_clinician_path%> 
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--</a>-->
-                <% end %>
             </div>
             <div class="col-lg-4 col-sm-6">
-               <%= link_to pages_related_path do %>
-                <!--<a href="#" class="portfolio-box">-->
                 <div class="portfolio-box"> 
                     <%= image_tag "creative/portfolio/3.jpg", class: "img-responsive", alt: "" %>
                     <div class="portfolio-box-caption">
@@ -50,17 +40,13 @@
                                 Category
                             </div>
                             <div class="project-name">
-                                Related Websites
+                                <%=link_to "Related Websites", pages_related_path%>
                             </div>
                         </div>
                     </div>
                 </div>
-               <!--</a>-->
-                <% end %>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <%= link_to pages_ptmacs_path do %>
-                <!--<a href="#" class="portfolio-box">-->
                 <div class="portfolio-box"> 
                     <%= image_tag "creative/portfolio/4.jpg", class: "img-responsive", alt: "" %>
                     <div class="portfolio-box-caption">
@@ -69,17 +55,13 @@
                                 Category
                             </div>
                             <div class="project-name">
-                                PT MACS
+                                <%=link_to "PT MACS", pages_ptmacs_path%>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--</a>-->
-                <% end %>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <%= link_to pages_award_path do %>
-                <!--<a href="#" class="portfolio-box">-->
                 <div class="portfolio-box"> 
                     <%= image_tag "creative/portfolio/5.jpg", class: "img-responsive", alt: "" %>
                     <div class="portfolio-box-caption">
@@ -88,17 +70,14 @@
                                 Category
                             </div>
                             <div class="project-name">
-                                Site Award
+                                <%=link_to "Site Award", pages_award_path%>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--</a>-->
-                <% end %>
             </div>
             <div class="col-lg-4 col-sm-6">
-               <%= link_to pages_ciccourse_path do %>
-                <!--<a href="#" class="portfolio-box">-->
+               	
                 <div class="portfolio-box"> 
                     <%= image_tag "creative/portfolio/6.jpg", class: "img-responsive", alt: "" %>
                     <div class="portfolio-box-caption">
@@ -107,15 +86,14 @@
                                 Category
                             </div>
                             <div class="project-name">
-                                Clinical Education Course
+                            	<%=link_to "Clinical Education Course", pages_ciccourse_path %>                               
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--</a>-->
-                <% end %>
+            
             </div>
-        </div>
-    </div>
+        </div><!-- row no gutter-->
+	</div> <!-- container-fluid -->
 </section>
 
