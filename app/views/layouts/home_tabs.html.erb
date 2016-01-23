@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
+  
 </head>
 <body>
 
@@ -14,6 +15,11 @@
 </div>
 
 <div class="inner">
+
+<div id="bgndVideo" class="player" 
+     data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">
+</div>
+
 
 	<!--<div class="jumbotron"><h2><font color="#2e8080">Texas Consortium for Physical Therapy Clinical Education, Inc.</font></h2></div>-->
 	<div class="jumbotron"></div>
