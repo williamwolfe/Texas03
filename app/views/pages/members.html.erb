@@ -2,7 +2,8 @@
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover({
         placement : 'top',
-        trigger : 'hover'
+        trigger : 'hover',
+        html: 'true'
     });
 });
 </script>
@@ -19,61 +20,59 @@ $(document).ready(function(){
 </div>
 
 
- <button type="button" class="btn btn-link" data-toggle="popover" title="Hardin Simmons University" data-content="Mary Lou Garrett, PT, DPT, PCS, DCE">Hardin Simmons University</button>
- <br>
- <br>
- 
- <button type="button" class="btn btn-link" data-toggle="popover" title="Texas State University" data-content="Steve Spivey PT DPT DCE, Shannon Williams PT DPT Asst DCE">Texas State University</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="Texas Tech University Health Sciences Center" data-content="Nathan Burgess, PT, MPT, NCS, DCE, Joan Potter-Brunet, PT, MS, DPT, Assistant DCE">Texas Tech University Health Sciences Center</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="Texas Woman's University – Dallas" data-content="Dale Anderle, PT, DPT, DCE, Kathleen Luedtke-Hoffmann, PT, MBA, PhD, Assistant DCE, Dr. Linda Csiza, Asst DCE">Texas Woman's University – Dallas</button>
- <br>
- <br>
- 
- <button type="button" class="btn btn-link" data-toggle="popover" title="Texas Woman's University – Houston" data-content="Peggy Gleeson, PT, PhD, DCE, Anne Turner O'Donnell, PT, PhD, Assistant DCE, Victoria Millet Zegarrundo, PT, DPT, Assistant DCE, Lauren Szot, PT, DPT, NCS, Assistant DCE">Texas Woman's University – Houston</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="The University of North Texas Health Science Center" data-content="Brandy Brewster Schwarz PT, DPT, OT, MBA, DCE">The University of North Texas Health Science Center</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="The University of Texas at El Paso" data-content="Loretta Dillon, PT, DPT, MS, DCE">The University of Texas at El Paso</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="University of Texas Health Science Center at San Antonio" data-content="Mike Geelhoed, PT, DPT, OCS, MTC">University of Texas Health Science Center at San Antonio</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="University of Texas Medical Branch" data-content="Rebecca Galloway, PT, PhD, GCS, DCE, Laurie Farroni, PT, DPT, Assistant DCE">University of Texas Medical Branch</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="University of Texas Southwestern Medical Center" data-content="Julie DeVahl, PT, MS, OCS, DCE,Tara Widgins Dickson, PT, DPT, CSCS">University of Texas Southwestern Medical Center</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="University of the Incarnate Word" data-content="Chad Jackson, PT, DPT, OCS">University of the Incarnate Word</button>
- <br>
- <br>
- 
-<button type="button" class="btn btn-link" data-toggle="popover" title="University of St. Augustine-Texas" data-content="Dr. Kathleen Manella, DCE, Dr. Martha Sneary, DCE">University of St. Augustine-Texas</button>
- <br>
- <br>
- 
+ <button type="button" class="btn btn-link" data-toggle="popover" title="Hardin Simmons University" data-content="Mary Lou Garrett<br/>PT, DPT, PCS, DCE"><%=link_to "Hardin Simmons University", "http://www.hsutx.edu/academics/holland/graduate/physicaltherapy/"%></button>
 
-
-
-<div class="bs-example">
-    <button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="Default popover">Popover</button>
-    <button type="button" class="btn btn-success" data-toggle="popover" title="Popover title" data-content="Another popover">Another popover</button>
-    <button type="button" class="btn btn-info" data-toggle="popover" title="Popover title" data-content="A larger popover to demonstrate the max-width of the Bootstrap popover.">Large popover</button>
-    <button type="button" class="btn btn-warning" data-toggle="popover" title="Popover title" data-content="The last popover!">Last popover</button>
-</div>
-
+ <br>
+ <br>
+ 
+ <button type="button" class="btn btn-link" data-toggle="popover" title="Texas State University" data-content="Steve Spivey<br/>PT DPT DCE<br/>Shannon Williams<br/>PT DPT Asst DCE"><%=link_to "Texas State University", "http://www.txstate.edu"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="Texas Tech University Health Sciences Center" data-content="Nathan Burgess<br/>PT, MPT, NCS, DCE<br/>Joan Potter-Brunet<br/>PT, MS, DPT, Asst DCE"><%=link_to "Texas Tech University Health Sciences Center", "https://www.ttuhsc.edu"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="Texas Woman's University – Dallas" data-content="Dale Anderle<br/>PT, DPT, DCE<br/>Kathleen Luedtke-Hoffmann<br/>PT, MBA, PhD, Asst DCE<br/>Dr. Linda Csiza<br/>Asst DCE"><%=link_to "Texas Woman's University – Dallas", "http://www.twu.edu/physical-therapy/"%></button>
+ <br>
+ <br>
+ 
+ <button type="button" class="btn btn-link" data-toggle="popover" title="Texas Woman's University – Houston" data-content="Peggy Gleeson<br/>PT, PhD, DCE<br/>Anne Turner O'Donnell<br/>PT, PhD, Asst DCE<br/>Victoria Millet Zegarrundo<br/>PT, DPT, Asst DCE<br/>Lauren Szot<br/>PT, DPT, NCS, Asst DCE"><%=link_to "Texas Woman's University – Houston", "http://www.twu.edu/physical-therapy/"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="The University of North Texas Health Science Center" data-content="Brandy Brewster Schwarz<br/>PT, DPT, OT, MBA, DCE"><%=link_to "University of North Texas Health Science Center", "https://www.unthsc.edu/school-of-health-professions/physical-therapy/"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="The University of Texas at El Paso" data-content="Loretta Dillon<br/>PT, DPT, MS, DCE"><%=link_to "University of Texas at El Paso", "http://chs.utep.edu/pt/"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="University of Texas Health Science Center at San Antonio" data-content="Mike Geelhoed<br/>PT, DPT, OCS, MTC"><%=link_to "University of Texas Health Science Center at San Antonio", "http://www.uthscsa.edu/academics/health-professions/programs/doctor-physical-therapy"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="University of Texas Medical Branch" data-content="Rebecca Galloway<br/>PT, PhD, GCS, DCE<br/>Laurie Farroni<br/>PT, DPT, Asst DCE"><%=link_to "University of Texas Medical Branch", "http://shp.utmb.edu/PhysicalTherapy/"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="University of Texas Southwestern Medical Center" data-content="Julie DeVahl<br/>PT, MS, OCS, DCE<br/>Tara Dickson<br/>PT, DPT, CSCS"><%=link_to "University of Texas Southwestern Medical Center", "http://www.utsouthwestern.edu/education/school-of-health-professions/programs/doctorate-programs/index.html"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="University of the Incarnate Word" data-content="Chad Jackson<br/>PT, DPT, OCS"><%=link_to "University of the Incarnate Word", "http://www.uiw.edu/physicaltherapy/index.html"%></button>
+ <br>
+ <br>
+ 
+<button type="button" class="btn btn-link" data-toggle="popover" title="University of St. Augustine-Texas" data-content="Dr. Kathleen Manella, DCE<br/>Dr. Martha Sneary, DCE"><%=link_to "University of St. Augustine-Texas", "http://www.usa.edu/Texas.aspx"%></button>
+ <br>
+ <br>
+ 
+ <button type="button" class="btn btn-link" data-toggle="popover" title="Angelo State University" data-content="Jimmy Villers<br/>PT, DPT, FAAOMPT"><%=link_to "Angelo State University", "http://www.angelo.edu/dept/physical_therapy/"%></button>
+ <br>
+ <br>
+ 
+  <button type="button" class="btn btn-link" data-toggle="popover" title="University of Mary Hardin-Baylor" data-content="Jenise Engelke<br/>PT, DPT, DCE"><%=link_to "University of Mary Hardin-Baylor", "http://graduate.umhb.edu/dpt/"%></button>
+ <br>
+ <br>

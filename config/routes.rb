@@ -59,7 +59,7 @@ Rails.application.routes.draw do
 
   get 'student_evaluation/use'
 
-get 'planning_pages/planning_home'
+  get 'planning_pages/planning_home'
 
   get 'planning_pages/tx_consortium'
 
@@ -126,7 +126,8 @@ get 'planning_pages/planning_home'
   
   #root 'pages#home'
   
-  root 'home_tabs#home'
+  #root 'home_tabs#home'
+  root 'creatives#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
