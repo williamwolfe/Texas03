@@ -87,7 +87,6 @@ Rails.application.routes.draw do
   resources :planning_case1s
   resources :evaluations
   get 'quiz/display'
-
   get 'quiz/results'
 
   resources :attempts
@@ -102,14 +101,11 @@ Rails.application.routes.draw do
   get 'pages/resources'
   get 'pages/ciccourse'
   get 'pages/award'
+  get 'pages/award2'
   get 'pages/ccus'
-
   get 'pages/products'
-
   get 'pages/cart_items'
-
-  get 'pages/sign_in'
-  
+  get 'pages/sign_in'  
   get 'creatives/index'
 
   resources :cart_items

@@ -36,6 +36,9 @@ end
   def award
   end
   
+def award2
+  end
+  
   def ccus
   end
 
