@@ -36,7 +36,10 @@ end
   def award
   end
   
-def award2
+  def award_Melzer
+  end
+  
+  def award_Long
   end
   
   def ccus
