@@ -94,6 +94,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   get 'pages/home'
+  get 'pages/announcements'
   get 'pages/members'
   get 'pages/clinician'
   get 'pages/related'

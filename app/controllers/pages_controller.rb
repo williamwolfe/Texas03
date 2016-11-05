@@ -15,6 +15,9 @@ end
   def home
   end
   
+  def announcements
+  end
+  
   def members
   end
   
