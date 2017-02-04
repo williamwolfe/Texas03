@@ -15,6 +15,12 @@ end
   def home
   end
   
+  def part1
+  end
+  
+  def part2
+  end
+  
   def announcements
   end
   
