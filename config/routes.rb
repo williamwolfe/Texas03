@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :part2_offerings
   get 'home_tabs/home'
 
   get 'home_tabs/incorporation'

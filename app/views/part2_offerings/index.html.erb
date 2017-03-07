@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Part2 Offerings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @part2_offerings.each do |part2_offering| %>
+      <tr>
+        <td><%= part2_offering.title %></td>
+        <td><%= part2_offering.description %></td>
+        <td><%= part2_offering.link %></td>
+        <td><%= link_to 'Show', part2_offering %></td>
+        <td><%= link_to 'Edit', edit_part2_offering_path(part2_offering) %></td>
+        <td><%= link_to 'Destroy', part2_offering, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Part2 offering', new_part2_offering_path %>
