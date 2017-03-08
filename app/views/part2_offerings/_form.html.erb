@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :size=>"50"%>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -21,9 +21,9 @@
   </div>
   <div class="field">
     <%= f.label :link %><br>
-    <%= f.text_field :link %>
+    <%= f.text_field :link, :size=>"50" %>
   </div>
-  <div class="actions">
+  <div class="actions" >
     <%= f.submit %>
   </div>
 <% end %>

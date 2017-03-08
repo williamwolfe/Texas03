@@ -4,6 +4,7 @@
  	}
 </style>
 
+<!--
 <table class = "table">
 	<tr>
 		<td>
@@ -16,24 +17,26 @@
 		</td>
 	</tr>
 </table>
-
+-->
 
 
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
   <div class="field form-group">
     <%= f.label :email, class: 'col-sm-2 control-label'%>
-    <div class="col-xs-4">
+    <br>
+   <!-- <div class="col-xs-4">-->
     	<%= f.email_field :email, autofocus: true, class: 'form-control' %>
-    </div>
+    <!--</div>-->
   </div>
 
   <div class="field form-group">
     <%= f.label :password, class: 'col-sm-2 control-label' %>
-    <div class="col-xs-4">
+    <br>
+<!--    <div class="col-xs-4"> -->
     	<%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
     </div>
-  </div>
+<!--  </div> -->
 
 <!--
   <% if devise_mapping.rememberable? -%>
@@ -47,12 +50,13 @@
   <% end -%>
 -->
   <div class="actions">
-   <div class="col-sm-offset-2 col-sm-10">
+   	<!--<div class="col-sm-offset-2 col-sm-10">-->
     	<%= f.submit "Log in" , :class => 'btn btn-large btn-primary' %>
-   </div>
+  	<!-- </div>-->
   </div>
 <% end %>
 
+<!--
 <table class="table">
 	<tr>
 		<td><h4>If you do not yet have a password, then please sign up for one:</h4>
@@ -63,6 +67,7 @@
 	</tr>
 </table>
 </br>
+-->
 
 
 

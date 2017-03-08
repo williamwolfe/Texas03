@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Part2 Offerings</h1>
+<h3>Current Part II Offerings</h3>
 
 <table class="table">
   <thead>
@@ -17,10 +17,14 @@
       <tr>
         <td><%= part2_offering.title %></td>
         <td><%= part2_offering.description %></td>
-        <td><%= part2_offering.link %></td>
-        <td><b><%= link_to 'Show', part2_offering %></b></td>
-        <td><b><%= link_to 'Edit', edit_part2_offering_path(part2_offering) %></b></td>
-        <td><b><%= link_to 'Destroy', part2_offering, method: :delete, data: { confirm: 'Are you sure?' } %></b></td>
+        <!--<td><%= part2_offering.link %></td>-->
+        <td><%= link_to 'flyer', part2_offering.link %></td>
+    
+        <% if ( (user_signed_in?) && (current_user.email == "a@a.com") ) %>
+        	<td><b><%= link_to 'Show', part2_offering %></b></td>
+        	<td><b><%= link_to 'Edit', edit_part2_offering_path(part2_offering) %></b></td>
+        	<td><b><%= link_to 'Destroy', part2_offering, method: :delete, data: { confirm: 'Are you sure?' } %></b></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +32,7 @@
 
 <br>
 
+<% if ( (user_signed_in?) && (current_user.email == "a@a.com") ) %>
+
 <b><%= link_to 'Add a New Part II Offering', new_part2_offering_path %></b>
+<% end %>
